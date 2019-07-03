@@ -17,11 +17,11 @@ export class LinkedList {
     if (item === null) { throw Error(`'item' parameter not defined`) }
     if (this.N !== 0) {
         const prev = this.tail;
-        this.tail = new Node(item, null);
+        this.tail = new ListNode(item, null);
         prev.next = this.tail;
     }
     else {
-        this.tail = new Node(item, null);
+        this.tail = new ListNode(item, null);
         this.head = this.tail;
     }
     this.N++;
@@ -82,7 +82,7 @@ export class LinkedList {
   }
 }
 
-class Node {
+class ListNode {
   data;
   next;
 
