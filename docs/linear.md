@@ -8,7 +8,7 @@ While not an optimial solution for general use, sometimes they are a 'best fit' 
 
 ## LinkedList
 
-A LinkedList is a data structure used to define list data. Specifically, direct parent->child relationsips betweens data nodes. 
+A `LinkedList` is used to define a sequential list data. Ie a list of nodes that map direct parent->child relationsips.
 
 ### Complexity
 
@@ -18,7 +18,7 @@ A write creates a new `ListNode` and appends it to the end of the list.
 
 *Read: O(N)*
 
-A traverses from the beginning of the list until it either locates a matching item or reaches the end of the list. 
+Traverses from the beginning of the list until it either locates a matching item or reaches the end of the list. 
 
 *Memory: O(N)*
 
