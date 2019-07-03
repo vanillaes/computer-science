@@ -18,3 +18,7 @@ Self-taught or academically educated. If you have aspirations to be a profession
 
 [Linear]: ./docs/linear.md
 [LinkedList]: ./docs/linear.md#likedlist
+
+## Related Projects
+
+- [JavaScript-Algorithms - Minko Gechev](https://github.com/mgechev/javascript-algorithms)
