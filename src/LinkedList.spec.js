@@ -17,14 +17,14 @@ test('LinkedList.add(item) - should add one item to the list', (t) => {
   const item = 'test1';
   ll.add(item);
 
-  t.equal(ll.head.data, item, `LinkedList.head should be the first item`);
-  t.equal(ll.tail.data, item, `LinkedList.tail should be the first item`);
+  t.equal(ll.head.data, item, `LinkedList.head should be the item`);
+  t.equal(ll.tail.data, item, `LinkedList.tail should be the item`);
   t.equal(ll.size, 1, `LinkedList.size should be 1`);
 
   t.end();
 });
 
-test('LinkedList.add() - should throw an exception when no item is specified', (t) => {
+test('LinkedList.add() - should throw when no item is specified', (t) => {
   t.plan(1);
   const ll = new LinkedList();
 
@@ -37,7 +37,7 @@ test('LinkedList.add() - should throw an exception when no item is specified', (
   t.end();
 });
 
-test('LinkedList.add(items) - should add multiple items to the list', (t) => {
+test('LinkedList.add(item)* - called multiple times should add multiple items to the list', (t) => {
   const ll = new LinkedList();
   const items = ['test1', 'test2'];
   items.forEach(item => ll.add(item));
@@ -61,7 +61,7 @@ test('LinkedList.addAll(items) - should add multiple items to the list', (t) => 
   t.end();
 });
 
-test('LinkedList.addAll() - should throw an exception when no item is specified', (t) => {
+test('LinkedList.addAll() - should throw when no items are specified', (t) => {
   t.plan(1);
   const ll = new LinkedList();
 
@@ -74,7 +74,7 @@ test('LinkedList.addAll() - should throw an exception when no item is specified'
   t.end();
 });
 
-test('new LinkedList(items) - should add construct with multiple items', (t) => {
+test('new LinkedList(items) - should add items during construction', (t) => {
   const items = ['test1', 'test2'];
   const ll = new LinkedList(items);
 
@@ -111,18 +111,6 @@ test('LinkedList.remove(item) - should remove a middle item from the list', (t) 
   t.end();
 });
 
-test('LinkedList.remove(not-item) - should remove nothing from the list', (t) => {
-  const items = ['test1', 'test2', 'test3'];
-  const ll = new LinkedList(items);
-  const result = ll.remove('not-item');
-
-  t.equal(ll.head.data, items[0], `LinkedList.head should be the first item`);
-  t.equal(ll.tail.data, items[2], `LinkedList.tail should be the last item`);
-  t.equal(ll.size, 3, `LinkedList.size should be 3`);
-  t.false(result, 'result should return true when an item is removed')
-
-  t.end();
-});
 
 test('LinkedList.remove(item) - should remove the last item from the list', (t) => {
   const items = ['test1', 'test2', 'test3'];
@@ -137,7 +125,32 @@ test('LinkedList.remove(item) - should remove the last item from the list', (t) 
   t.end();
 });
 
-test('LinkedList.remove() - should throw an exception when no item is specified', (t) => {
+test('LinkedList.remove(item)* - called multiple times should remove all items from the list', (t) => {
+  const items = ['test1', 'test2', 'test3'];
+  const ll = new LinkedList(items);
+  items.forEach(item => ll.remove(item));
+
+  t.equal(ll.head, null, `LinkedList.head should reset to null`);
+  t.equal(ll.tail, null, `LinkedList.tail should reset to null`);
+  t.equal(ll.size, 0, `LinkedList.size should be 0`);
+
+  t.end();
+});
+
+test('LinkedList.remove(not-item) - should remove nothing from the list', (t) => {
+  const items = ['test1', 'test2', 'test3'];
+  const ll = new LinkedList(items);
+  const result = ll.remove('not-item');
+
+  t.equal(ll.head.data, items[0], `LinkedList.head should be the first item`);
+  t.equal(ll.tail.data, items[2], `LinkedList.tail should be the last item`);
+  t.equal(ll.size, 3, `LinkedList.size should be 3`);
+  t.false(result, 'result should return true when an item is removed')
+
+  t.end();
+});
+
+test('LinkedList.remove() - should throw  when no item is specified', (t) => {
   t.plan(1);
   const items = ['test1', 'test2', 'test3'];
   const ll = new LinkedList(items);
@@ -151,7 +164,7 @@ test('LinkedList.remove() - should throw an exception when no item is specified'
   t.end();
 });
 
-test('LinkedList.remove(item) - should throw an exception when remove is called on an empty list', (t) => {
+test('LinkedList.remove(item) - should throw when called on an empty list', (t) => {
   t.plan(1);
   const ll = new LinkedList();
 
@@ -177,7 +190,7 @@ test('LinkedList.clear() - should remove all items from the list', (t) => {
 });
 
 
-test('LinkedList - should be iterable', (t) => {
+test('...LinkedList - should be iterable', (t) => {
   const items = ['test1', 'test2', 'test3'];
   const ll = new LinkedList(items);
   const result = [ ...ll ];
