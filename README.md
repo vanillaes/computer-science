@@ -15,9 +15,11 @@ Self-taught or academically educated. If you have aspirations to be a profession
 ### [Linear][]
 
 - [LinkedList][]
+- [Stack][]
 
 [Linear]: ./docs/linear.md
 [LinkedList]: ./docs/linear.md#linkedlist
+[Stack]: ./docs/linear.md#stack
 
 ## Related Projects
 

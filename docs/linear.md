@@ -38,10 +38,10 @@ const list = new LinkedList();
 const list = new LinkedList(['item1', 'item2', 'item3']);
 ```
 
-*Get the size(ie # of nodes) of the list*
+*Get the size (ie # of nodes) of the list*
 
 ```javascript
-const size = list.size();
+const size = list.size;
 ```
 
 *Add an item to the list*
@@ -73,3 +73,78 @@ list.clear();
 ```javascript
 const listToArray = ...list;
 ```
+
+### Stack
+
+A `Stack` is used to define a FIFO (First-In-First-Out) collection of data. Ie a stack contains nodes with data and the relationship to the next item lower on the stack. 
+
+*Write: O(1)*
+
+A write creates a new `StackNode` and appends it to top of the stack.
+
+*Read: O(1)*
+
+- Pop - removes and returns the top item of the stack
+- Peek - returns the top item without removing it
+
+*Memory: O(N)*
+
+Every StackNode stores the data as well as a reference `link` to the next lower node in the stack.
+
+### Usage
+
+*Creation*
+
+```javascript
+const stack = new Stack();
+```
+
+*Creation w/ data*
+
+```javascript
+const stack = new Stack(['item1', 'item2', 'item3']);
+```
+
+*Get the size (ie # of nodes) of the Stack*
+
+```javascript
+const size = stack.size;
+```
+
+*Add an item to the stack*
+
+```javascript
+stack.push('item');
+```
+
+*Add an array of items to the stack*
+
+```javascript
+list.pushAll(['item1', 'item2', 'item3']);
+```
+
+*Remove and return an item from the top of the stack*
+
+```javascript
+const topItem = list.pop();
+```
+
+*Return but don't remove the top item on the stack*
+
+```javascript
+const topItem = list.peek()
+```
+
+*Remove all items from the stack*
+
+```javascript
+stack.clear();
+```
+
+*Iterate through the items in the stack*
+
+```javascript
+const listToArray = ...list;
+```
+
+Note: items will be read in top->bottom order.
