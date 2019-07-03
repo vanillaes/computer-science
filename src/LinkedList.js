@@ -15,7 +15,7 @@ export class LinkedList {
 
   add(item = null) {
     if (item === null) { throw Error(`'item' parameter not defined`) }
-    if (!this.isEmpty()) {
+    if (this.N !== 0) {
         const prev = this.tail;
         this.tail = new Node(item, null);
         prev.next = this.tail;
@@ -35,7 +35,7 @@ export class LinkedList {
 
   remove(item = null) {
     if (item === null) { throw Error(`'item' parameter not defined`) }
-    if (this.isEmpty()) { throw Error(`can't remove an item from an empty list`) }
+    if (this.N === 0) { throw Error(`can't remove an item from an empty list`) }
 
     let prev = this.head;
     let curr = this.head;
@@ -64,10 +64,6 @@ export class LinkedList {
     this.head = null;
     this.tail = null;
     this.N = 0;
-  }
-
-  isEmpty() {
-    return this.N === 0;
   }
 
   [Symbol.iterator]() {
