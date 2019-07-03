@@ -10,7 +10,17 @@ Algorithms and data structures are essential foundations if you ever want to adv
 
 Self-taught or academically educated. If you have aspirations to be a professional deveoper, eventually you'll need to know this. Instead of wasting time/effort on outdated courses, blogs, libraries, etc; the goal of this repo is to provide everything you need to get started using only modern best practices.  
 
-## Data Structures Documentation
+## Usage
+
+All modules are written in VanillsJS as ES modules. All algorithms and data structures can be impored from the entry point.
+
+*Ex.*
+
+```javascript
+import { LinkedList, Stack } from './compsci.js';
+```
+
+## API Documentation
 
 ### [Linear][]
 
