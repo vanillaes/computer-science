@@ -190,7 +190,7 @@ test('LinkedList.clear() - should remove all items from the list', (t) => {
 });
 
 
-test('...LinkedList - should be iterable', (t) => {
+test('LinkedList[Symbol.iterator] - should be iterable', (t) => {
   const items = ['test1', 'test2', 'test3'];
   const ll = new LinkedList(items);
   const result = [ ...ll ];

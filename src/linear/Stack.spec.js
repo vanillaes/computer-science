@@ -139,7 +139,7 @@ test('Stack.clear() - should remove all items from the stack', (t) => {
   t.end();
 });
 
-test('...Stack - should be iterable', (t) => {
+test('Stack[Symbol.iterator] - should be iterable', (t) => {
   const items = ['test1', 'test2', 'test3'];
   const s = new Stack(items);
   const result = [ ...s ];
