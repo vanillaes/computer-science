@@ -31,6 +31,9 @@ import { LinkedList, Stack } from './compsci.js';
 [LinkedList]: ./docs/linear.md#linkedlist
 [Stack]: ./docs/linear.md#stack
 
-## Related Projects
+## Related Materials
 
 - [JavaScript-Algorithms - Minko Gechev](https://github.com/mgechev/javascript-algorithms)
+- [thank u, [Symbol.iterator].next](https://medium.com/front-end-weekly/thank-u-symbol-iterator-next-aef9f09ff78)
+- [Data Structures and Algorithms (DSA) - Adrian Mejia](https://adrianmejia.com/categories/coding/data-structures-and-algorithms-dsa/)
+- [Practice - GeeksForGeeks.org](https://practice.geeksforgeeks.org/)
