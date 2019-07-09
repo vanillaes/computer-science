@@ -1,6 +1,6 @@
 export class Stack {
   top = null;
-  N = 0;
+  size = 0;
 
   constructor(items) {
     if (items) {
@@ -8,19 +8,15 @@ export class Stack {
     }
   }
 
-  get size() {
-    return this.N;
-  }
-
   push(item = null) {
     if (item === null) { throw Error(`'item' parameter not defined`) }
-    if (this.N !== 0) {
+    if (this.size === 0) {
+      this.top = new StackNode(item, null);
+    } else {
       const link = this.top;
       this.top = new StackNode(item, link);
-    } else {
-      this.top = new StackNode(item, null);
     }
-    this.N++;
+    this.size++;
   }
 
   pushAll(items = null) {
@@ -30,16 +26,16 @@ export class Stack {
   }
 
   pop() {
-    if (this.N === 0) { throw Error(`can't pop an item from an empty stack`) }
+    if (this.size === 0) { throw Error(`can't pop an item from an empty stack`) }
     const item = this.top.data;
     this.top = this.top.link;
-    this.N--;
+    this.size--;
 
     return item;
   }
 
   peek() {
-    if (this.N === 0) { throw Error(`can't peek an item from an empty stack`) }
+    if (this.size === 0) { throw Error(`can't peek an item from an empty stack`) }
 
     return this.top.data;
   };
@@ -47,7 +43,7 @@ export class Stack {
 
   clear() {
     this.top = null;
-    this.N = 0;
+    this.size = 0;
   }
 
   [Symbol.iterator]() {
