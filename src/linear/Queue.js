@@ -1,7 +1,7 @@
 export class Queue {
   first = null;
   last = null;
-  N = 0;
+  size = 0;
 
   constructor(items) {
     if (items) {
@@ -9,13 +9,9 @@ export class Queue {
     }
   }
 
-  get size() {
-    return this.N;
-  }
-
   enqueue(item = null) {
     if (item === null) { throw Error(`'item' parameter not defined`) }
-    if (this.N !== 0) {
+    if (this.size !== 0) {
       const prevLast = this.last;
       this.last = new QueueNode(item, null);
       prevLast.link = this.last;
@@ -23,7 +19,7 @@ export class Queue {
       this.first = new QueueNode(item, null);
       this.last = this.first;
     }
-    this.N++;
+    this.size++;
   }
 
   enqueueAll(items = null) {
@@ -33,20 +29,21 @@ export class Queue {
   }
 
   dequeue() {
-    if (this.N === 0) { throw Error(`can't dequeue an item from an empty queue`) }
+    if (this.size === 0) { throw Error(`can't dequeue an item from an empty queue`) }
     const dequeued = this.first;
-    if (this.N > 1) { this.first = dequeued.link; }
-    if (this.N === 1) { 
+    if (this.size === 1) { 
       this.first = null;
       this.last = null;
+    } else {
+      this.first = dequeued.link;
     }
-    this.N--;
+    this.size--;
 
     return dequeued.data;
   }
 
   peek() {
-    if (this.N === 0) { throw Error(`can't peek an item from an empty stack`) }
+    if (this.size === 0) { throw Error(`can't peek an item from an empty stack`) }
 
     return this.first.data;
   }
@@ -54,7 +51,7 @@ export class Queue {
   clear() {
     this.first = null;
     this.last = null;
-    this.N = 0;
+    this.size = 0;
   }
 
   [Symbol.iterator]() {
