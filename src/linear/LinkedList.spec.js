@@ -39,24 +39,24 @@ test('LinkedList.add() - should throw when no item is specified', (t) => {
 
 test('LinkedList.add(item)* - called multiple times should add multiple items to the list', (t) => {
   const ll = new LinkedList();
-  const items = ['test1', 'test2'];
+  const items = ['test1', 'test2', 'test3'];
   items.forEach(item => ll.add(item));
 
   t.equal(ll.head.data, items[0], `LinkedList.head should be the first item`);
-  t.equal(ll.tail.data, items[1], `LinkedList.tail should be the second item`);
-  t.equal(ll.size, 2, `LinkedList.size should be 2`);
+  t.equal(ll.tail.data, items[2], `LinkedList.tail should be the last item`);
+  t.equal(ll.size, 3, `LinkedList.size should be 3`);
 
   t.end();
 });
 
 test('LinkedList.addAll(items) - should add multiple items to the list', (t) => {
   const ll = new LinkedList();
-  const items = ['test1', 'test2']; 
+  const items = ['test1', 'test2', 'test3']; 
   ll.addAll(items);
 
   t.equal(ll.head.data, items[0], `LinkedList.head should be the first item`);
-  t.equal(ll.tail.data, items[1], `LinkedList.tail should be the second item`);
-  t.equal(ll.size, 2, `LinkedList.size should be 2`);
+  t.equal(ll.tail.data, items[2], `LinkedList.tail should be the last item`);
+  t.equal(ll.size, 3, `LinkedList.size should be 3`);
 
   t.end();
 });
@@ -75,12 +75,12 @@ test('LinkedList.addAll() - should throw when no items are specified', (t) => {
 });
 
 test('new LinkedList(items) - should add items during construction', (t) => {
-  const items = ['test1', 'test2'];
+  const items = ['test1', 'test2', 'test3'];
   const ll = new LinkedList(items);
 
   t.equal(ll.head.data, items[0], `LinkedList.head should be the first item`);
-  t.equal(ll.tail.data, items[1], `LinkedList.tail should be the second item`);
-  t.equal(ll.size, 2, `LinkedList.size should be 2`);
+  t.equal(ll.tail.data, items[2], `LinkedList.tail should be the last item`);
+  t.equal(ll.size, 3, `LinkedList.size should be 3`);
 
   t.end();
 });
