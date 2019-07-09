@@ -1,7 +1,7 @@
 export class LinkedList {
   head = null;
   tail = null;
-  N = 0;
+  size = 0;
 
   constructor(items) {
     if (items) {
@@ -9,22 +9,17 @@ export class LinkedList {
     }
   }
 
-  get size() {
-    return this.N;
-  }
-
   add(item = null) {
     if (item === null) { throw Error(`'item' parameter not defined`) }
-    if (this.N !== 0) {
-        const prev = this.tail;
-        this.tail = new ListNode(item, null);
-        prev.next = this.tail;
-    }
-    else {
+    if (this.size === 0) {
         this.tail = new ListNode(item, null);
         this.head = this.tail;
+    } else {
+      const prev = this.tail;
+      this.tail = new ListNode(item, null);
+      prev.next = this.tail;
     }
-    this.N++;
+    this.size++;
   }
 
   addAll(items = null) {
@@ -35,21 +30,21 @@ export class LinkedList {
 
   remove(item = null) {
     if (item === null) { throw Error(`'item' parameter not defined`) }
-    if (this.N === 0) { throw Error(`can't remove an item from an empty list`) }
+    if (this.size === 0) { throw Error(`can't remove an item from an empty list`) }
 
     let prev = this.head;
     let curr = this.head;
     while (curr != null) {
         if (curr.data === item) {
             // remove the last remaining element
-            if (this.N === 1) { this.head = null; this.tail = null; }
+            if (this.size === 1) { this.head = null; this.tail = null; }
             // remove first element
             else if (curr === this.head) { this.head = this.head.next; }
             // remove last element
             else if (curr === this.tail) { this.tail = prev; this.tail.next = null; }
             // remove element
             else { prev.next = curr.next; }
-            this.N--;
+            this.size--;
             
             return true;
         }
@@ -63,7 +58,7 @@ export class LinkedList {
   clear() {
     this.head = null;
     this.tail = null;
-    this.N = 0;
+    this.size = 0;
   }
 
   [Symbol.iterator]() {
