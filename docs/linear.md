@@ -8,7 +8,7 @@ While not an optimial solution for general use, sometimes they are a 'best fit' 
 
 ## LinkedList
 
-A `LinkedList` is used to define a sequential list data. Ie a list of nodes that map direct parent->child relationsips.
+A `LinkedList` is used to store a sequential list of data.
 
 ### Complexity
 
@@ -22,7 +22,7 @@ Traverses from the beginning of the list until it either locates a matching item
 
 *Memory: O(N)*
 
-Every ListNode stores the data as well as a reference to the `next` node in the list.
+Every `ListNode` stores the data as well as a reference to the next node in the list.
 
 ### Usage
 
@@ -76,7 +76,7 @@ const listToArray = ...list;
 
 ### Stack
 
-A `Stack` is used to define a FIFO (First-In-First-Out) collection of data. Ie a stack contains nodes with data and the relationship to the next item lower on the stack. 
+A `Stack` is used to define a FIFO (First-In-First-Out) collection of data.
 
 *Write: O(1)*
 
@@ -89,7 +89,7 @@ A write creates a new `StackNode` and appends it to top of the stack.
 
 *Memory: O(N)*
 
-Every StackNode stores the data as well as a reference `link` to the next lower node in the stack.
+Each `StackNode` stores the data as well as a reference to the next lower node in the stack.
 
 ### Usage
 
@@ -120,19 +120,19 @@ stack.push('item');
 *Add an array of items to the stack*
 
 ```javascript
-list.pushAll(['item1', 'item2', 'item3']);
+stack.pushAll(['item1', 'item2', 'item3']);
 ```
 
 *Remove and return an item from the top of the stack*
 
 ```javascript
-const topItem = list.pop();
+const topItem = stack.pop();
 ```
 
 *Return but don't remove the top item on the stack*
 
 ```javascript
-const topItem = list.peek()
+const topItem = stack.peek()
 ```
 
 *Remove all items from the stack*
@@ -144,7 +144,82 @@ stack.clear();
 *Iterate through the items in the stack*
 
 ```javascript
-const listToArray = ...list;
+const stackToArray = ...stack;
 ```
 
 Note: items will be read in top->bottom order.
+
+
+### Queue
+
+A `Queue` is used to define a LIFO (Last-In-First-Out) collection of data.
+
+*Write: O(1)*
+
+- Enqueue - creates a new `QueueNode` and adds it to the end of the queue.
+
+*Read: O(1)*
+
+- Dequeue - removes and returns the first item in the queue
+- Peek - returns the first item without removing it
+
+
+*Memory: O(N)*
+
+Every `QueueNode` stores the data as well as a reference to the next node in the queue.
+
+### Usage
+
+*Creation*
+
+```javascript
+const queue = new Queue();
+```
+
+*Creation w/ data*
+
+```javascript
+const queue = new Queue(['item1', 'item2', 'item3']);
+```
+
+*Get the size (ie # of nodes) of the queue*
+
+```javascript
+const size = queue.size;
+```
+
+*Add an item to the queue*
+
+```javascript
+queue.enqueue('item');
+```
+
+*Add an array of items to the queue*
+
+```javascript
+queue.queueAll(['item1', 'item2', 'item3']);
+```
+
+*Remove and return an item from the front of the queue*
+
+```javascript
+const firstItem = queue.dequeue();
+```
+
+*Return but don't remove the first item in the queue*
+
+```javascript
+const firstItem = queue.peek()
+```
+
+*Remove all items from the queue*
+
+```javascript
+queue.clear();
+```
+
+*Iterate through the items in the queue*
+
+```javascript
+const queueToArray = ...queue;
+```
