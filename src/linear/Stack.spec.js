@@ -37,22 +37,22 @@ test('Stack.push() - should throw when no item is specified', (t) => {
 
 test('Stack.push(item)* - called multiple times should add multiple items to the stack', (t) => {
   const s = new Stack();
-  const items = ['test1', 'test2'];
+  const items = ['test1', 'test2', 'test3'];
   items.forEach(item => s.push(item));
 
-  t.equal(s.top.data, items[1], `Stack.top should be the last item`);
-  t.equal(s.size, 2, `Stack.size should be 2`);
+  t.equal(s.top.data, items[2], `Stack.top should be the last item`);
+  t.equal(s.size, 3, `Stack.size should be 3`);
 
   t.end();
 });
 
 test('Stack.pushAll(items) - should add multiple items to the stack', (t) => {
   const s = new Stack();
-  const items = ['test1', 'test2']; 
+  const items = ['test1', 'test2', 'test3']; 
   s.pushAll(items);
 
-  t.equal(s.top.data, items[1], `Stack.top should be the last item`);
-  t.equal(s.size, 2, `Stack.size should be 2`);
+  t.equal(s.top.data, items[2], `Stack.top should be the last item`);
+  t.equal(s.size, 3, `Stack.size should be 3`);
 
   t.end();
 });
@@ -71,11 +71,11 @@ test('Stack.pushAll() - should throw when no items are specified', (t) => {
 });
 
 test('new Stack(items) - should push items during construction', (t) => {
-  const items = ['test1', 'test2'];
+  const items = ['test1', 'test2', 'test3'];
   const s = new Stack(items);
 
-  t.equal(s.top.data, items[1], `Stack.top should be the last item`);
-  t.equal(s.size, 2, `Stack.size should be 2`);
+  t.equal(s.top.data, items[2], `Stack.top should be the last item`);
+  t.equal(s.size, 3, `Stack.size should be 3`);
 
   t.end();
 });
