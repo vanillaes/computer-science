@@ -1,14 +1,48 @@
+// @ts-check
+
+/**
+ * @export
+ * @class LinkedList
+ */
 export class LinkedList {
+
+  /**
+   * The head node in the list
+   * @ignore
+   * @type {Object}
+   */
   head = null;
+ 
+  /**
+   * The tail node in the list
+   * @ignore
+   * @type {Object}
+   */
   tail = null;
+
+  /**
+   * The number of items in the list
+   * @type {number}
+   */
   size = 0;
 
+
+  /**
+   * @constructs LinkedList
+   * @param {array} [items]
+   */
   constructor(items) {
     if (items) {
       this.addAll(items);
     }
   }
 
+
+  /**
+   * Add an item to the list
+   *
+   * @param {*} [item=null]
+   */
   add(item = null) {
     if (item === null) { throw Error(`'item' parameter not defined`) }
     if (this.size === 0) {
@@ -22,12 +56,24 @@ export class LinkedList {
     this.size++;
   }
 
+
+  /**
+   * Add multiple items to the list
+   *
+   * @param {*[]} [items=null]
+   */
   addAll(items = null) {
     if (items === null) { throw Error(`'items' parameter not defined`) }
 
     items.forEach(item => this.add(item));
   }
 
+  /**
+   * Remove an item from the list
+   *
+   * @param {*} [item=null]
+   * @return {boolean}
+   */
   remove(item = null) {
     if (item === null) { throw Error(`'item' parameter not defined`) }
     if (this.size === 0) { throw Error(`can't remove an item from an empty list`) }
@@ -55,12 +101,23 @@ export class LinkedList {
     return false;
   }
 
+
+  /**
+   * Remove all items from the list
+   */
   clear() {
     this.head = null;
     this.tail = null;
     this.size = 0;
   }
 
+
+  /**
+   * Iterate all items (in-order) in the list
+   *
+   * @ignore
+   * @return {Iterator<*>}
+   */
   [Symbol.iterator]() {
     let item = this.head;
     return {
@@ -77,6 +134,11 @@ export class LinkedList {
   }
 }
 
+
+/**
+ * @class ListNode
+ * @private
+ */
 class ListNode {
   data;
   next;
