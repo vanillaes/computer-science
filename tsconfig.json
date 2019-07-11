@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "noEmit": true,
+    "target": "es6",
+    "allowSyntheticDefaultImports": true
+  }
+}
