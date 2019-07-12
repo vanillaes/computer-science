@@ -3,14 +3,14 @@ export class Queue {
   last = null;
   size = 0;
 
-  constructor(items) {
+  constructor (items) {
     if (items) {
       this.enqueueAll(items);
     }
   }
 
-  enqueue(item = null) {
-    if (item === null) { throw Error(`'item' parameter not defined`) }
+  enqueue (item = null) {
+    if (item === null) { throw Error(`'item' parameter not defined`); }
     if (this.size !== 0) {
       const prevLast = this.last;
       this.last = new QueueNode(item, null);
@@ -22,16 +22,16 @@ export class Queue {
     this.size++;
   }
 
-  enqueueAll(items = null) {
-    if (items === null) { throw Error(`'items' parameter not defined`) }
+  enqueueAll (items = null) {
+    if (items === null) { throw Error(`'items' parameter not defined`); }
 
     items.forEach(item => this.enqueue(item));
   }
 
-  dequeue() {
-    if (this.size === 0) { throw Error(`can't dequeue an item from an empty queue`) }
+  dequeue () {
+    if (this.size === 0) { throw Error(`can't dequeue an item from an empty queue`); }
     const dequeued = this.first;
-    if (this.size === 1) { 
+    if (this.size === 1) {
       this.first = null;
       this.last = null;
     } else {
@@ -42,31 +42,31 @@ export class Queue {
     return dequeued.data;
   }
 
-  peek() {
-    if (this.size === 0) { throw Error(`can't peek an item from an empty stack`) }
+  peek () {
+    if (this.size === 0) { throw Error(`can't peek an item from an empty stack`); }
 
     return this.first.data;
   }
 
-  clear() {
+  clear () {
     this.first = null;
     this.last = null;
     this.size = 0;
   }
 
-  [Symbol.iterator]() {
+  [Symbol.iterator] () {
     let item = this.first;
     return {
       next: () => {
         if (item) {
           const value = item.data;
           item = item.link;
-          return  { value , done: false };
+          return { value, done: false };
         }
 
-        return { value: null, done: true }
+        return { value: null, done: true };
       }
-    }
+    };
   }
 }
 
@@ -74,7 +74,7 @@ class QueueNode {
   data;
   link;
 
-  constructor(data, link = null) {
+  constructor (data, link = null) {
     this.data = data;
     this.link = link;
   }

@@ -28,7 +28,7 @@ test('Stack.push() - should throw when no item is specified', (t) => {
 
   try {
     s.push();
-  } catch(e) {
+  } catch (e) {
     t.pass(`Expected exception thrown`);
   }
 
@@ -48,7 +48,7 @@ test('Stack.push(item)* - called multiple times should add multiple items to the
 
 test('Stack.pushAll(items) - should add multiple items to the stack', (t) => {
   const s = new Stack();
-  const items = ['test1', 'test2', 'test3']; 
+  const items = ['test1', 'test2', 'test3'];
   s.pushAll(items);
 
   t.equal(s.top.data, items[2], `Stack.top should be the last item`);
@@ -63,7 +63,7 @@ test('Stack.pushAll() - should throw when no items are specified', (t) => {
 
   try {
     s.pushAll();
-  } catch(e) {
+  } catch (e) {
     t.pass(`Expected exception thrown`);
   }
 
@@ -87,7 +87,7 @@ test('Stack.pop() - should remove and return the top item', (t) => {
 
   t.equal(s.top.data, items[1], `Stack.top should be the second item`);
   t.equal(s.size, 2, `Stack.size should be 2`);
-  t.equal(result, items[2], 'result should return the popped item')
+  t.equal(result, items[2], 'result should return the popped item');
 
   t.end();
 });
@@ -95,7 +95,7 @@ test('Stack.pop() - should remove and return the top item', (t) => {
 test('Stack.pop()* - called multiple times should remove all items from the stack', (t) => {
   const items = ['test1', 'test2', 'test3'];
   const s = new Stack(items);
-  for(let i = 0; i < items.length; i++) {
+  for (let i = 0; i < items.length; i++) {
     s.pop();
   }
 
@@ -111,7 +111,7 @@ test('Stack.pop() - should throw when called on an empty stack', (t) => {
 
   try {
     s.pop();
-  } catch(e) {
+  } catch (e) {
     t.pass(`Expected exception thrown`);
   }
 

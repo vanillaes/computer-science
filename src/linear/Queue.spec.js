@@ -30,7 +30,7 @@ test('Queue.enqueue() - should throw when no item is specified', (t) => {
 
   try {
     q.enqueue();
-  } catch(e) {
+  } catch (e) {
     t.pass(`Expected exception thrown`);
   }
 
@@ -51,7 +51,7 @@ test('Queue.enqueue(item)* - called multiple times should add multiple items to 
 
 test('Queue.enqueueAll(items) - should add multiple items to the queue', (t) => {
   const q = new Queue();
-  const items = ['test1', 'test2']; 
+  const items = ['test1', 'test2'];
   q.enqueueAll(items);
 
   t.equal(q.first.data, items[0], `Queue.first should be the first item`);
@@ -67,7 +67,7 @@ test('Queue.enqueueAll() - should throw when no items are specified', (t) => {
 
   try {
     q.enqueueAll();
-  } catch(e) {
+  } catch (e) {
     t.pass(`Expected exception thrown`);
   }
 
@@ -101,7 +101,7 @@ test('Queue.dequeue(item) - should dequeue an item from the queue', (t) => {
 test('Queue.dequeue(item)* - called multiple times should dequeue all items from the queue', (t) => {
   const items = ['test1', 'test2', 'test3'];
   const q = new Queue(items);
-  for(let i = 0; i < items.length; i++) {
+  for (let i = 0; i < items.length; i++) {
     q.dequeue();
   }
 
@@ -118,7 +118,7 @@ test('Stack.dequeue() - should throw when called on an empty queue', (t) => {
 
   try {
     q.dequeue();
-  } catch(e) {
+  } catch (e) {
     t.pass(`Expected exception thrown`);
   }
 

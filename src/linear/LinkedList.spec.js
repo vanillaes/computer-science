@@ -31,7 +31,7 @@ test('LinkedList.add() - should throw when no item is specified', (t) => {
 
   try {
     ll.add();
-  } catch(e) {
+  } catch (e) {
     t.pass(`Expected exception thrown`);
   }
 
@@ -52,7 +52,7 @@ test('LinkedList.add(item)* - called multiple times should add multiple items to
 
 test('LinkedList.addAll(items) - should add multiple items to the list', (t) => {
   const ll = new LinkedList();
-  const items = ['test1', 'test2', 'test3']; 
+  const items = ['test1', 'test2', 'test3'];
   ll.addAll(items);
 
   t.equal(ll.head.data, items[0], `LinkedList.head should be the first item`);
@@ -68,7 +68,7 @@ test('LinkedList.addAll() - should throw when no items are specified', (t) => {
 
   try {
     ll.addAll();
-  } catch(e) {
+  } catch (e) {
     t.pass(`Expected exception thrown`);
   }
 
@@ -94,7 +94,7 @@ test('LinkedList.remove(item) - should remove the first item from the list', (t)
   t.equal(ll.head.data, items[1], `LinkedList.head should be the second item`);
   t.equal(ll.tail.data, items[2], `LinkedList.tail should be the last item`);
   t.equal(ll.size, 2, `LinkedList.size should be 2`);
-  t.true(result, 'result should return true when an item is removed')
+  t.true(result, 'result should return true when an item is removed');
 
   t.end();
 });
@@ -107,11 +107,10 @@ test('LinkedList.remove(item) - should remove a middle item from the list', (t) 
   t.equal(ll.head.data, items[0], `LinkedList.head should be the first item`);
   t.equal(ll.tail.data, items[2], `LinkedList.tail should be the last item`);
   t.equal(ll.size, 2, `LinkedList.size should be 2`);
-  t.true(result, 'result should return true when an item is removed')
+  t.true(result, 'result should return true when an item is removed');
 
   t.end();
 });
-
 
 test('LinkedList.remove(item) - should remove the last item from the list', (t) => {
   const items = ['test1', 'test2', 'test3'];
@@ -121,7 +120,7 @@ test('LinkedList.remove(item) - should remove the last item from the list', (t) 
   t.equal(ll.head.data, items[0], `LinkedList.head should be the first item`);
   t.equal(ll.tail.data, items[1], `LinkedList.tail should be the second item`);
   t.equal(ll.size, 2, `LinkedList.size should be 2`);
-  t.true(result, 'result should return true when an item is removed')
+  t.true(result, 'result should return true when an item is removed');
 
   t.end();
 });
@@ -146,7 +145,7 @@ test('LinkedList.remove(not-item) - should remove nothing from the list', (t) =>
   t.equal(ll.head.data, items[0], `LinkedList.head should be the first item`);
   t.equal(ll.tail.data, items[2], `LinkedList.tail should be the last item`);
   t.equal(ll.size, 3, `LinkedList.size should be 3`);
-  t.false(result, 'result should return true when an item is removed')
+  t.false(result, 'result should return true when an item is removed');
 
   t.end();
 });
@@ -158,7 +157,7 @@ test('LinkedList.remove() - should throw  when no item is specified', (t) => {
 
   try {
     ll.remove();
-  } catch(e) {
+  } catch (e) {
     t.pass(`Expected exception thrown`);
   }
 
@@ -171,7 +170,7 @@ test('LinkedList.remove(item) - should throw when called on an empty list', (t) 
 
   try {
     ll.remove('test1');
-  } catch(e) {
+  } catch (e) {
     t.pass(`Expected exception thrown`);
   }
 
@@ -189,7 +188,6 @@ test('LinkedList.clear() - should remove all items from the list', (t) => {
 
   t.end();
 });
-
 
 test('LinkedList[Symbol.iterator] - should be iterable', (t) => {
   const items = ['test1', 'test2', 'test3'];
