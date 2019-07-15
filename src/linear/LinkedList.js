@@ -68,7 +68,7 @@ export class LinkedList {
    * Remove an item from the list
    *
    * @param {*} [item=null]
-   * @return {boolean}
+   * @returns {boolean}
    */
   remove (item = null) {
     if (item === null) { throw Error(`'item' parameter not defined`); }
@@ -113,7 +113,7 @@ export class LinkedList {
    * Iterate all items (in-order) in the list
    *
    * @ignore
-   * @return {Iterator<*>}
+   * @returns {Iterator<*>}
    */
   [Symbol.iterator] () {
     let item = this.head;
