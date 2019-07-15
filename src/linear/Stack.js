@@ -1,13 +1,40 @@
+// @ts-check
+
+/**
+ * @export
+ * @class Stack
+ */
 export class Stack {
+  /**
+   * The top item of the stack
+   *
+   * @ignore
+   * @type {Object}
+   */
   top = null;
+
+  /**
+   * The number of items in the list
+   * @type {number}
+   */
   size = 0;
 
+  /**
+   *Creates an instance of Stack.
+   * @constructs Stack
+   * @param {array} [items]
+   */
   constructor (items) {
     if (items) {
       this.pushAll(items);
     }
   }
 
+  /**
+   * Add an item to the stack
+   *
+   * @param {*} [item=null]
+   */
   push (item = null) {
     if (item === null) { throw Error(`'item' parameter not defined`); }
     if (this.size === 0) {
@@ -19,12 +46,22 @@ export class Stack {
     this.size++;
   }
 
+  /**
+   * Add multiple items to the stack
+   *
+   * @param {*[]} [items=null]
+   */
   pushAll (items = null) {
     if (items === null) { throw Error(`'items' parameter not defined`); }
 
     items.forEach(item => this.push(item));
   }
 
+  /**
+   * Remove and return the top item of the stack
+   *
+   * @returns {*}
+   */
   pop () {
     if (this.size === 0) { throw Error(`can't pop an item from an empty stack`); }
     const item = this.top.data;
@@ -34,17 +71,30 @@ export class Stack {
     return item;
   }
 
+  /**
+   * Return the top item of the stack
+   *
+   * @returns {*}
+   */
   peek () {
     if (this.size === 0) { throw Error(`can't peek an item from an empty stack`); }
 
     return this.top.data;
   }
 
+  /**
+   * Remove all items from the list
+   */
   clear () {
     this.top = null;
     this.size = 0;
   }
 
+  /**
+   * Iterate all items (top-to-bottom) in the list
+   *
+   * @returns {Iterator<*>}
+   */
   [Symbol.iterator] () {
     let item = this.top;
     return {
@@ -61,6 +111,10 @@ export class Stack {
   }
 }
 
+/**
+ * @class StackNode
+ * @private
+ */
 class StackNode {
   data;
   link;
