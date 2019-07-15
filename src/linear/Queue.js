@@ -1,14 +1,47 @@
+// @ts-check
+
+/**
+ * @export
+ * @class Queue
+ */
 export class Queue {
+  /**
+   * The first item in the queue
+   *
+   * @private
+   * @type {Object}
+   */
   first = null;
+
+  /**
+   * The last item in the queue
+   *
+   * @private
+   * @type {Object}
+   */
   last = null;
+
+  /**
+   * The number of items in the queue
+   * @type {number}
+   */
   size = 0;
 
+  /**
+   * @constructs Queue
+   * @param {array} [items]
+   */
   constructor (items) {
     if (items) {
       this.enqueueAll(items);
     }
   }
 
+  /**
+   * Add an item to the end of the queue
+   *
+   * @param {*} [item=null]
+   */
   enqueue (item = null) {
     if (item === null) { throw Error(`'item' parameter not defined`); }
     if (this.size !== 0) {
@@ -22,12 +55,22 @@ export class Queue {
     this.size++;
   }
 
+  /**
+   * Add multiple items to the end of the queue
+   *
+   * @param {*[]} [items=null]
+   */
   enqueueAll (items = null) {
     if (items === null) { throw Error(`'items' parameter not defined`); }
 
     items.forEach(item => this.enqueue(item));
   }
 
+  /**
+   * Remove and return the first item in the queue
+   *
+   * @returns {*}
+   */
   dequeue () {
     if (this.size === 0) { throw Error(`can't dequeue an item from an empty queue`); }
     const dequeued = this.first;
@@ -42,18 +85,32 @@ export class Queue {
     return dequeued.data;
   }
 
+  /**
+   * Return the first item in the queue
+   *
+   * @returns {*}
+   */
   peek () {
     if (this.size === 0) { throw Error(`can't peek an item from an empty stack`); }
 
     return this.first.data;
   }
 
+  /**
+   * Remove all items from the queue
+   */
   clear () {
     this.first = null;
     this.last = null;
     this.size = 0;
   }
 
+  /**
+   * Iterate all items (first-to-last) in the queue
+   *
+   * @ignore
+   * @returns {Iterator<*>}
+   */
   [Symbol.iterator] () {
     let item = this.first;
     return {
@@ -70,6 +127,10 @@ export class Queue {
   }
 }
 
+/**
+ * @class QueueNode
+ * @private
+ */
 class QueueNode {
   data;
   link;

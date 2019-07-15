@@ -1,3 +1,4 @@
+// @ts-check
 import test from 'tape';
 import { Queue } from './Queue.js';
 
