@@ -7,14 +7,14 @@
 export class LinkedList {
   /**
    * The head node in the list
-   * @ignore
+   * @private
    * @type {Object}
    */
   head = null;
 
   /**
    * The tail node in the list
-   * @ignore
+   * @private
    * @type {Object}
    */
   tail = null;

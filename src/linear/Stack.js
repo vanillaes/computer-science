@@ -8,19 +8,18 @@ export class Stack {
   /**
    * The top item of the stack
    *
-   * @ignore
+   * @private
    * @type {Object}
    */
   top = null;
 
   /**
-   * The number of items in the list
+   * The number of items in the stack
    * @type {number}
    */
   size = 0;
 
   /**
-   *Creates an instance of Stack.
    * @constructs Stack
    * @param {array} [items]
    */
@@ -31,7 +30,7 @@ export class Stack {
   }
 
   /**
-   * Add an item to the stack
+   * Add an item to the top of the stack
    *
    * @param {*} [item=null]
    */
@@ -83,7 +82,7 @@ export class Stack {
   }
 
   /**
-   * Remove all items from the list
+   * Remove all items from the stack
    */
   clear () {
     this.top = null;
@@ -91,8 +90,9 @@ export class Stack {
   }
 
   /**
-   * Iterate all items (top-to-bottom) in the list
+   * Iterate all items (top-to-bottom) in the stack
    *
+   * @ignore
    * @returns {Iterator<*>}
    */
   [Symbol.iterator] () {
