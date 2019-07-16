@@ -2,7 +2,7 @@
 import test from 'tape';
 import { Stack } from './Stack.js';
 
-test('new Stack - should create a new empty stack', (t) => {
+test('new Stack() - should create a new empty stack', (t) => {
   const s = new Stack();
 
   t.notEqual(s, null, `Stack should exist`);

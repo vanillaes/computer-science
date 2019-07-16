@@ -2,7 +2,7 @@
 import test from 'tape';
 import { LinkedList } from './LinkedList.js';
 
-test('new LinkedList - should create a new empty list', (t) => {
+test('new LinkedList() - should create a new empty list', (t) => {
   const ll = new LinkedList();
 
   t.notEqual(ll, null, `LinkedList should exist`);

@@ -2,7 +2,7 @@
 import test from 'tape';
 import { Queue } from './Queue.js';
 
-test('new Queue - should create a new empty queue', (t) => {
+test('new Queue() - should create a new empty queue', (t) => {
   const q = new Queue();
 
   t.notEqual(q, null, `Queue should exist`);
