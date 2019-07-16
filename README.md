@@ -22,18 +22,32 @@ import { LinkedList, Stack } from './compsci.js';
 
 ## API Documentation
 
-### [Linear][]
+### Linear
+
+Linear data structures get their name because they are typically used to map 1-to-1 relationships between data elements in a one-dimensional fashion.
 
 - [LinkedList][]
 - [Stack][]
+- [Queue][]
 
-[Linear]: ./docs/linear.md
-[LinkedList]: ./docs/linear.md#linkedlist
-[Stack]: ./docs/linear.md#stack
+[LinkedList]: ./docs/linkedlist.md
+[Stack]: ./docs/stack.md
+[Queue]: ./docs/queue.md
 
 ## Related Materials
 
-- [JavaScript-Algorithms - Minko Gechev](https://github.com/mgechev/javascript-algorithms)
-- [thank u, [Symbol.iterator].next](https://medium.com/front-end-weekly/thank-u-symbol-iterator-next-aef9f09ff78)
-- [Data Structures and Algorithms (DSA) - Adrian Mejia](https://adrianmejia.com/categories/coding/data-structures-and-algorithms-dsa/)
-- [Practice - GeeksForGeeks.org](https://practice.geeksforgeeks.org/)
+- [Algorithms (4th ed)][]
+- [William Fiset - YouTube][]
+- [JavaScript-Algorithms - Oleksii Trekhleb][]
+- [JavaScript-Algorithms - Minko Gechev][]
+- [Data Structures and Algorithms (DSA) - Adrian Mejia][]
+- [Practice - GeeksForGeeks.org][]
+- [thank u, Symbol.iterator.next][]
+
+[Algorithms (4th ed)]: https://algs4.cs.princeton.edu/home/
+[William Fiset - YouTube]: https://www.youtube.com/channel/UCD8yeTczadqdARzQUp29PJw
+[JavaScript-Algorithms - Oleksii Trekhleb]: https://github.com/trekhleb/javascript-algorithms
+[JavaScript-Algorithms - Minko Gechev]: https://github.com/mgechev/javascript-algorithms
+[Data Structures and Algorithms (DSA) - Adrian Mejia]: https://adrianmejia.com/categories/coding/data-structures-and-algorithms-dsa/
+[Practice - GeeksForGeeks.org]: https://practice.geeksforgeeks.org/
+[thank u, Symbol.iterator.next]: https://medium.com/front-end-weekly/thank-u-symbol-iterator-next-aef9f09ff78
