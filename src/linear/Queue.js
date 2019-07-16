@@ -1,8 +1,8 @@
 // @ts-check
 
 /**
- * @export
  * @class Queue
+ * @exports
  */
 export class Queue {
   /**

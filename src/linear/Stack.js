@@ -1,8 +1,8 @@
 // @ts-check
 
 /**
- * @export
  * @class Stack
+ * @exports
  */
 export class Stack {
   /**

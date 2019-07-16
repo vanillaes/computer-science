@@ -1,8 +1,8 @@
 // @ts-check
 
 /**
- * @export
  * @class LinkedList
+ * @exports
  */
 export class LinkedList {
   /**
