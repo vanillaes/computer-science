@@ -10,10 +10,9 @@ export class QuickFind {
    * The identity array
    *
    * @private
-   * @type {Number[]}
+   * @type {Map}
    */
-  id = [];
-
+  verticies = null;
 
   /**
    * The number of sets
@@ -22,23 +21,17 @@ export class QuickFind {
    */
   count = 0;
 
-
   /**
    * @constructs QuickFind
-   * @param {*} [size=0]
+   * @param {*[]} [values]
    */
-  constructor(size = 0) {
-    const id = new Array(size);
+  constructor(values = []) {
+    this.verticies = new Map();
+    values.forEach((value, i) => {
+      this.verticies.set(value, i);
+    });
 
-    // create identities
-    for (let i = 0; i < size; i++) {
-      id[i] = i;
-    }
-
-    this.id = id;
-    this.count = size;
-
-    console.log(this.id);
+    this.count = this.verticies.size;
   }
 
   /**
@@ -48,20 +41,21 @@ export class QuickFind {
    * @returns {Number}
    */
   find(value) {
-    return this.id[value];
+    const id = this.verticies.get(value);
+    if (id === undefined) { throw Error(`Item: ${value} not found in the set`); }
+    return id;
   }
 
   /**
    * Are the 2 verticies connected?
    *
-   * @param {*} idA
-   * @param {*} idB
+   * @param {*} valueA
+   * @param {*} valueB
    * @returns {boolean}
    */
-  connected(idA, idB) {
-    return this.find(idA) === this.find(idB);
+  connected(valueA, valueB) {
+    return this.find(valueA) === this.find(valueB);
   }
-
 
   /**
    * Join the verticies if not alredy in the same set
@@ -74,15 +68,12 @@ export class QuickFind {
     
     const idA = this.find(valueA);
     const idB = this.find(valueB);
-      for (let i = 0; i < this.id.length; i++) {
-        if(this.id[i] == idA) {
-          this.id[i] = idB;
-        }
-      }
-    this.count--;
-    
-    console.log(`Union ${idA} + ${idB}`);
-    console.log(this.id);
-  }
 
+    this.verticies.forEach((id, key) => {
+      if (id === idA) {
+        this.verticies.set(key, idB);
+      }
+    });
+    this.count--;
+  }
 }
