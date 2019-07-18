@@ -76,4 +76,15 @@ export class QuickFind {
     });
     this.count--;
   }
+
+  sets() {
+    const verticies = [...this.verticies.entries()];
+    const sets = verticies.reduce((acc, curr) => {
+      // create the set array if it doesn't exist
+      if (acc[curr[1]] === undefined) { acc[curr[1]] = []; }
+      acc[curr[1]].push(curr[0]);
+      return acc;
+    }, {});
+    return Object.values(sets);
+ }
 }

@@ -105,3 +105,24 @@ test('QuickFind.connected(itemA, itemB) - should return true if the verticies ar
 
   t.end();
 });
+
+test('QuickFind.sets() - Returns a 2D array containing the sets of joined verticies', (t) => {
+  const qf = new QuickFind([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
+  qf.union(4, 3);
+  qf.union(3, 8);
+  qf.union(6, 5);
+  qf.union(9, 4);
+  qf.union(2, 1);
+  const expected = [
+    [0],
+    [1, 2],
+    [5, 6],
+    [7],
+    [3, 4, 8, 9]
+  ];
+  const result = qf.sets();
+
+  t.deepEqual(result, expected, `Outputs the correct sets`);
+
+  t.end();
+});
