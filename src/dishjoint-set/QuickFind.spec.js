@@ -47,8 +47,8 @@ test('new QuickFind(items) - should create a set populated with items', (t) => {
 
 test('QuickFind.find(item) - should return the id of the item', (t) => {
   const qf = new QuickFind(['a', 'b', 'c', 'd']);
-  const expected  = 1;
-  const result = qf.find('b')
+  const expected = 1;
+  const result = qf.find('b');
 
   t.deepEqual(result, expected, `QuickFind.find should return the correct id`);
 
@@ -70,7 +70,7 @@ test('QuickFind.find(item) - should throw if the item is not in the set', (t) =>
 
 test('QuickFind.connected(itemA, itemB) - should return false if the verticies are not connected', (t) => {
   const qf = new QuickFind(['a', 'b', 'c', 'd']);
-  const result = qf.connected('a', 'b')
+  const result = qf.connected('a', 'b');
 
   t.deepEqual(result, false, `QuickFind.connected should return false`);
 
@@ -80,7 +80,7 @@ test('QuickFind.connected(itemA, itemB) - should return false if the verticies a
 test('QuickFind.connected(itemA, itemB) - should return true if the verticies are connected', (t) => {
   const qf = new QuickFind(['a', 'b', 'c', 'd']);
   qf.verticies.set('c', 1);
-  const result = qf.connected('b', 'c')
+  const result = qf.connected('b', 'c');
 
   t.deepEqual(result, true, `QuickFind.connected should return true`);
 

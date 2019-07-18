@@ -5,7 +5,6 @@
  * @exports
  */
 export class QuickFind {
-
   /**
    * The identity array
    *
@@ -25,7 +24,7 @@ export class QuickFind {
    * @constructs QuickFind
    * @param {*[]} [values]
    */
-  constructor(values = []) {
+  constructor (values = []) {
     this.verticies = new Map();
     values.forEach((value, i) => {
       this.verticies.set(value, i);
@@ -40,9 +39,10 @@ export class QuickFind {
    * @param {*} value
    * @returns {Number}
    */
-  find(value) {
+  find (value) {
     const id = this.verticies.get(value);
     if (id === undefined) { throw Error(`Item: ${value} not found in the set`); }
+
     return id;
   }
 
@@ -53,7 +53,7 @@ export class QuickFind {
    * @param {*} valueB
    * @returns {boolean}
    */
-  connected(valueA, valueB) {
+  connected (valueA, valueB) {
     return this.find(valueA) === this.find(valueB);
   }
 
@@ -63,9 +63,9 @@ export class QuickFind {
    * @param {*} valueA
    * @param {*} valueB
    */
-  union(valueA, valueB) {
+  union (valueA, valueB) {
     if (this.connected(valueA, valueB)) { return; }
-    
+
     const idA = this.find(valueA);
     const idB = this.find(valueB);
 
@@ -77,7 +77,12 @@ export class QuickFind {
     this.count--;
   }
 
-  sets() {
+  /**
+   * Returns a 2D array of the unique sets and the values in those sets
+   *
+   * @returns [][]
+   */
+  sets () {
     const verticies = [...this.verticies.entries()];
     const sets = verticies.reduce((acc, curr) => {
       // create the set array if it doesn't exist
@@ -85,6 +90,7 @@ export class QuickFind {
       acc[curr[1]].push(curr[0]);
       return acc;
     }, {});
+
     return Object.values(sets);
- }
+  }
 }
