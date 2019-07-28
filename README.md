@@ -51,6 +51,7 @@ Linear data structures get their name because they are typically used to map 1-t
 - [JavaScript-Algorithms - Minko Gechev][]
 - [Data Structures and Algorithms (DSA) - Adrian Mejia][]
 - [Practice - GeeksForGeeks.org][]
+- [VISUALGO.net][]
 - [thank u, Symbol.iterator.next][]
 
 [Algorithms (4th ed)]: https://algs4.cs.princeton.edu/home/
@@ -59,4 +60,5 @@ Linear data structures get their name because they are typically used to map 1-t
 [JavaScript-Algorithms - Minko Gechev]: https://github.com/mgechev/javascript-algorithms
 [Data Structures and Algorithms (DSA) - Adrian Mejia]: https://adrianmejia.com/categories/coding/data-structures-and-algorithms-dsa/
 [Practice - GeeksForGeeks.org]: https://practice.geeksforgeeks.org/
+[VISUALGO.net]: https://visualgo.net/en
 [thank u, Symbol.iterator.next]: https://medium.com/front-end-weekly/thank-u-symbol-iterator-next-aef9f09ff78
