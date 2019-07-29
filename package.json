@@ -1,6 +1,6 @@
 {
   "name": "@vanillajs2/compsci",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "license": "MIT",
   "author": "Evan Plaice <evanplaice@gmail.com> (http://evanplaice.com/)",
   "description": "A repository containing typical reference algorithms & data structures",
