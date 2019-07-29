@@ -16,7 +16,7 @@ Unlike the QuickFind implementations found in most Algorithms textbooks (ie numb
 **Read: O(1)**
 
 - find - locates the ID of an item, requires a single dictionary lookup
-- connected - returns the first item without removing it
+- connected - performs a find on both values and compares them
 
 **Union: O(n)**
 
@@ -72,10 +72,10 @@ const sets = quickFind.sets();
 
 ## Resources
 
-[1.5 Case Study: Union-Find - Algorithms (4th ed)][]
-[Disjoint Set - trekhleb/javascript-algorithms][]
-[QuickFind.java - Algorithms (4th ed)][]
-[Union Find - Union and Find Operations][]
+- [1.5 Case Study: Union-Find - Algorithms (4th ed)][]
+- [Disjoint Set - trekhleb/javascript-algorithms][]
+- [QuickFind.java - Algorithms (4th ed)][]
+- [Union Find - Union and Find Operations][]
 
 [1.5 Case Study: Union-Find - Algorithms (4th ed)]: https://algs4.cs.princeton.edu/15uf/
 [QuickFind.java - Algorithms (4th ed)]: https://algs4.cs.princeton.edu/15uf/QuickFindUF.java.html
