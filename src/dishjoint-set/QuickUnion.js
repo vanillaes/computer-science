@@ -71,7 +71,7 @@ export class QuickUnion {
 
     const idA = this.find(valueA);
     const idB = this.find(valueB);
-    this.verticies.set(idA, idB)
+    this.verticies.set(idA, idB);
 
     this.count--;
   }

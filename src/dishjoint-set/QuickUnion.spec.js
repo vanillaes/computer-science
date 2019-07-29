@@ -19,7 +19,7 @@ test('new QuickUnion() - should create a set with verticies', (t) => {
     ['a', 1],
     ['b', 2],
     ['c', 3],
-    ['d', 4],
+    ['d', 4]
   ]);
 
   t.notEqual(qu, null, `QuickUnion should exist`);
