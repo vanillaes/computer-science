@@ -29,7 +29,6 @@ Disjoint sets a.k.a. UnionFind data structures are used to determine the connect
 - [QuickFind][]
 - [QuickUnion][]
 
-
 ### Linear
 
 Linear data structures get their name because they are typically used to map 1-to-1 relationships between data elements in a one-dimensional fashion.
@@ -38,12 +37,16 @@ Linear data structures get their name because they are typically used to map 1-t
 - [Stack][]
 - [Queue][]
 
+### Sorting
+
+- [selectionSort][]
+
 [QuickFind]: ./docs/quickfind.md
 [QuickUnion]: ./docs/quickunion.md
 [LinkedList]: ./docs/linkedlist.md
 [Stack]: ./docs/stack.md
 [Queue]: ./docs/queue.md
-
+[selectionSort]: ./docs/selectionsort.md
 
 ## Related Materials
 
