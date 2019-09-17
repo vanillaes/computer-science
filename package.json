@@ -1,5 +1,5 @@
 {
-  "name": "@vanillajs2/compsci",
+  "name": "computerscience",
   "version": "0.6.1",
   "license": "MIT",
   "author": "Evan Plaice <evanplaice@gmail.com> (http://evanplaice.com/)",
@@ -8,7 +8,7 @@
     "vanilla",
     "esm"
   ],
-  "repository": "git@github.com:vanillajs2/compsci.git",
+  "repository": "git@github.com:vanillajs2/computerscience.git",
   "main": "index.js",
   "type": "module",
   "scripts": {
