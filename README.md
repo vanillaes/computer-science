@@ -1,14 +1,26 @@
 <!-- [![npm](https://img.shields.io/npm/v/@vanillajs2/compsci.js.svg)](https://www.npmjs.com/package/@vanillajs/compsci.js) -->
 
-# CompSci.js
+# Computer Science
 
-## Computer Science the Modern Javascript Way
+Algorithms and data structures are essential foundations if you ever want to advance in the professional development world. The goal of this library is to provide a moderm Javascript specific reference to study and experiment with a wide range of general purpose algorithms and data structures. This is by-no-means the first JS lib of its kind but it is the first that is 100% dedicated to using modern JS practices and patterns.
 
-Algorithms and data structures are essential foundations if you ever want to advance beyond the #NerdKeepers of the professional development world. With the latest additions to JS, not only is it possible to implement these tools in a way that matches other typical CompSci languages (ex Java); with the additions of langauge extensions like the `[symbol.iterator]` JS is capable of prividing an even better DX (Developer Experience).
+## Modern Javascript
 
-## What's the Point?
+ECMAScript standards have come a long way in the past 5 years (ie ES2015 - ES2020) but it will take a lot of time for the rest of the greater JS ecosystem to catch up. This library is a 'clean room' implementation, written from scratch to use modern practices by default.
 
-Self-taught or academically educated. If you have aspirations to be a professional deveoper, eventually you'll need to know this. Instead of wasting time/effort on outdated courses, blogs, libraries, etc; the goal of this repo is to provide everything you need to get started using only modern best practices.  
+For Example:
+
+- all modules ES modules
+- index.js define the public API
+- no build-tooling required
+- classes are used liberally 
+- `[Symbol.iterator]` definitions for data structures
+- cross-browser compatibility is a low priority
+- in Node.js this package loads as type=module
+
+That means...
+
+Not only does this package provide a useful reference for Computer Science principles but it also works as a reference for Modern JS best-practices.  
 
 ## Usage
 
