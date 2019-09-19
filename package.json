@@ -14,8 +14,8 @@
   "scripts": {
     "test": "find . -wholename '**/*.spec.js' -not -path './node_modules/*' | xargs -n1 node --experimental-modules",
     "test:watch": "npx chokidar-cli -i 'node_modules' '**/*.js' -c 'npm test'",
-    "lint": "npx semistandard",
     "types": "npx tsc",
+    "lint": "semistandard",
     "package": "npx rimraf package && npm pack | tail -n 1 | xargs tar -xf",
     "preversion": "npm test && npm run lint && npm run types",
     "postversion": "git push --follow-tags"
@@ -24,7 +24,7 @@
   "devDependencies": {
     "@types/tape": "^4.2.33",
     "babel-eslint": "^10.0.3",
-    "semistandard": "^13.0.1",
+    "semistandard": "^14.2.0",
     "tape": "^4.11.0"
   },
   "engines": {
