@@ -12,6 +12,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
+    "docs": "node --experimental-modules docs.config.js",
     "test": "find . -wholename '**/*.spec.js' -not -path './node_modules/*' | xargs -n1 node --experimental-modules",
     "test:watch": "npx chokidar-cli -i 'node_modules' '**/*.js' -c 'npm test'",
     "lint": "semistandard",
@@ -24,6 +25,8 @@
   "devDependencies": {
     "@types/tape": "^4.2.33",
     "babel-eslint": "^10.0.3",
+    "docdown": "github:evanplaice/docdown",
+    "glob": "^7.1.4",
     "semistandard": "^14.2.0",
     "tape": "^4.11.0"
   },
@@ -33,6 +36,7 @@
   "semistandard": {
     "parser": "babel-eslint",
     "ignore": [
+      "docs.config.js",
       "index.js"
     ]
   }

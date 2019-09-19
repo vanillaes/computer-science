@@ -4,5 +4,8 @@
     "noEmit": true,
     "target": "es2017",
     "allowSyntheticDefaultImports": true
-  }
+  },
+  "exclude": [
+    "docs.config.js"
+  ]
 }
