@@ -14,8 +14,8 @@
   "scripts": {
     "test": "find . -wholename '**/*.spec.js' -not -path './node_modules/*' | xargs -n1 node --experimental-modules",
     "test:watch": "npx chokidar-cli -i 'node_modules' '**/*.js' -c 'npm test'",
-    "types": "npx tsc",
     "lint": "semistandard",
+    "types": "npx tsc --checkJs",
     "package": "npx rimraf package && npm pack | tail -n 1 | xargs tar -xf",
     "preversion": "npm test && npm run lint && npm run types",
     "postversion": "git push --follow-tags"

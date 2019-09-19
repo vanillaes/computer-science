@@ -1,5 +1,3 @@
-// @ts-check
-
 /**
  * Sorts an array of items
  *

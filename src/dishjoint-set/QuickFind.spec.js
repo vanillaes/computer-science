@@ -1,4 +1,3 @@
-// @ts-check
 import test from 'tape';
 import { QuickFind } from './QuickFind.js';
 

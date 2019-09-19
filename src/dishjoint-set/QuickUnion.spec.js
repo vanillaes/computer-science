@@ -1,4 +1,3 @@
-// @ts-check
 import test from 'tape';
 import { QuickUnion } from './QuickUnion.js';
 
