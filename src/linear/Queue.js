@@ -41,7 +41,7 @@ export class Queue {
    * @param {*} [item=null]
    */
   enqueue (item = null) {
-    if (item === null) { throw Error(`'item' parameter not defined`); }
+    if (item === null) { throw Error('\'item\' parameter not defined'); }
     if (this.size !== 0) {
       const prevLast = this.last;
       this.last = new QueueNode(item, null);
@@ -59,7 +59,7 @@ export class Queue {
    * @param {*[]} [items=null]
    */
   enqueueAll (items = null) {
-    if (items === null) { throw Error(`'items' parameter not defined`); }
+    if (items === null) { throw Error('\'items\' parameter not defined'); }
 
     items.forEach(item => this.enqueue(item));
   }
@@ -70,7 +70,7 @@ export class Queue {
    * @returns {*}
    */
   dequeue () {
-    if (this.size === 0) { throw Error(`can't dequeue an item from an empty queue`); }
+    if (this.size === 0) { throw Error('can\'t dequeue an item from an empty queue'); }
     const dequeued = this.first;
     if (this.size === 1) {
       this.first = null;
@@ -89,7 +89,7 @@ export class Queue {
    * @returns {*}
    */
   peek () {
-    if (this.size === 0) { throw Error(`can't peek an item from an empty stack`); }
+    if (this.size === 0) { throw Error('can\'t peek an item from an empty stack'); }
 
     return this.first.data;
   }

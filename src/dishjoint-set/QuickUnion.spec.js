@@ -5,9 +5,9 @@ test('new QuickUnion() - should create an empty set', (t) => {
   const qu = new QuickUnion();
   const expected = new Map();
 
-  t.notEqual(qu, null, `QuickUnion should exist`);
-  t.deepEqual(qu.verticies, expected, `QuickUnion.verticies should initialize to an empty array`);
-  t.equal(qu.count, 0, `QuickUnion.count should be 0`);
+  t.notEqual(qu, null, 'QuickUnion should exist');
+  t.deepEqual(qu.verticies, expected, 'QuickUnion.verticies should initialize to an empty array');
+  t.equal(qu.count, 0, 'QuickUnion.count should be 0');
 
   t.end();
 });
@@ -21,9 +21,9 @@ test('new QuickUnion() - should create a set with verticies', (t) => {
     ['d', 4]
   ]);
 
-  t.notEqual(qu, null, `QuickUnion should exist`);
-  t.deepEqual(qu.verticies, expected, `QuickUnion.verticies should initialize w/ 4 verticies`);
-  t.equal(qu.count, 4, `QuickUnion.count should be 4`);
+  t.notEqual(qu, null, 'QuickUnion should exist');
+  t.deepEqual(qu.verticies, expected, 'QuickUnion.verticies should initialize w/ 4 verticies');
+  t.equal(qu.count, 4, 'QuickUnion.count should be 4');
 
   t.end();
 });
@@ -37,9 +37,9 @@ test('new QuickUnion(items) - should create a set populated with items', (t) => 
     ['d', 3]
   ]);
 
-  t.notEqual(qu, null, `QuickUnion should exist`);
-  t.deepEqual(qu.verticies, expected, `QuickUnion.verticies should initialize w/ 4 verticies`);
-  t.equal(qu.count, 4, `QuickUnion.count should be 4`);
+  t.notEqual(qu, null, 'QuickUnion should exist');
+  t.deepEqual(qu.verticies, expected, 'QuickUnion.verticies should initialize w/ 4 verticies');
+  t.equal(qu.count, 4, 'QuickUnion.count should be 4');
 
   t.end();
 });
@@ -49,7 +49,7 @@ test('QuickUnion.find(item) - should return the id of the item', (t) => {
   const expected = 'b';
   const result = qu.find('b');
 
-  t.deepEqual(result, expected, `QuickUnion.find should return the correct id`);
+  t.deepEqual(result, expected, 'QuickUnion.find should return the correct id');
 
   t.end();
 });
@@ -61,7 +61,7 @@ test('QuickUnion.find(item) - should throw if the item is not in the set', (t) =
   try {
     qu.find('x');
   } catch (e) {
-    t.pass(`Expected exception thrown`);
+    t.pass('Expected exception thrown');
   }
 
   t.end();
@@ -71,7 +71,7 @@ test('QuickUnion.connected(itemA, itemB) - should return false if the verticies 
   const qu = new QuickUnion(['a', 'b', 'c', 'd']);
   const result = qu.connected('a', 'b');
 
-  t.deepEqual(result, false, `QuickFind.connected should return false`);
+  t.deepEqual(result, false, 'QuickFind.connected should return false');
 
   t.end();
 });
@@ -81,7 +81,7 @@ test('QuickUnion.connected(itemA, itemB) - should return true if the verticies a
   qu.verticies.set('c', 'b');
   const result = qu.connected('b', 'c');
 
-  t.deepEqual(result, true, `QuickUnion.connected should return true`);
+  t.deepEqual(result, true, 'QuickUnion.connected should return true');
 
   t.end();
 });
@@ -99,8 +99,8 @@ test('QuickUnion.connected(itemA, itemB) - should return true if the verticies a
   const expected = [1, 1, 1, 8, 3, 0, 5, 1, 8, 8];
   const result = [...qu.verticies.values()];
 
-  t.deepEqual(result, expected, `QuickUnion.verticies should have the correct data`);
-  t.equal(qu.count, 2, `QuickUnion.count should be 2`);
+  t.deepEqual(result, expected, 'QuickUnion.verticies should have the correct data');
+  t.equal(qu.count, 2, 'QuickUnion.count should be 2');
 
   t.end();
 });
@@ -121,7 +121,7 @@ test('QuickUnion.sets() - Returns a 2D array containing the sets of joined verti
   ];
   const result = qu.sets();
 
-  t.deepEqual(result, expected, `Outputs the correct sets`);
+  t.deepEqual(result, expected, 'Outputs the correct sets');
 
   t.end();
 });

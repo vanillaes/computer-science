@@ -33,7 +33,7 @@ export class Stack {
    * @param {*} [item=null]
    */
   push (item = null) {
-    if (item === null) { throw Error(`'item' parameter not defined`); }
+    if (item === null) { throw Error('\'item\' parameter not defined'); }
     if (this.size === 0) {
       this.top = new StackNode(item, null);
     } else {
@@ -49,7 +49,7 @@ export class Stack {
    * @param {*[]} [items=null]
    */
   pushAll (items = null) {
-    if (items === null) { throw Error(`'items' parameter not defined`); }
+    if (items === null) { throw Error('\'items\' parameter not defined'); }
 
     items.forEach(item => this.push(item));
   }
@@ -60,7 +60,7 @@ export class Stack {
    * @returns {*}
    */
   pop () {
-    if (this.size === 0) { throw Error(`can't pop an item from an empty stack`); }
+    if (this.size === 0) { throw Error('can\'t pop an item from an empty stack'); }
     const item = this.top.data;
     this.top = this.top.link;
     this.size--;
@@ -74,7 +74,7 @@ export class Stack {
    * @returns {*}
    */
   peek () {
-    if (this.size === 0) { throw Error(`can't peek an item from an empty stack`); }
+    if (this.size === 0) { throw Error('can\'t peek an item from an empty stack'); }
 
     return this.top.data;
   }

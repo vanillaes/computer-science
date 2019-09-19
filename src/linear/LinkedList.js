@@ -39,7 +39,7 @@ export class LinkedList {
    * @param {*} [item=null]
    */
   add (item = null) {
-    if (item === null) { throw Error(`'item' parameter not defined`); }
+    if (item === null) { throw Error('\'item\' parameter not defined'); }
     if (this.size === 0) {
       this.tail = new ListNode(item, null);
       this.head = this.tail;
@@ -57,7 +57,7 @@ export class LinkedList {
    * @param {*[]} [items=null]
    */
   addAll (items = null) {
-    if (items === null) { throw Error(`'items' parameter not defined`); }
+    if (items === null) { throw Error('\'items\' parameter not defined'); }
 
     items.forEach(item => this.add(item));
   }
@@ -69,8 +69,8 @@ export class LinkedList {
    * @returns {boolean}
    */
   remove (item = null) {
-    if (item === null) { throw Error(`'item' parameter not defined`); }
-    if (this.size === 0) { throw Error(`can't remove an item from an empty list`); }
+    if (item === null) { throw Error('\'item\' parameter not defined'); }
+    if (this.size === 0) { throw Error('can\'t remove an item from an empty list'); }
 
     let prev = this.head;
     let curr = this.head;
