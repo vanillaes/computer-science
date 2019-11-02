@@ -13,7 +13,7 @@ const docPath = join(__dirname, 'docs');
 const baseConfig = {
   toc: 'none',
   style: 'github',
-  url: `https://github.com/vanillajs2/computerscience/doc/README.md`,
+  url: `https://github.com/vanillaes/computerscience/doc/README.md`,
   sourceLink: '',
   tocHref: '',
   tocLink: ''

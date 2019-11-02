@@ -1,8 +1,8 @@
-[![GitHub release](https://img.shields.io/github/release/vanillajs2/computerscience.svg)](https://github.com/vanillajs2/computerscience/releases)
+[![GitHub release](https://img.shields.io/github/release/vanillaes/computerscience.svg)](https://github.com/vanillaes/computerscience/releases)
 [![npm](https://img.shields.io/npm/v/computerscience.svg)](https://www.npmjs.com/package/computerscience)
-[![David](https://img.shields.io/david/dev/vanillajs2/computerscience.svg)](https://david-dm.org/vanillajs2/computerscience?type=dev)
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/vanillajs2/computerscience/master/LICENSE)
-[![Actions Status](https://github.com/vanillajs2/computerscience/workflows/Release/badge.svg)](https://github.com/vanillajs2/computerscience/actions)
+[![David](https://img.shields.io/david/dev/vanillaes/computerscience.svg)](https://david-dm.org/vanillaes/computerscience?type=dev)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/vanillaes/computerscience/master/LICENSE)
+[![Actions Status](https://github.com/vanillaes/computerscience/workflows/Release/badge.svg)](https://github.com/vanillaes/computerscience/actions)
 
 # Computer Science
 
