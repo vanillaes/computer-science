@@ -41,10 +41,9 @@ import { LinkedList, Stack } from './compsci.js';
 
 ### Disjoint-Sets
 
-Disjoint sets a.k.a. UnionFind data structures are used to determine the connectivity within a graph by grouping verticies into unique sets.
+Disjoint sets are used to determine the connectivity within a graph by grouping verticies into unique sets.
 
-- [QuickFind][]
-- [QuickUnion][]
+- [UnionFind][]
 
 ### Linear
 
@@ -58,8 +57,7 @@ Linear data structures get their name because they are typically used to map 1-t
 
 - [selectionSort][]
 
-[QuickFind]: ./docs/quickfind.md
-[QuickUnion]: ./docs/quickunion.md
+[UnionFind]: ./docs/unionfind.md
 [LinkedList]: ./docs/linkedlist.md
 [Stack]: ./docs/stack.md
 [Queue]: ./docs/queue.md

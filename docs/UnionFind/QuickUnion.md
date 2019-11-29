@@ -1,4 +1,4 @@
-# disjoint-set.QuickFind
+# UnionFind.QuickUnion
 
 <!-- div class="doc-container" -->
 
@@ -12,11 +12,11 @@
 Are the `2` verticies connected?
 
 #### Arguments
-1. `valueA` *(&#42;)*:
-2. `valueB` *(&#42;)*:
+1. `valueA` *(&#42;)*: the first vertex to compare
+2. `valueB` *(&#42;)*: the second vertex to compare
 
 #### Returns
-*(boolean)*:
+*(boolean)*: true if the verticies are connected, false if not
 
 ---
 
@@ -34,7 +34,7 @@ Are the `2` verticies connected?
 
 
 #### Arguments
-1. `[values]` *(&#42;&#91;&#93;)*:
+1. `[values]` *(&#42;&#91;&#93;)*: an array of verticies to add to the set
 
 ---
 
@@ -67,10 +67,10 @@ Are the `2` verticies connected?
 Find the id for a value
 
 #### Arguments
-1. `value` *(&#42;)*:
+1. `value` *(&#42;)*: the value to lookup
 
 #### Returns
-*(Number)*:
+*(&#42;)*: the identity of the set containing the item
 
 ---
 
@@ -88,7 +88,7 @@ Find the id for a value
 Returns a `2`D array of the unique sets and the values in those sets
 
 #### Returns
-*(&#42;)*: &#91;&#93;&#91;&#93;
+*(&#42;)*: &#91;&#93;&#91;&#93; a `2`D array containing the disjoint sets
 
 ---
 
@@ -106,8 +106,8 @@ Returns a `2`D array of the unique sets and the values in those sets
 Join the verticies if not alredy in the same set
 
 #### Arguments
-1. `valueA` *(&#42;)*:
-2. `valueB` *(&#42;)*:
+1. `valueA` *(&#42;)*: the first vertex to connect
+2. `valueB` *(&#42;)*: the second vertex to connect
 
 ---
 
