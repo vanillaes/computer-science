@@ -1,4 +1,4 @@
-# linear.LinkedList
+# LinkedList.LinkedList
 
 <!-- div class="doc-container" -->
 
@@ -7,30 +7,12 @@
 
 <!-- div -->
 
-<h3 id="symboliterator"><code>[Symbol.iterator]()</code></h3>
-
-Iterate all items *(in-order)* in the list
-
-#### Returns
-*(&#42;)*:
-
----
-
-<!-- /div -->
-
-<!-- /div -->
-
-<!-- div -->
-
-
-<!-- div -->
-
-<h3 id="additemnull"><code>add([item=null])</code></h3>
+<h3 id="additem"><code>add(item)</code></h3>
 
 Add an item to the list
 
 #### Arguments
-1. `[item=null]` *(&#42;)*:
+1. `item` *(&#42;)*: an item to add to the list
 
 ---
 
@@ -43,12 +25,27 @@ Add an item to the list
 
 <!-- div -->
 
-<h3 id="addallitemsnull"><code>addAll([items=null])</code></h3>
+<h3 id="addallitems"><code>addAll(items)</code></h3>
 
 Add multiple items to the list
 
 #### Arguments
-1. `[items=null]` *(&#42;&#91;&#93;)*:
+1. `items` *(&#42;&#91;&#93;)*: an array of items to be added to the list
+
+---
+
+<!-- /div -->
+
+<!-- /div -->
+
+<!-- div -->
+
+
+<!-- div -->
+
+<h3 id="clear"><code>clear()</code></h3>
+
+Remove all items from the list
 
 ---
 
@@ -66,7 +63,7 @@ Add multiple items to the list
 
 
 #### Arguments
-1. `[items]` *(array)*:
+1. `[items]` *(array)*: an array of items to add to the list
 
 ---
 
@@ -79,15 +76,15 @@ Add multiple items to the list
 
 <!-- div -->
 
-<h3 id="removeitemnull"><code>remove([item=null])</code></h3>
+<h3 id="removeitem"><code>remove(item)</code></h3>
 
 Remove an item from the list
 
 #### Arguments
-1. `[item=null]` *(&#42;)*:
+1. `item` *(&#42;)*: the item to remove from the list
 
 #### Returns
-*(boolean)*:
+*(boolean)*: true if the item was successfully removed, false if not
 
 ---
 

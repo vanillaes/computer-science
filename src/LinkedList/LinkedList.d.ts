@@ -1,11 +1,8 @@
 /**
- * @class LinkedList
- * @exports
  */
 export class LinkedList {
     /**
-     * @constructs LinkedList
-     * @param {array} [items]
+     * @param {array} [items] an array of items to add to the list
      */
     constructor(items?: any[]);
     /**
@@ -28,31 +25,33 @@ export class LinkedList {
     /**
      * Add an item to the list
      *
-     * @param {*} [item=null]
+     * @param {*} item an item to add to the list
      */
     add(item?: any): void;
     /**
      * Add multiple items to the list
      *
-     * @param {*[]} [items=null]
+     * @param {*[]} items an array of items to be added to the list
      */
     addAll(items?: any[]): void;
     /**
      * Remove an item from the list
      *
-     * @param {*} [item=null]
-     * @returns {boolean}
+     * @param {*} item the item to remove from the list
+     * @returns {boolean} true if the item was successfully removed, false if not
      */
     remove(item?: any): boolean;
     /**
      * Remove all items from the list
+     *
+     * @returns void
      */
     clear(): void;
     /**
      * Iterate all items (in-order) in the list
      *
      * @ignore
-     * @returns {Iterator<*>}
+     * @returns {Iterator<*>} an iterator for the data
      */
     "__@iterator"(): Iterator<any, any, undefined>;
 }

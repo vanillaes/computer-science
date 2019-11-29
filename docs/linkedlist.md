@@ -1,70 +1,29 @@
 # LinkedList
 
-A `LinkedList` is used to store a sequential list of data.
+A `LinkedList` is a data structure that stores a linear set of data in order of insertion
 
-## Complexity
+<!-- TODO: Add better description -->
+<!-- TODO: Add a graphic representing the list -->
 
-**Write: O(1)**
+## API
 
-A write creates a new `ListNode` and appends it to the end of the list.
-
-**Read: O(N)**
-
-Traverses from the beginning of the list until it either locates a matching item or reaches the end of the list. 
-
-**Memory: O(N)**
-
-Every `ListNode` stores the data as well as a reference to the next node in the list.
-
-## Usage
-
-**Creation**
-
-```javascript
-const list = new LinkedList();
+```typescript
+abstract class AbstractLinkedList {
+  size: number;
+  constructor(...items?: any[]);
+  add(item: any);
+  addAll(...items: any[]);
+  remove(item: any);
+  clear();
+  [Symbol.iterator]();
+}
 ```
 
-**Creation w/ data**
+## Implementations
 
-```javascript
-const list = new LinkedList(['item1', 'item2', 'item3']);
-```
+- [LinkedList][]
 
-**Get the size (ie # of nodes) of the list**
-
-```javascript
-const size = list.size;
-```
-
-**Add an item to the list**
-
-```javascript
-list.add('item');
-```
-
-**Add an array of items to the list**
-
-```javascript
-list.addAll(['item1', 'item2', 'item3']);
-```
-
-**Remove an item from the list**
-
-```javascript
-list.remove('item');
-```
-
-**Remove all items from the list**
-
-```javascript
-list.clear();
-```
-
-**Iterate through the items in the list**
-
-```javascript
-const listToArray = ...list;
-```
+[LinkedList]: ./LinkedList/LinkedList.md
 
 ## Resources
 
