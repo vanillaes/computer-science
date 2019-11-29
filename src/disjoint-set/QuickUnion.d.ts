@@ -12,9 +12,9 @@ export class QuickUnion {
      * The identity array
      *
      * @private
-     * @type {Map}
+     * @type {Map<any, any>}
      */
-    verticies: Map;
+    verticies: Map<any, any>;
     /**
      * The number of sets
      *

@@ -7,7 +7,7 @@ export class QuickUnion {
    * The identity array
    *
    * @private
-   * @type {Map}
+   * @type {Map<any, any>}
    */
   verticies = null;
 
