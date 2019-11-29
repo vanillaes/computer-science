@@ -1,4 +1,4 @@
-# linear.Queue
+# Queue.Queue
 
 <!-- div class="doc-container" -->
 
@@ -7,12 +7,9 @@
 
 <!-- div -->
 
-<h3 id="symboliterator"><code>[Symbol.iterator]()</code></h3>
+<h3 id="clear"><code>clear()</code></h3>
 
-Iterate all items *(first-to-last)* in the queue
-
-#### Returns
-*(&#42;)*:
+Remove all items from the queue
 
 ---
 
@@ -30,7 +27,7 @@ Iterate all items *(first-to-last)* in the queue
 
 
 #### Arguments
-1. `[items]` *(array)*:
+1. `[items]` *(array)*: an array of items to add to the queue
 
 ---
 
@@ -48,7 +45,7 @@ Iterate all items *(first-to-last)* in the queue
 Remove and return the first item in the queue
 
 #### Returns
-*(&#42;)*:
+*(&#42;)*: removes and returns the last item in the queue
 
 ---
 
@@ -61,12 +58,12 @@ Remove and return the first item in the queue
 
 <!-- div -->
 
-<h3 id="enqueueitemnull"><code>enqueue([item=null])</code></h3>
+<h3 id="enqueueitem"><code>enqueue(item)</code></h3>
 
 Add an item to the end of the queue
 
 #### Arguments
-1. `[item=null]` *(&#42;)*:
+1. `item` *(&#42;)*: an item to add to the queue
 
 ---
 
@@ -79,12 +76,12 @@ Add an item to the end of the queue
 
 <!-- div -->
 
-<h3 id="enqueueallitemsnull"><code>enqueueAll([items=null])</code></h3>
+<h3 id="enqueueallitems"><code>enqueueAll(items)</code></h3>
 
 Add multiple items to the end of the queue
 
 #### Arguments
-1. `[items=null]` *(&#42;&#91;&#93;)*:
+1. `items` *(&#42;&#91;&#93;)*: an array of items to be added to the queue
 
 ---
 
@@ -102,7 +99,7 @@ Add multiple items to the end of the queue
 Return the first item in the queue
 
 #### Returns
-*(&#42;)*:
+*(&#42;)*: the last item in the queue
 
 ---
 

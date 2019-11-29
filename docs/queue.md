@@ -2,77 +2,28 @@
 
 A `Queue` is used to define a LIFO (Last-In-First-Out) collection of data.
 
-## Complexity
+<!-- TODO: Add better description -->
+<!-- TODO: Add a graphic representing the list -->
 
-**Write: O(1)**
+## API
 
-- Enqueue - creates a new `QueueNode` and adds it to the end of the queue.
-
-**Read: O(1)**
-
-- Dequeue - removes and returns the first item in the queue
-- Peek - returns the first item without removing it
-
-
-**Memory: O(N)**
-
-Every `QueueNode` stores the data as well as a reference to the next node in the queue.
-
-### Usage
-
-**Creation**
-
-```javascript
-const queue = new Queue();
+```typescript
+abstract class AbstractQueue {
+  size: number;
+  constructor(...items?: any[]);
+  enqueue(item: any);
+  enqueueAll(...items: any[]);
+  dequeue(): any;
+  peek(): any;
+  clear();
+  [Symbol.iterator]();
+}
 ```
+## Implementations
 
-**Creation w/ data**
+- [Queue][]
 
-```javascript
-const queue = new Queue(['item1', 'item2', 'item3']);
-```
-
-**Get the size (ie # of nodes) of the queue**
-
-```javascript
-const size = queue.size;
-```
-
-**Add an item to the queue**
-
-```javascript
-queue.enqueue('item');
-```
-
-**Add an array of items to the queue**
-
-```javascript
-queue.queueAll(['item1', 'item2', 'item3']);
-```
-
-**Remove and return an item from the front of the queue**
-
-```javascript
-const firstItem = queue.dequeue();
-```
-
-**Return but don't remove the first item in the queue**
-
-```javascript
-const firstItem = queue.peek()
-```
-
-**Remove all items from the queue**
-
-```javascript
-queue.clear();
-```
-
-**Iterate through the items in the queue**
-
-```javascript
-const queueToArray = ...queue;
-```
+[Queue]: ./Queue/Queue.md
 
 ## Resources
 

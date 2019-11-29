@@ -1,11 +1,7 @@
-/**
- * @class Queue
- * @exports
- */
+/** A Queue implementation using nodes liked by reference */
 export class Queue {
   /**
    * The first item in the queue
-   *
    * @private
    * @type {Object}
    */
@@ -13,7 +9,6 @@ export class Queue {
 
   /**
    * The last item in the queue
-   *
    * @private
    * @type {Object}
    */
@@ -26,8 +21,7 @@ export class Queue {
   size = 0;
 
   /**
-   * @constructs Queue
-   * @param {array} [items]
+   * @param {array} [items] an array of items to add to the queue
    */
   constructor (items) {
     if (items) {
@@ -38,7 +32,7 @@ export class Queue {
   /**
    * Add an item to the end of the queue
    *
-   * @param {*} [item=null]
+   * @param {*} item an item to add to the queue
    */
   enqueue (item = null) {
     if (item === null) { throw Error('\'item\' parameter not defined'); }
@@ -56,7 +50,7 @@ export class Queue {
   /**
    * Add multiple items to the end of the queue
    *
-   * @param {*[]} [items=null]
+   * @param {*[]} items an array of items to be added to the queue
    */
   enqueueAll (items = null) {
     if (items === null) { throw Error('\'items\' parameter not defined'); }
@@ -67,7 +61,7 @@ export class Queue {
   /**
    * Remove and return the first item in the queue
    *
-   * @returns {*}
+   * @returns {*} removes and returns the last item in the queue
    */
   dequeue () {
     if (this.size === 0) { throw Error('can\'t dequeue an item from an empty queue'); }
@@ -86,7 +80,7 @@ export class Queue {
   /**
    * Return the first item in the queue
    *
-   * @returns {*}
+   * @returns {*} the last item in the queue
    */
   peek () {
     if (this.size === 0) { throw Error('can\'t peek an item from an empty stack'); }
@@ -96,6 +90,7 @@ export class Queue {
 
   /**
    * Remove all items from the queue
+   * @method
    */
   clear () {
     this.first = null;
@@ -106,7 +101,7 @@ export class Queue {
   /**
    * Iterate all items (first-to-last) in the queue
    *
-   * @ignore
+   * @private
    * @returns {Iterator<*>}
    */
   [Symbol.iterator] () {
@@ -126,7 +121,6 @@ export class Queue {
 }
 
 /**
- * @class QueueNode
  * @private
  */
 class QueueNode {
