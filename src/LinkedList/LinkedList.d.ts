@@ -1,5 +1,4 @@
-/**
- */
+/** A LinkedList implementation using nodes liked by reference */
 export class LinkedList {
     /**
      * @param {array} [items] an array of items to add to the list
@@ -43,14 +42,13 @@ export class LinkedList {
     remove(item?: any): boolean;
     /**
      * Remove all items from the list
-     *
-     * @returns void
+     * @method
      */
     clear(): void;
     /**
      * Iterate all items (in-order) in the list
      *
-     * @ignore
+     * @private
      * @returns {Iterator<*>} an iterator for the data
      */
     "__@iterator"(): Iterator<any, any, undefined>;

@@ -1,11 +1,7 @@
-/**
- * @class Stack
- * @exports
- */
+/** A Queue implementation using nodes liked by reference */
 export class Stack {
   /**
    * The top item of the stack
-   *
    * @private
    * @type {Object}
    */
@@ -18,8 +14,7 @@ export class Stack {
   size = 0;
 
   /**
-   * @constructs Stack
-   * @param {array} [items]
+   * @param {array} [items] an array of items to push onto the stack
    */
   constructor (items) {
     if (items) {
@@ -30,7 +25,7 @@ export class Stack {
   /**
    * Add an item to the top of the stack
    *
-   * @param {*} [item=null]
+   * @param {*} item an item to push onto the stack
    */
   push (item = null) {
     if (item === null) { throw Error('\'item\' parameter not defined'); }
@@ -46,7 +41,7 @@ export class Stack {
   /**
    * Add multiple items to the stack
    *
-   * @param {*[]} [items=null]
+   * @param {*[]} items an array of items to push onto the stack
    */
   pushAll (items = null) {
     if (items === null) { throw Error('\'items\' parameter not defined'); }
@@ -57,7 +52,7 @@ export class Stack {
   /**
    * Remove and return the top item of the stack
    *
-   * @returns {*}
+   * @returns {*} removes and returns the item on the top of the stack
    */
   pop () {
     if (this.size === 0) { throw Error('can\'t pop an item from an empty stack'); }
@@ -71,7 +66,7 @@ export class Stack {
   /**
    * Return the top item of the stack
    *
-   * @returns {*}
+   * @returns {*} the top item on the stack
    */
   peek () {
     if (this.size === 0) { throw Error('can\'t peek an item from an empty stack'); }
@@ -81,6 +76,7 @@ export class Stack {
 
   /**
    * Remove all items from the stack
+   * @method
    */
   clear () {
     this.top = null;
@@ -90,7 +86,7 @@ export class Stack {
   /**
    * Iterate all items (top-to-bottom) in the stack
    *
-   * @ignore
+   * @private
    * @returns {Iterator<*>}
    */
   [Symbol.iterator] () {
@@ -110,7 +106,6 @@ export class Stack {
 }
 
 /**
- * @class StackNode
  * @private
  */
 class StackNode {

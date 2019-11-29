@@ -2,78 +2,29 @@
 
 A `Stack` is used to define a FIFO (First-In-First-Out) collection of data.
 
-## Complexity
+<!-- TODO: Add better description -->
+<!-- TODO: Add a graphic representing the list -->
 
-**Write: O(1)**
+## API
 
-A write creates a new `StackNode` and appends it to top of the stack.
-
-**Read: O(1)**
-
-- Pop - removes and returns the top item of the stack
-- Peek - returns the top item without removing it
-
-**Memory: O(N)**
-
-Each `StackNode` stores the data as well as a reference to the next lower node in the stack.
-
-## Usage
-
-**Creation**
-
-```javascript
-const stack = new Stack();
+```typescript
+abstract class AbstractStack {
+  size: number;
+  constructor(...items?: any[]);
+  push(item: any);
+  pushAll(...items: any[]);
+  pop(): any;
+  peek(): any;
+  clear();
+  [Symbol.iterator]();
+}
 ```
 
-**Creation w/ data**
+## Implementations
 
-```javascript
-const stack = new Stack(['item1', 'item2', 'item3']);
-```
+- [Stack][]
 
-**Get the size (ie # of nodes) of the Stack**
-
-```javascript
-const size = stack.size;
-```
-
-**Add an item to the stack**
-
-```javascript
-stack.push('item');
-```
-
-**Add an array of items to the stack**
-
-```javascript
-stack.pushAll(['item1', 'item2', 'item3']);
-```
-
-**Remove and return an item from the top of the stack**
-
-```javascript
-const topItem = stack.pop();
-```
-
-**Return but don't remove the top item on the stack**
-
-```javascript
-const topItem = stack.peek()
-```
-
-**Remove all items from the stack**
-
-```javascript
-stack.clear();
-```
-
-**Iterate through the items in the stack**
-
-```javascript
-const stackToArray = ...stack;
-```
-
-*Note: items will be read in top->bottom order.*
+[Stack]: ./Stack/Stack.md
 
 ## References
 

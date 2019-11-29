@@ -1,4 +1,4 @@
-# linear.Stack
+# Stack.Stack
 
 <!-- div class="doc-container" -->
 
@@ -7,12 +7,9 @@
 
 <!-- div -->
 
-<h3 id="symboliterator"><code>[Symbol.iterator]()</code></h3>
+<h3 id="clear"><code>clear()</code></h3>
 
-Iterate all items *(top-to-bottom)* in the stack
-
-#### Returns
-*(&#42;)*:
+Remove all items from the stack
 
 ---
 
@@ -30,7 +27,7 @@ Iterate all items *(top-to-bottom)* in the stack
 
 
 #### Arguments
-1. `[items]` *(array)*:
+1. `[items]` *(array)*: an array of items to push onto the stack
 
 ---
 
@@ -48,7 +45,7 @@ Iterate all items *(top-to-bottom)* in the stack
 Return the top item of the stack
 
 #### Returns
-*(&#42;)*:
+*(&#42;)*: the top item on the stack
 
 ---
 
@@ -66,7 +63,7 @@ Return the top item of the stack
 Remove and return the top item of the stack
 
 #### Returns
-*(&#42;)*:
+*(&#42;)*: removes and returns the item on the top of the stack
 
 ---
 
@@ -79,12 +76,12 @@ Remove and return the top item of the stack
 
 <!-- div -->
 
-<h3 id="pushitemnull"><code>push([item=null])</code></h3>
+<h3 id="pushitem"><code>push(item)</code></h3>
 
 Add an item to the top of the stack
 
 #### Arguments
-1. `[item=null]` *(&#42;)*:
+1. `item` *(&#42;)*: an item to push onto the stack
 
 ---
 
@@ -97,12 +94,12 @@ Add an item to the top of the stack
 
 <!-- div -->
 
-<h3 id="pushallitemsnull"><code>pushAll([items=null])</code></h3>
+<h3 id="pushallitems"><code>pushAll(items)</code></h3>
 
 Add multiple items to the stack
 
 #### Arguments
-1. `[items=null]` *(&#42;&#91;&#93;)*:
+1. `items` *(&#42;&#91;&#93;)*: an array of items to push onto the stack
 
 ---
 
