@@ -13,11 +13,11 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "docs": "node --experimental-modules docs.config.js",
     "test": "tape-es",
     "test:watch": "npx chokidar-cli -i 'node_modules' '**/*.js' -c 'npm test'",
     "lint": "semistandard",
     "types": "npx tsc -p .config/jsconfig.json",
+    "build:docs": "node .config/docs.config.js",
     "package": "npx rimraf package && npm pack | tail -n 1 | xargs tar -xf",
     "preversion": "npm test && npm run lint && npm run types",
     "postversion": "git push --follow-tags"
