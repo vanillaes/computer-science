@@ -14,7 +14,7 @@
   "type": "module",
   "scripts": {
     "test": "tape-es",
-    "test:watch": "npx chokidar-cli -i 'node_modules' '**/*.js' -c 'npm test'",
+    "test:watch": "tape-watch-es",
     "lint": "semistandard",
     "types": "npx tsc -p .config/jsconfig.json",
     "build:docs": "node .config/docs.config.js",
@@ -31,7 +31,7 @@
     "glob": "^7.1.4",
     "semistandard": "^14.2.0",
     "tape": "^4.11.0",
-    "tape-es": "^1.0.2"
+    "tape-es": "^1.1.1"
   },
   "engines": {
     "node": ">=12.0"
