@@ -11,34 +11,9 @@ assignees: ''
 
 ## Checklist
 
-- [ ] api
 - [ ] implementation
 - [ ] tests
-- [ ] types
-- [ ] documentation
-
-## API
-
-<!-- define a draft public API for the module
-
-```javascript
-class LinkedList {
-  // props
-  size
-
-  // methods
-  add(item)
-  addAll(items)
-  remove(item)
-  clear()
-  [Symbol.iterator]()
-
-  // classes
-  class ListNode {}
-}
-```
-
--->
+- [ ] jsdoc
 
 ## Specifics
 
