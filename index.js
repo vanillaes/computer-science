@@ -2,6 +2,8 @@
 export { LinkedList } from './src/LinkedList/LinkedList.js';
 // Queue
 export { Queue } from './src/Queue/Queue.js';
+// Set
+export { Set } from './src/Set/Set.js';
 // Sort
 export { InsertionSort } from './src/Sort/InsertionSort';
 export { SelectionSort } from './src/Sort/SelectionSort.js';
