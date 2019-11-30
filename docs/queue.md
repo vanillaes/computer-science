@@ -19,6 +19,7 @@ abstract class AbstractQueue {
   [Symbol.iterator]();
 }
 ```
+
 ## Implementations
 
 - [Queue][]

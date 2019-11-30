@@ -53,15 +53,15 @@ Linear data structures get their name because they are typically used to map 1-t
 - [Stack][]
 - [Queue][]
 
-### Sorting
+### Algorithms
 
-- [selectionSort][]
+- [Sort][]
 
 [UnionFind]: ./docs/unionfind.md
 [LinkedList]: ./docs/linkedlist.md
 [Stack]: ./docs/stack.md
 [Queue]: ./docs/queue.md
-[selectionSort]: ./docs/selectionsort.md
+[Sort]: ./docs/sort.md
 
 ## Related Materials
 
