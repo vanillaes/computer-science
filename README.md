@@ -1,9 +1,9 @@
 [![GitHub release](https://img.shields.io/github/release/vanillaes/computerscience.svg)](https://github.com/vanillaes/computerscience/releases)
 [![David](https://img.shields.io/david/dev/vanillaes/computerscience.svg)](https://david-dm.org/vanillaes/computerscience?type=dev)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/vanillaes/computerscience/master/LICENSE)
-[![Latest Status](https://github.com/vanillaes/absurdum/workflows/Latest/badge.svg)](https://github.com/vanillaes/absurdum/actions)
+[![Latest Status](https://github.com/vanillaes/computer-science/workflows/Latest/badge.svg)](https://github.com/vanillaes/computer-science/actions)
 <!-- [![npm](https://img.shields.io/npm/v/computerscience.svg)](https://www.npmjs.com/package/computerscience) -->
-<!-- [![Release Status](https://github.com/vanillaes/absurdum/workflows/Release/badge.svg)](https://github.com/vanillaes/absurdum/actions) -->
+<!-- [![Release Status](https://github.com/vanillaes/computer-science/workflows/Release/badge.svg)](https://github.com/vanillaes/computer-science/actions) -->
 
 # Computer Science
 
