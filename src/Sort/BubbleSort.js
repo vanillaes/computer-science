@@ -11,21 +11,18 @@
  * @returns {*[]} the sorted array
  */
 function BubbleSort (array, comparator = (a, b) => a < b, step) {
-    const N = array.length;
-    for (let i = 0; i < N; i++){
-        for (let j = 0; j < N; j++){
-            if (comparator(array[j+1], array[j])){
-                let tmp = array[j];
-                array[j] = array[j+1];
-                array[j+1] = tmp;
-            }
-        }
-        if (step) { step(array); }
+  const N = array.length;
+  for (let i = 0; i < N; i++) {
+    for (let j = 0; j < N; j++) {
+      if (comparator(array[j + 1], array[j])) {
+        const tmp = array[j];
+        array[j] = array[j + 1];
+        array[j + 1] = tmp;
+      }
     }
-    return array;
+    if (step) { step(array); }
+  }
+  return array;
 }
-
-
-//console.log(BubbleSort(['CC', 'BB', 'BB', 'BB', 'BB', 'CC', 'AA', 'BB'], ))
 
 export { BubbleSort };
