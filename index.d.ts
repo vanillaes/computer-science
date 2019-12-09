@@ -1,7 +1,7 @@
 export { LinkedList } from "./src/LinkedList/LinkedList.js";
 export { Queue } from "./src/Queue/Queue.js";
 export { Set } from "./src/Set/Set.js";
-export { BubbleSort } from "./src/Sort/BubbleSort.js"
+export { BubbleSort } from "./src/Sort/BubbleSort.js";
 export { InsertionSort } from "./src/Sort/InsertionSort";
 export { SelectionSort } from "./src/Sort/SelectionSort.js";
 export { Stack } from "./src/Stack/Stack.js";
