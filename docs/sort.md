@@ -13,9 +13,11 @@ function GenericSort (array, comparator?, step?) {}
 
 ## Implementations
 
+- [BubbleSort][]
 - [InsertionSort][]
 - [SelectionSort][]
 
+[BubbleSort]: ./Sort/BubbleSort.md
 [InsertionSort]: ./Sort/InsertionSort.md
 [SelectionSort]: ./Sort/SelectionSort.md
 
