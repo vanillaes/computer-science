@@ -5,6 +5,7 @@ export { Queue } from './src/Queue/Queue.js';
 // Set
 export { Set } from './src/Set/Set.js';
 // Sort
+export { BubbleSort } from './src/Sort/BubbleSort.js'
 export { InsertionSort } from './src/Sort/InsertionSort';
 export { SelectionSort } from './src/Sort/SelectionSort.js';
 // Stack
