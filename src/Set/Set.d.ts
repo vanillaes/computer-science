@@ -7,9 +7,9 @@ export class Set {
     /**
      * The set's values
      * @private
-     * @type {Array}
+     * @type {array}
      */
-    values: Array;
+    values: array;
     /**
      * The number of items in the set
      * @type {number}

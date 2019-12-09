@@ -3,7 +3,7 @@ export class Set {
   /**
    * The set's values
    * @private
-   * @type {Array}
+   * @type {array}
    */
   values = [];
 
