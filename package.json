@@ -1,6 +1,6 @@
 {
   "name": "computer-science",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "license": "MIT",
   "author": "Evan Plaice <evanplaice@gmail.com> (http://evanplaice.com/)",
   "description": "A repository containing typical reference algorithms & data structures",
