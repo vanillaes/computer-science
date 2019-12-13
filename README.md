@@ -36,6 +36,10 @@ All modules are written in VanillsJS as ES modules. All algorithms and data stru
 import { LinkedList, Stack } from './compsci.js';
 ```
 
+## CommonJS
+
+A CommonJS bundle is included for backward compatiblity with `node <= 13.2`
+
 ## Data Structures
 
 ### Collection
