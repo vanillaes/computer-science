@@ -26,7 +26,7 @@ jobs:
       run: |
         npm ci
         npm run preversion
-    - name: Publish
-      run: |
-        echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
-        npm publish --access public
+    # - name: Publish
+    #   run: |
+    #     echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_AUTH_TOKEN }}" > ~/.npmrc
+    #     npm publish --access public
