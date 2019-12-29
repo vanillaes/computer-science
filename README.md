@@ -6,7 +6,7 @@
 
 # Computer Science
 
-Algorithms and data structures are essential foundations if you ever want to advance in the professional development world. The goal of this library is to provide a moderm Javascript specific reference to study and experiment with a wide range of general purpose algorithms and data structures. This is by-no-means the first JS lib of its kind but it is the first that is 100% dedicated to using modern JS practices and patterns.
+Algorithms and data structures are essential foundations if you ever want to advance in the professional development world. The goal of this library is to provide a modern Javascript specific reference to study and experiment with a wide range of general purpose algorithms and data structures. This is by-no-means the first JS lib of its kind but it is the first that is 100% dedicated to using modern JS practices and patterns.
 
 ## Modern Javascript
 
@@ -28,7 +28,7 @@ Not only does this package provide a useful reference for Computer Science princ
 
 ## Usage
 
-All modules are written in VanillsJS as ES modules. All algorithms and data structures can be impored from the entry point.
+All modules are written in VanillsJS as ES modules. All algorithms and data structures can be imported from the entry point.
 
 *Ex.*
 
@@ -38,7 +38,7 @@ import { LinkedList, Stack } from './compsci.js';
 
 ## CommonJS
 
-A CommonJS bundle is included for backward compatiblity with `node <= 13.2`
+A CommonJS bundle is included for backward compatibility with `node <= 13.2`
 
 ## Data Structures
 
@@ -53,7 +53,7 @@ A collection contains an unordered grouping of values[UnionFind]: ./docs/union-f
 
 ### Disjoint-Set
 
-Disjoint sets are used to determine the connectivity within a graph by grouping verticies into unique sets.
+Disjoint sets are used to determine the connectivity within a graph by grouping vertices into unique sets.
 
 - [UnionFind][]
 
