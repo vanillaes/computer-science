@@ -35,7 +35,7 @@
     "tape-es": "^1.1.1"
   },
   "engines": {
-    "node": ">=12.0"
+    "node": ">=13.2"
   },
   "semistandard": {
     "parser": "babel-eslint",
