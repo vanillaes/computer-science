@@ -1,5 +1,5 @@
 import test from 'tape';
-import { QuickUnion } from './QuickUnion.js';
+import { QuickUnion } from '../../index.js';
 
 test('new QuickUnion() - should create an empty set', (t) => {
   const qu = new QuickUnion();

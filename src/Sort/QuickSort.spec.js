@@ -1,5 +1,5 @@
 import test from 'tape';
-import { QuickSort } from './QuickSort.js';
+import { QuickSort } from '../../index.js';
 
 test('QuickSort(array) - should sort the array', t => {
   const data = ['CC', 'BB', 'BB', 'BB', 'BB', 'CC', 'AA', 'BB'];

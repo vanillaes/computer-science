@@ -1,5 +1,5 @@
 import test from 'tape';
-import { SelectionSort } from './SelectionSort.js';
+import { SelectionSort } from '../../index.js';
 
 test('SelectionSort() - should sort the array', t => {
   const data = ['CC', 'BB', 'BB', 'BB', 'BB', 'CC', 'AA', 'BB'];

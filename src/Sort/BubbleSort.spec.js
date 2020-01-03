@@ -1,5 +1,5 @@
 import test from 'tape';
-import { BubbleSort } from './BubbleSort.js';
+import { BubbleSort } from '../../index.js';
 
 test('BubbleSort() - should sort the array', t => {
   const data = ['CC', 'BB', 'BB', 'BB', 'BB', 'CC', 'AA', 'BB'];

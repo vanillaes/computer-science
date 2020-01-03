@@ -1,5 +1,5 @@
 import test from 'tape';
-import { InsertionSort } from './InsertionSort.js';
+import { InsertionSort } from '../../index.js';
 
 test('InsertionSort() - should sort the array', t => {
   const data = ['CC', 'BB', 'BB', 'BB', 'BB', 'CC', 'AA', 'BB'];

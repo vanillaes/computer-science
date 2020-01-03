@@ -1,5 +1,5 @@
 import test from 'tape';
-import { Stack } from './Stack.js';
+import { Stack } from '../../index.js';
 
 test('new Stack() - should create a new empty stack', (t) => {
   const s = new Stack();

@@ -1,5 +1,5 @@
 import test from 'tape';
-import { QuickFind } from './QuickFind.js';
+import { QuickFind } from '../../index.js';
 
 test('new QuickFind() - should create an empty set', (t) => {
   const qf = new QuickFind();

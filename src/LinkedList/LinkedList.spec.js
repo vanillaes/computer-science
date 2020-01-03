@@ -1,5 +1,5 @@
 import test from 'tape';
-import { LinkedList } from './LinkedList.js';
+import { LinkedList } from '../../index.js';
 
 test('new LinkedList() - should create a new empty list', (t) => {
   const ll = new LinkedList();
