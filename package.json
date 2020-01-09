@@ -18,7 +18,6 @@
     "lint": "semistandard",
     "types": "npx tsc -p .config/jsconfig.json",
     "build": "npm run build:docs && npm run build:typings",
-    "build:esm": "npx rollup --config .config/esm.config.js ",
     "build:docs": "node .config/docs.config.js",
     "build:typings": "npx tsc -p .config/tsconfig.json",
     "package": "npx rimraf package && npm pack | tail -n 1 | xargs tar -xf",
