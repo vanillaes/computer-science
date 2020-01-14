@@ -8,7 +8,7 @@
  * from smallest-to-largest.
  *
  * @export
- * @param {*[]} array
+ * @param {*[]} array the input array
  * @param {Function} [comparator] a function to compare 2 values (defaults asc->desc)
  * @param {Function} [step] an optional function that gets applied at each step
  * @returns {*[]} the sorted array

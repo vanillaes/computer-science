@@ -1,15 +1,15 @@
 /** A Set implementation using an array */
 export class Set {
     /**
-     * @param {array} [items] an array of items to add to the set
+     * @param {*[]} [items] an array of items to add to the set
      */
     constructor(items?: any[]);
     /**
      * The set's values
      * @private
-     * @type {array}
+     * @type {*[]}
      */
-    values: array;
+    values: any[];
     /**
      * The number of items in the set
      * @type {number}

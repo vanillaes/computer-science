@@ -1,16 +1,11 @@
-/**
- * @class Stack
- * @exports
- */
+/** A Queue implementation using nodes liked by reference */
 export class Stack {
     /**
-     * @constructs Stack
-     * @param {array} [items]
+     * @param {array} [items] an array of items to push onto the stack
      */
     constructor(items?: any[]);
     /**
      * The top item of the stack
-     *
      * @private
      * @type {Object}
      */
@@ -23,35 +18,36 @@ export class Stack {
     /**
      * Add an item to the top of the stack
      *
-     * @param {*} [item=null]
+     * @param {*} item an item to push onto the stack
      */
     push(item?: any): void;
     /**
      * Add multiple items to the stack
      *
-     * @param {*[]} [items=null]
+     * @param {*[]} items an array of items to push onto the stack
      */
     pushAll(items?: any[]): void;
     /**
      * Remove and return the top item of the stack
      *
-     * @returns {*}
+     * @returns {*} removes and returns the item on the top of the stack
      */
     pop(): any;
     /**
      * Return the top item of the stack
      *
-     * @returns {*}
+     * @returns {*} the top item on the stack
      */
     peek(): any;
     /**
      * Remove all items from the stack
+     * @method
      */
     clear(): void;
     /**
      * Iterate all items (top-to-bottom) in the stack
      *
-     * @ignore
+     * @private
      * @returns {Iterator<*>}
      */
     "__@iterator"(): Iterator<any, any, undefined>;
