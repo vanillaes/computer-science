@@ -3,7 +3,7 @@ export class Set {
   /**
    * The set's values
    * @private
-   * @type {array}
+   * @type {*[]}
    */
   values = [];
 
@@ -14,7 +14,7 @@ export class Set {
   size = 0;
 
   /**
-   * @param {array} [items] an array of items to add to the set
+   * @param {*[]} [items] an array of items to add to the set
    */
   constructor (items) {
     if (items) {
