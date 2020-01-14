@@ -20,6 +20,9 @@
     "build": "npm run build:docs && npm run build:typings",
     "build:docs": "node .config/docs.config.js",
     "build:typings": "npx tsc -p .config/tsconfig.json",
+    "clean": "npm run clean:docs && npm run clean:typings",
+    "clean:docs": "npx rimraf docs/*/*.md",
+    "clean:typings": "npx rimraf src/**/*.d.ts",
     "package": "npx rimraf package && npm pack | tail -n 1 | xargs tar -xf",
     "preversion": "npm test && npm run lint && npm run types",
     "postversion": "git push --follow-tags"
