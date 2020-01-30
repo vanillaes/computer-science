@@ -1,4 +1,5 @@
 export { LinkedList } from "./src/LinkedList/LinkedList.js";
+export { LRUCache } from "./src/Misc/LRUCache.js";
 export { Queue } from "./src/Queue/Queue.js";
 export { Set } from "./src/Set/Set.js";
 export { BubbleSort } from "./src/Sort/BubbleSort.js";

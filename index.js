@@ -1,5 +1,7 @@
 // LinkedList
 export { LinkedList } from './src/LinkedList/LinkedList.js';
+// Misc
+export { LRUCache } from './src/Misc/LRUCache.js';
 // Queue
 export { Queue } from './src/Queue/Queue.js';
 // Set

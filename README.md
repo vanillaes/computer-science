@@ -78,6 +78,12 @@ Linear data structures get their name because they are typically used to map 1-t
 
 [Sort]: ./docs/sort.md
 
+## Misc
+
+- [Miscellaneous][]
+
+[Miscellaneous]: ./docs/misc.md
+
 ## Related Materials
 
 - [Algorithms (4th ed)][]
