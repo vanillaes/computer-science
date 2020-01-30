@@ -73,21 +73,10 @@ export class LRUCache {
    *
    * @returns {*} an iterator for the item keys
    */
-  keys () {
-    let index = 0;
-    return {
-      [Symbol.iterator]: () => {
-        return {
-          next: () => {
-            if (index < this.dequeue.length) {
-              const value = this.dequeue[index++];
-              return { value, done: false };
-            }
-            return { value: null, done: true };
-          }
-        };
-      }
-    };
+  * keys () {
+    for (const key of this.dequeue) {
+      yield key;
+    }
   }
 
   /**
@@ -95,22 +84,10 @@ export class LRUCache {
    *
    * @returns {*} an iterator for the item values
    */
-  values () {
-    let index = 0;
-    return {
-      [Symbol.iterator]: () => {
-        return {
-          next: () => {
-            if (index < this.dequeue.length) {
-              const key = this.dequeue[index++];
-              const value = this.items.get(key);
-              return { value, done: false };
-            }
-            return { value: null, done: true };
-          }
-        };
-      }
-    };
+  * values () {
+    for (const key of this.dequeue) {
+      yield this.items.get(key);
+    }
   }
 
   /**
@@ -118,22 +95,9 @@ export class LRUCache {
    *
    * @returns {*} an iterator for the items
    */
-  entries () {
-    let index = 0;
-    return {
-      [Symbol.iterator]: () => {
-        return {
-          next: () => {
-            if (index < this.dequeue.length) {
-              const key = this.dequeue[index++];
-              const val = this.items.get(key);
-              const value = [key, val];
-              return { value, done: false };
-            }
-            return { value: null, done: true };
-          }
-        };
-      }
-    };
+  * entries () {
+    for (const key of this.dequeue) {
+      yield [key, this.items.get(key)];
+    }
   }
 }
