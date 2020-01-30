@@ -1,5 +1,5 @@
 import test from 'tape';
-import { Set } from '../../index.js';
+import { Set } from 'computer-science';
 
 test('new Set() - should create a new empty set', (t) => {
   const s = new Set();

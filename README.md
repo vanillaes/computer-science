@@ -21,6 +21,7 @@ For Example:
 - `[Symbol.iterator]` definitions for data structures
 - cross-browser compatibility is a low priority
 - in Node.js this package loads as type=module
+- CommonJS compatible
 
 That means...
 
@@ -35,10 +36,6 @@ All modules are written in VanillsJS as ES modules. All algorithms and data stru
 ```javascript
 import { LinkedList, Stack } from './compsci.js';
 ```
-
-## CommonJS
-
-A CommonJS bundle is included for backward compatibility with `node <= 13.2`
 
 ## Data Structures
 

@@ -10,8 +10,12 @@
     "vanilla"
   ],
   "repository": "git@github.com:vanillaes/computerscience.git",
-  "main": "index.js",
   "type": "module",
+  "main": "index.cjs",
+  "exports": {
+    "import": "./index.js",
+    "require": "./index.cjs"
+  },
   "scripts": {
     "test": "tape-es",
     "test:watch": "tape-watch-es",
