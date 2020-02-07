@@ -88,12 +88,12 @@ test('new LinkedList(items) - should add items during construction', (t) => {
 test('LinkedList.remove(item) - should remove the first item from the list', (t) => {
   const items = ['test1', 'test2', 'test3'];
   const ll = new LinkedList(items);
-  const result = ll.remove('test1');
+  const actual = ll.remove('test1');
 
   t.equal(ll.head.data, items[1], 'LinkedList.head should be the second item');
   t.equal(ll.tail.data, items[2], 'LinkedList.tail should be the last item');
   t.equal(ll.size, 2, 'LinkedList.size should be 2');
-  t.true(result, 'result should return true when an item is removed');
+  t.true(actual, 'should return true when an item is removed');
 
   t.end();
 });
@@ -101,12 +101,12 @@ test('LinkedList.remove(item) - should remove the first item from the list', (t)
 test('LinkedList.remove(item) - should remove a middle item from the list', (t) => {
   const items = ['test1', 'test2', 'test3'];
   const ll = new LinkedList(items);
-  const result = ll.remove('test2');
+  const actual = ll.remove('test2');
 
   t.equal(ll.head.data, items[0], 'LinkedList.head should be the first item');
   t.equal(ll.tail.data, items[2], 'LinkedList.tail should be the last item');
   t.equal(ll.size, 2, 'LinkedList.size should be 2');
-  t.true(result, 'result should return true when an item is removed');
+  t.true(actual, 'should return true when an item is removed');
 
   t.end();
 });
@@ -114,12 +114,12 @@ test('LinkedList.remove(item) - should remove a middle item from the list', (t) 
 test('LinkedList.remove(item) - should remove the last item from the list', (t) => {
   const items = ['test1', 'test2', 'test3'];
   const ll = new LinkedList(items);
-  const result = ll.remove('test3');
+  const actual = ll.remove('test3');
 
   t.equal(ll.head.data, items[0], 'LinkedList.head should be the first item');
   t.equal(ll.tail.data, items[1], 'LinkedList.tail should be the second item');
   t.equal(ll.size, 2, 'LinkedList.size should be 2');
-  t.true(result, 'result should return true when an item is removed');
+  t.true(actual, 'should return true when an item is removed');
 
   t.end();
 });
@@ -139,12 +139,12 @@ test('LinkedList.remove(item)* - called multiple times should remove all items f
 test('LinkedList.remove(not-item) - should remove nothing from the list', (t) => {
   const items = ['test1', 'test2', 'test3'];
   const ll = new LinkedList(items);
-  const result = ll.remove('not-item');
+  const actual = ll.remove('not-item');
 
   t.equal(ll.head.data, items[0], 'LinkedList.head should be the first item');
   t.equal(ll.tail.data, items[2], 'LinkedList.tail should be the last item');
   t.equal(ll.size, 3, 'LinkedList.size should be 3');
-  t.false(result, 'result should return true when an item is removed');
+  t.false(actual, 'should return true when an item is removed');
 
   t.end();
 });
@@ -191,9 +191,9 @@ test('LinkedList.clear() - should remove all items from the list', (t) => {
 test('LinkedList[Symbol.iterator] - should be iterable', (t) => {
   const items = ['test1', 'test2', 'test3'];
   const ll = new LinkedList(items);
-  const result = [...ll];
+  const actual = [...ll];
 
-  t.deepEqual(result, items, 'iteration works');
+  t.deepEqual(actual, items, 'iteration works');
 
   t.end();
 });

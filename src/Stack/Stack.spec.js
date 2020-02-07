@@ -83,11 +83,11 @@ test('new Stack(items) - should push items during construction', (t) => {
 test('Stack.pop() - should remove and return the top item', (t) => {
   const items = ['test1', 'test2', 'test3'];
   const s = new Stack(items);
-  const result = s.pop();
+  const actual = s.pop();
 
   t.equal(s.top.data, items[1], 'Stack.top should be the second item');
   t.equal(s.size, 2, 'Stack.size should be 2');
-  t.equal(result, items[2], 'result should return the popped item');
+  t.equal(actual, items[2], 'should return the popped item');
 
   t.end();
 });
@@ -121,9 +121,9 @@ test('Stack.pop() - should throw when called on an empty stack', (t) => {
 test('Stack.peek() - should return the top item of the stack', (t) => {
   const items = ['test1', 'test2', 'test3'];
   const s = new Stack(items);
-  const result = s.peek();
+  const actual = s.peek();
 
-  t.equal(result, items[2], 'Should return the top item of the stack');
+  t.equal(actual, items[2], 'Should return the top item of the stack');
 
   t.end();
 });
@@ -142,9 +142,9 @@ test('Stack.clear() - should remove all items from the stack', (t) => {
 test('Stack[Symbol.iterator] - should be iterable', (t) => {
   const items = ['test1', 'test2', 'test3'];
   const s = new Stack(items);
-  const result = [...s];
+  const actual = [...s];
 
-  t.deepEqual(result, items.reverse(), 'iteration works');
+  t.deepEqual(actual, items.reverse(), 'iteration works');
 
   t.end();
 });

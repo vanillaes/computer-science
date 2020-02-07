@@ -47,9 +47,9 @@ test('new QuickUnion(items) - should create a set populated with items', (t) => 
 test('QuickUnion.find(item) - should return the id of the item', (t) => {
   const qu = new QuickUnion(['a', 'b', 'c', 'd']);
   const expected = 'b';
-  const result = qu.find('b');
+  const actual = qu.find('b');
 
-  t.deepEqual(result, expected, 'QuickUnion.find should return the correct id');
+  t.deepEqual(actual, expected, 'QuickUnion.find should return the correct id');
 
   t.end();
 });
@@ -69,9 +69,9 @@ test('QuickUnion.find(item) - should throw if the item is not in the set', (t) =
 
 test('QuickUnion.connected(itemA, itemB) - should return false if the verticies are not connected', (t) => {
   const qu = new QuickUnion(['a', 'b', 'c', 'd']);
-  const result = qu.connected('a', 'b');
+  const actual = qu.connected('a', 'b');
 
-  t.deepEqual(result, false, 'QuickFind.connected should return false');
+  t.deepEqual(actual, false, 'QuickFind.connected should return false');
 
   t.end();
 });
@@ -79,9 +79,9 @@ test('QuickUnion.connected(itemA, itemB) - should return false if the verticies 
 test('QuickUnion.connected(itemA, itemB) - should return true if the verticies are connected', (t) => {
   const qu = new QuickUnion(['a', 'b', 'c', 'd']);
   qu.verticies.set('c', 'b');
-  const result = qu.connected('b', 'c');
+  const actual = qu.connected('b', 'c');
 
-  t.deepEqual(result, true, 'QuickUnion.connected should return true');
+  t.deepEqual(actual, true, 'QuickUnion.connected should return true');
 
   t.end();
 });
@@ -97,9 +97,9 @@ test('QuickUnion.connected(itemA, itemB) - should return true if the verticies a
   qu.union(7, 2);
   qu.union(6, 1);
   const expected = [1, 1, 1, 8, 3, 0, 5, 1, 8, 8];
-  const result = [...qu.verticies.values()];
+  const actual = [...qu.verticies.values()];
 
-  t.deepEqual(result, expected, 'QuickUnion.verticies should have the correct data');
+  t.deepEqual(actual, expected, 'QuickUnion.verticies should have the correct data');
   t.equal(qu.count, 2, 'QuickUnion.count should be 2');
 
   t.end();
@@ -119,9 +119,9 @@ test('QuickUnion.sets() - Returns a 2D array containing the sets of joined verti
     [7],
     [3, 4, 8, 9]
   ];
-  const result = qu.sets();
+  const actual = qu.sets();
 
-  t.deepEqual(result, expected, 'Outputs the correct sets');
+  t.deepEqual(actual, expected, 'Outputs the correct sets');
 
   t.end();
 });

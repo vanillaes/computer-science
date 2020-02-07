@@ -84,12 +84,12 @@ test('new Set(items) - should add items during construction', (t) => {
 test('Set.remove(item) - should remove the item from the set', (t) => {
   const items = ['test1', 'test2', 'test3'];
   const s = new Set(items);
-  const result = s.remove('test1');
+  const actual = s.remove('test1');
   const expect = ['test2', 'test3'];
 
   t.deepEqual(s.values, expect, 'Set.values should not contain the removed item');
   t.equal(s.size, 2, 'Set.size should be 2');
-  t.true(result, 'result should return true when an item is removed');
+  t.true(actual, 'should return true when an item is removed');
 
   t.end();
 });
@@ -97,12 +97,12 @@ test('Set.remove(item) - should remove the item from the set', (t) => {
 test('Set.remove(item) - should not remove an item not in the set', (t) => {
   const items = ['test1', 'test2', 'test3'];
   const s = new Set(items);
-  const result = s.remove('test4');
+  const actual = s.remove('test4');
   const expect = ['test1', 'test2', 'test3'];
 
   t.deepEqual(s.values, expect, 'Set.values should not be modified');
   t.equal(s.size, 3, 'Set.size should be 3');
-  t.false(result, 'result should return false if the item is not in the set');
+  t.false(actual, 'should return false if the item is not in the set');
 
   t.end();
 });
@@ -135,9 +135,9 @@ test('Set.clear() - should remove all items from the set', (t) => {
 test('Set[Symbol.iterator] - should be iterable', (t) => {
   const items = ['test1', 'test2', 'test3'];
   const s = new Set(items);
-  const result = [...s];
+  const actual = [...s];
 
-  t.deepEqual(result, items, 'iteration works');
+  t.deepEqual(actual, items, 'iteration works');
 
   t.end();
 });

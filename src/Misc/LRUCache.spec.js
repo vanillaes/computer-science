@@ -30,11 +30,11 @@ test('new LRUCache.put(key, value) - should add an item to the cache', (t) => {
   const expectdequeue = [1];
   const lc = new LRUCache(1);
   lc.put(1, 1);
-  const resultItems = [...lc.items.entries()];
-  const resultdequeue = [...lc.dequeue.values()];
+  const actualItems = [...lc.items.entries()];
+  const actualdequeue = [...lc.dequeue.values()];
 
-  t.deepEqual(resultItems, expectItems, 'LRUCache.items should contain the inserted item');
-  t.deepEqual(resultdequeue, expectdequeue, 'LRUCache.dequeue should contain the inserted item');
+  t.deepEqual(actualItems, expectItems, 'LRUCache.items should contain the inserted item');
+  t.deepEqual(actualdequeue, expectdequeue, 'LRUCache.dequeue should contain the inserted item');
 
   t.end();
 });
@@ -43,9 +43,9 @@ test('new LRUCache.get(key) - should get the item from the cache', (t) => {
   const expect = 1;
   const lc = new LRUCache(1);
   lc.put(1, 1);
-  const result = lc.get(1);
+  const actual = lc.get(1);
 
-  t.deepEqual(result, expect, 'LRUCache.put() should return the item value');
+  t.deepEqual(actual, expect, 'LRUCache.put() should return the item value');
 
   t.end();
 });
@@ -54,9 +54,9 @@ test('new LRUCache.get(key) - should return -1 if the item is not in the cache',
   const expect = -1;
   const lc = new LRUCache(1);
   lc.put(1, 1);
-  const result = lc.get(2);
+  const actual = lc.get(2);
 
-  t.deepEqual(result, expect, 'LRUCache.put() should return -1');
+  t.deepEqual(actual, expect, 'LRUCache.put() should return -1');
 
   t.end();
 });
@@ -66,9 +66,9 @@ test('new LRUCache.get(key) - should move the item to the top of the cache when 
   const lc = new LRUCache(2);
   lc.put(1, 1);
   lc.put(2, 2);
-  const result = [...lc.dequeue.values()];
+  const actual = [...lc.dequeue.values()];
 
-  t.deepEqual(result, expect, 'LRUCache.dequeue should have the correct dequeue order');
+  t.deepEqual(actual, expect, 'LRUCache.dequeue should have the correct dequeue order');
 
   t.end();
 });
@@ -78,9 +78,9 @@ test('new LRUCache.put(key, value) - should update the item if it is already in 
   const lc = new LRUCache(2);
   lc.put(1, 1);
   lc.put(1, 4);
-  const result = lc.items.get(1);
+  const actual = lc.items.get(1);
 
-  t.deepEqual(result, expect, 'LRUCache.dequeue should contain the correct value');
+  t.deepEqual(actual, expect, 'LRUCache.dequeue should contain the correct value');
 
   t.end();
 });
@@ -91,9 +91,9 @@ test('new LRUCache.put(key, value) - should move the item to the top of the dequ
   lc.put(1, 1);
   lc.put(2, 2);
   lc.put(1, 4);
-  const result = [...lc.dequeue.values()];
+  const actual = [...lc.dequeue.values()];
 
-  t.deepEqual(result, expect, 'LRUCache.dequeue should contain the correct dequeue order');
+  t.deepEqual(actual, expect, 'LRUCache.dequeue should contain the correct dequeue order');
 
   t.end();
 });
@@ -105,11 +105,11 @@ test('LRUCache.clear() - should remove all items from the list', (t) => {
   lc.put(1, 1);
   lc.put(2, 2);
   lc.clear();
-  const resultItems = [...lc.items.entries()];
-  const resultdequeue = [...lc.dequeue.values()];
+  const actualItems = [...lc.items.entries()];
+  const actualdequeue = [...lc.dequeue.values()];
 
-  t.deepEqual(resultItems, expectItems, 'LRUCache.items should be cleared');
-  t.deepEqual(resultdequeue, expectdequeue, 'LRUCache.dequeue should be cleared');
+  t.deepEqual(actualItems, expectItems, 'LRUCache.items should be cleared');
+  t.deepEqual(actualdequeue, expectdequeue, 'LRUCache.dequeue should be cleared');
 
   t.end();
 });
@@ -119,9 +119,9 @@ test('LRUCache.keys() - should return the keys in recent->least-recent order', (
   const lc = new LRUCache(2);
   lc.put(1, 2);
   lc.put(3, 4);
-  const result = [...lc.keys()];
+  const actual = [...lc.keys()];
 
-  t.deepEqual(result, expect, 'keys iteration works');
+  t.deepEqual(actual, expect, 'keys iteration works');
 
   t.end();
 });
@@ -131,9 +131,9 @@ test('LRUCache.values() - should return the values in recent->least-recent order
   const lc = new LRUCache(2);
   lc.put(1, 2);
   lc.put(3, 4);
-  const result = [...lc.values()];
+  const actual = [...lc.values()];
 
-  t.deepEqual(result, expect, 'values iteration works');
+  t.deepEqual(actual, expect, 'values iteration works');
 
   t.end();
 });
@@ -143,9 +143,9 @@ test('LRUCache.entries() - should return the entries in recent->least-recent ord
   const lc = new LRUCache(2);
   lc.put(1, 2);
   lc.put(3, 4);
-  const result = [...lc.entries()];
+  const actual = [...lc.entries()];
 
-  t.deepEqual(result, expect, 'entries iteration works');
+  t.deepEqual(actual, expect, 'entries iteration works');
 
   t.end();
 });

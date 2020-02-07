@@ -88,12 +88,12 @@ test('new Queue(items) - should enqueue items during construction', (t) => {
 test('Queue.dequeue(item) - should dequeue an item from the queue', (t) => {
   const items = ['test1', 'test2', 'test3'];
   const q = new Queue(items);
-  const result = q.dequeue();
+  const actual = q.dequeue();
 
   t.equal(q.first.data, items[1], 'Queue.first should be the second item');
   t.equal(q.last.data, items[2], 'Queue.last should be the last item');
   t.equal(q.size, 2, 'Queue.size should be 2');
-  t.equal(result, items[0], 'result should return the first item');
+  t.equal(actual, items[0], 'should return the first item');
 
   t.end();
 });
@@ -128,9 +128,9 @@ test('Stack.dequeue() - should throw when called on an empty queue', (t) => {
 test('Queue.peek() - should return the first item of the queue', (t) => {
   const items = ['test1', 'test2', 'test3'];
   const q = new Queue(items);
-  const result = q.peek();
+  const actual = q.peek();
 
-  t.equal(result, items[0], 'Should return the first item in the queue');
+  t.equal(actual, items[0], 'Should return the first item in the queue');
 
   t.end();
 });
@@ -150,9 +150,9 @@ test('Queue.clear() - should remove all items from the queue', (t) => {
 test('Queue[Symbol.iterator] - should be iterable', (t) => {
   const items = ['test1', 'test2', 'test3'];
   const q = new Queue(items);
-  const result = [...q];
+  const actual = [...q];
 
-  t.deepEqual(result, items, 'iteration works');
+  t.deepEqual(actual, items, 'iteration works');
 
   t.end();
 });
