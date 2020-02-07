@@ -1,7 +1,8 @@
-[![GitHub Releases](https://img.shields.io/github/release/vanillaes/computerscience.svg)](https://github.com/vanillaes/computerscience/releases)
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/vanillaes/computerscience/master/LICENSE)
+[![GitHub Releases](https://badgen.net/github/tag/vanillaes/computer-science)](https://github.com/vanillaes/computer-science/releases)
+[![MIT License](https://badgen.net/github/license/vanillaes/computer-science)](https://raw.githubusercontent.com/vanillaes/computer-science/master/LICENSE)
 [![Latest Status](https://github.com/vanillaes/computer-science/workflows/Latest/badge.svg)](https://github.com/vanillaes/computer-science/actions)
-<!-- [![NPM Release](https://img.shields.io/npm/v/computerscience.svg)](https://www.npmjs.com/package/computerscience) -->
+<!-- [![NPM Release](https://badgen.net/npm/v/computer-science)](https://www.npmjs.com/package/computer-science) -->
+<!-- [![Bundlephobia](https://badgen.net/bundlephobia/minzip/computer-science)](https://bundlephobia.com/result?p=computer-science) -->
 <!-- [![Release Status](https://github.com/vanillaes/computer-science/workflows/Release/badge.svg)](https://github.com/vanillaes/computer-science/actions) -->
 
 # Computer Science
