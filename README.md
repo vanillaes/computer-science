@@ -1,3 +1,7 @@
+<h1 align="center">Computer Science</h1>
+
+A collection of Computer Science algorithms and data structures implemented using bleeding-edge JavaScript features and capabilities 
+
 [![GitHub Releases](https://badgen.net/github/tag/vanillaes/computer-science)](https://github.com/vanillaes/computer-science/releases)
 [![MIT License](https://badgen.net/github/license/vanillaes/computer-science)](https://raw.githubusercontent.com/vanillaes/computer-science/master/LICENSE)
 [![Latest Status](https://github.com/vanillaes/computer-science/workflows/Latest/badge.svg)](https://github.com/vanillaes/computer-science/actions)
@@ -5,7 +9,6 @@
 <!-- [![Bundlephobia](https://badgen.net/bundlephobia/minzip/computer-science)](https://bundlephobia.com/result?p=computer-science) -->
 <!-- [![Release Status](https://github.com/vanillaes/computer-science/workflows/Release/badge.svg)](https://github.com/vanillaes/computer-science/actions) -->
 
-# Computer Science
 
 Algorithms and data structures are essential foundations if you ever want to advance in the professional development world. The goal of this library is to provide a modern Javascript specific reference to study and experiment with a wide range of general purpose algorithms and data structures. This is by-no-means the first JS lib of its kind but it is the first that is 100% dedicated to using modern JS practices and patterns.
 
