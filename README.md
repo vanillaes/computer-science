@@ -9,6 +9,7 @@ A collection of Computer Science algorithms and data structures implemented usin
 <!-- [![Bundlephobia](https://badgen.net/bundlephobia/minzip/computer-science)](https://bundlephobia.com/result?p=computer-science) -->
 <!-- [![Release Status](https://github.com/vanillaes/computer-science/workflows/Release/badge.svg)](https://github.com/vanillaes/computer-science/actions) -->
 
+<p align="center"><strong>⚠️ Notice: This project is an experimental proving-ground for bleeding-edge ECMAScript features ⚠️</strong></p>
 
 Algorithms and data structures are essential foundations if you ever want to advance in the professional development world. The goal of this library is to provide a modern Javascript specific reference to study and experiment with a wide range of general purpose algorithms and data structures. This is by-no-means the first JS lib of its kind but it is the first that is 100% dedicated to using modern JS practices and patterns.
 
