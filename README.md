@@ -68,8 +68,8 @@ Linear data structures get their name because they are typically used to map 1-t
 - [Queue][]
 
 [Set]: ./docs/set.md
-[UnionFind]: ./docs/unionfind.md
-[LinkedList]: ./docs/linkedlist.md
+[UnionFind]: ./docs/union-find.md
+[LinkedList]: ./docs/linked-list.md
 [Stack]: ./docs/stack.md
 [Queue]: ./docs/queue.md
 
