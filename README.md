@@ -44,16 +44,6 @@ import { LinkedList, Stack } from './compsci.js';
 
 ## Data Structures
 
-### Collection
-
-A collection contains an unordered grouping of values
-
-- [UnionFind][]
-- [LinkedList][]
-- [Stack][]
-- [Queue][]
-- [Set][]
-
 ### Disjoint-Set
 
 Disjoint sets are used to determine the connectivity within a graph by grouping vertices into unique sets.
