@@ -46,11 +46,12 @@ import { LinkedList, Stack } from './compsci.js';
 
 ### Collection
 
-A collection contains an unordered grouping of values[UnionFind]: ./docs/union-find.md
-[LinkedList]: ./docs/linked-list.md
-[Stack]: ./docs/stack.md
-[Queue]: ./docs/queue.md
+A collection contains an unordered grouping of values
 
+- [UnionFind][]
+- [LinkedList][]
+- [Stack][]
+- [Queue][]
 - [Set][]
 
 ### Disjoint-Set
