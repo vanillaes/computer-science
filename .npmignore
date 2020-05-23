@@ -1,0 +1,9 @@
+.config/
+.github/
+.vscode/
+docs/
+CHANGELOG.md
+CONTRIBUTING.md
+*.spec.cjs
+*.spec.js
+*.tgz
