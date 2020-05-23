@@ -9,7 +9,7 @@ A collection of Computer Science algorithms and data structures implemented usin
 [![Release Status](https://github.com/vanillaes/computer-science/workflows/Release/badge.svg)](https://github.com/vanillaes/computer-science/actions)
 <!-- [![Bundlephobia](https://badgen.net/bundlephobia/minzip/@vanillaes/computer-science)](https://bundlephobia.com/result?p=@vanillaes/computer-science) -->
 
-<p align="center"><strong>⚠️ Notice: This lib uses experimental features that are not supported by all bundlers or browsers ⚠️<strong></p>
+<p align="center"><strong>⚠️ Notice: This lib uses experimental features that are not supported by all bundlers or browsers ⚠️</strong></p>
 
 Algorithms and data structures are essential foundations if you ever want to advance in the professional development world. The goal of this library is to provide a modern Javascript specific reference to study and experiment with a wide range of general purpose algorithms and data structures. This is by-no-means the first JS lib of its kind but it is the first that is 100% dedicated to using modern JS practices and patterns.
 
