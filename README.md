@@ -3,11 +3,13 @@
 A collection of Computer Science algorithms and data structures implemented using bleeding-edge JavaScript features and capabilities 
 
 [![GitHub Releases](https://badgen.net/github/tag/vanillaes/computer-science)](https://github.com/vanillaes/computer-science/releases)
+[![NPM Release](https://badgen.net/npm/v/@vanillaes/computer-science)](https://www.npmjs.com/package/@vanillaes/computer-science)
+[![Bundlephobia](https://badgen.net/bundlephobia/minzip/@vanillaes/computer-science)](https://bundlephobia.com/result?p=@vanillaes/computer-science)
 [![MIT License](https://badgen.net/github/license/vanillaes/computer-science)](https://raw.githubusercontent.com/vanillaes/computer-science/master/LICENSE)
 [![Latest Status](https://github.com/vanillaes/computer-science/workflows/Latest/badge.svg)](https://github.com/vanillaes/computer-science/actions)
-<!-- [![NPM Release](https://badgen.net/npm/v/computer-science)](https://www.npmjs.com/package/computer-science) -->
-<!-- [![Bundlephobia](https://badgen.net/bundlephobia/minzip/computer-science)](https://bundlephobia.com/result?p=computer-science) -->
-<!-- [![Release Status](https://github.com/vanillaes/computer-science/workflows/Release/badge.svg)](https://github.com/vanillaes/computer-science/actions) -->
+[![Release Status](https://github.com/vanillaes/computer-science/workflows/Release/badge.svg)](https://github.com/vanillaes/computer-science/actions)
+
+<p align="center"><strong>⚠️ Notice: This lib uses experimental features that aren't supported in all browsers ⚠️<strong></p>
 
 Algorithms and data structures are essential foundations if you ever want to advance in the professional development world. The goal of this library is to provide a modern Javascript specific reference to study and experiment with a wide range of general purpose algorithms and data structures. This is by-no-means the first JS lib of its kind but it is the first that is 100% dedicated to using modern JS practices and patterns.
 
@@ -37,7 +39,7 @@ All modules are written in VanillsJS as ES modules. All algorithms and data stru
 *Ex.*
 
 ```javascript
-import { LinkedList, Stack } from './compsci.js';
+import { LinkedList, Stack } from '@vanillaes/computer-science';
 ```
 
 ## Data Structures
