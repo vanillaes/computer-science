@@ -1,5 +1,3 @@
-**Notice: This is a ES package, development requires a Node >=v13.2**
-
 ## Getting Started
 
 This package is designed to make contributing as easy as possible. All work is tracked in the Issues.
