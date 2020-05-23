@@ -1,5 +1,5 @@
 import test from 'tape';
-import { Stack } from 'computer-science';
+import { Stack } from '@vanillaes/computer-science';
 
 test('new Stack() - should create a new empty stack', (t) => {
   const s = new Stack();

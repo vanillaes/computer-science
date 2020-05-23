@@ -1,5 +1,5 @@
 import test from 'tape';
-import { SelectionSort } from 'computer-science';
+import { SelectionSort } from '@vanillaes/computer-science';
 
 test('SelectionSort() - should sort the array', t => {
   const data = ['CC', 'BB', 'BB', 'BB', 'BB', 'CC', 'AA', 'BB'];

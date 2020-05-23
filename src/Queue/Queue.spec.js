@@ -1,5 +1,5 @@
 import test from 'tape';
-import { Queue } from 'computer-science';
+import { Queue } from '@vanillaes/computer-science';
 
 test('new Queue() - should create a new empty queue', (t) => {
   const q = new Queue();

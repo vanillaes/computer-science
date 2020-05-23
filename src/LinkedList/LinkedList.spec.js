@@ -1,5 +1,5 @@
 import test from 'tape';
-import { LinkedList } from 'computer-science';
+import { LinkedList } from '@vanillaes/computer-science';
 
 test('new LinkedList() - should create a new empty list', (t) => {
   const ll = new LinkedList();

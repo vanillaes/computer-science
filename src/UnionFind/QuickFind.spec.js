@@ -1,5 +1,5 @@
 import test from 'tape';
-import { QuickFind } from 'computer-science';
+import { QuickFind } from '@vanillaes/computer-science';
 
 test('new QuickFind() - should create an empty set', (t) => {
   const qf = new QuickFind();

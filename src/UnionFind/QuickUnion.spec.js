@@ -1,5 +1,5 @@
 import test from 'tape';
-import { QuickUnion } from 'computer-science';
+import { QuickUnion } from '@vanillaes/computer-science';
 
 test('new QuickUnion() - should create an empty set', (t) => {
   const qu = new QuickUnion();

@@ -1,5 +1,5 @@
 import test from 'tape';
-import { LRUCache } from 'computer-science';
+import { LRUCache } from '@vanillaes/computer-science';
 
 test('new LRUCache() - should throw if no capacity is provided', (t) => {
   t.plan(1);

@@ -1,5 +1,5 @@
 import test from 'tape';
-import { BubbleSort } from 'computer-science';
+import { BubbleSort } from '@vanillaes/computer-science';
 
 test('BubbleSort() - should sort the array', t => {
   const data = ['CC', 'BB', 'BB', 'BB', 'BB', 'CC', 'AA', 'BB'];
