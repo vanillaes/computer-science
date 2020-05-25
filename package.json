@@ -9,7 +9,7 @@
     "data-structures",
     "vanilla"
   ],
-  "repository": "git@github.com:vanillaes/computerscience.git",
+  "repository": "git@github.com:vanillaes/computer-science.git",
   "type": "module",
   "main": "index.cjs",
   "exports": {
