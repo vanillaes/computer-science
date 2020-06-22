@@ -22,9 +22,9 @@ export class LRUCache {
   dequeue = [];
 
   constructor (capacity = null) {
-    if (capacity === null) { throw Error('\'capacity\' parameter not defined'); }
+    if (capacity === null) { throw Error('\'capacity\' parameter not defined') }
 
-    this.capacity = capacity;
+    this.capacity = capacity
   }
 
   /**
@@ -32,13 +32,13 @@ export class LRUCache {
    * @return {number} The value of the item
    */
   get (key) {
-    const index = this.dequeue.indexOf(key);
+    const index = this.dequeue.indexOf(key)
     if (index === -1) {
-      return index;
+      return index
     }
-    this.dequeue.splice(index, 1);
-    this.dequeue.unshift(key);
-    return this.items.get(key);
+    this.dequeue.splice(index, 1)
+    this.dequeue.unshift(key)
+    return this.items.get(key)
   }
 
   /**
@@ -48,15 +48,15 @@ export class LRUCache {
    */
   put (key, value) {
     if (this.get(key) !== -1) {
-      this.items.set(key, value);
-      return;
+      this.items.set(key, value)
+      return
     }
     if (this.dequeue.length > this.capacity) {
-      const removeKey = this.dequeue.pop();
-      this.items.delete(removeKey);
+      const removeKey = this.dequeue.pop()
+      this.items.delete(removeKey)
     }
-    this.dequeue.unshift(key);
-    this.items.set(key, value);
+    this.dequeue.unshift(key)
+    this.items.set(key, value)
   }
 
   /**
@@ -64,8 +64,8 @@ export class LRUCache {
    * @method
    */
   clear () {
-    this.items = new Map();
-    this.dequeue = [];
+    this.items = new Map()
+    this.dequeue = []
   }
 
   /**
@@ -75,7 +75,7 @@ export class LRUCache {
    */
   * keys () {
     for (const key of this.dequeue) {
-      yield key;
+      yield key
     }
   }
 
@@ -86,7 +86,7 @@ export class LRUCache {
    */
   * values () {
     for (const key of this.dequeue) {
-      yield this.items.get(key);
+      yield this.items.get(key)
     }
   }
 
@@ -97,7 +97,7 @@ export class LRUCache {
    */
   * entries () {
     for (const key of this.dequeue) {
-      yield [key, this.items.get(key)];
+      yield [key, this.items.get(key)]
     }
   }
 }

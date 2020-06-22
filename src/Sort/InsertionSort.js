@@ -12,17 +12,17 @@
  * @returns {*[]} the sorted array
  */
 function InsertionSort (array, comparator = (a, b) => a < b, step) {
-  const N = array.length;
+  const N = array.length
   for (let i = 1; i < N; i++) {
     for (let j = i; j > 0; j--) {
       if (comparator(array[j], array[j - 1])) {
-        [array[j], array[j - 1]] = [array[j - 1], array[j]];
+        [array[j], array[j - 1]] = [array[j - 1], array[j]]
       }
     }
-    if (step) { step(array); }
+    if (step) { step(array) }
   }
 
-  return array;
+  return array
 }
 
-export { InsertionSort };
+export { InsertionSort }

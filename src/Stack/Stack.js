@@ -18,7 +18,7 @@ export class Stack {
    */
   constructor (items) {
     if (items) {
-      this.pushAll(items);
+      this.pushAll(items)
     }
   }
 
@@ -28,14 +28,14 @@ export class Stack {
    * @param {*} item an item to push onto the stack
    */
   push (item = null) {
-    if (item === null) { throw Error('\'item\' parameter not defined'); }
+    if (item === null) { throw Error('\'item\' parameter not defined') }
     if (this.size === 0) {
-      this.top = new StackNode(item, null);
+      this.top = new StackNode(item, null)
     } else {
-      const link = this.top;
-      this.top = new StackNode(item, link);
+      const link = this.top
+      this.top = new StackNode(item, link)
     }
-    this.size++;
+    this.size++
   }
 
   /**
@@ -44,9 +44,9 @@ export class Stack {
    * @param {*[]} items an array of items to push onto the stack
    */
   pushAll (items = null) {
-    if (items === null) { throw Error('\'items\' parameter not defined'); }
+    if (items === null) { throw Error('\'items\' parameter not defined') }
 
-    items.forEach(item => this.push(item));
+    items.forEach(item => this.push(item))
   }
 
   /**
@@ -55,12 +55,12 @@ export class Stack {
    * @returns {*} removes and returns the item on the top of the stack
    */
   pop () {
-    if (this.size === 0) { throw Error('can\'t pop an item from an empty stack'); }
-    const item = this.top.data;
-    this.top = this.top.link;
-    this.size--;
+    if (this.size === 0) { throw Error('can\'t pop an item from an empty stack') }
+    const item = this.top.data
+    this.top = this.top.link
+    this.size--
 
-    return item;
+    return item
   }
 
   /**
@@ -69,9 +69,9 @@ export class Stack {
    * @returns {*} the top item on the stack
    */
   peek () {
-    if (this.size === 0) { throw Error('can\'t peek an item from an empty stack'); }
+    if (this.size === 0) { throw Error('can\'t peek an item from an empty stack') }
 
-    return this.top.data;
+    return this.top.data
   }
 
   /**
@@ -79,8 +79,8 @@ export class Stack {
    * @method
    */
   clear () {
-    this.top = null;
-    this.size = 0;
+    this.top = null
+    this.size = 0
   }
 
   /**
@@ -90,18 +90,18 @@ export class Stack {
    * @returns {Iterator<*>}
    */
   [Symbol.iterator] () {
-    let item = this.top;
+    let item = this.top
     return {
       next: () => {
         if (item) {
-          const value = item.data;
-          item = item.link;
-          return { value, done: false };
+          const value = item.data
+          item = item.link
+          return { value, done: false }
         }
 
-        return { value: null, done: true };
+        return { value: null, done: true }
       }
-    };
+    }
   }
 }
 
@@ -113,7 +113,7 @@ class StackNode {
   link;
 
   constructor (data, link = null) {
-    this.data = data;
-    this.link = link;
+    this.data = data
+    this.link = link
   }
 }

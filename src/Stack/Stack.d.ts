@@ -9,7 +9,7 @@ export class Stack {
      * @private
      * @type {Object}
      */
-    top: Object;
+    private top;
     /**
      * The number of items in the stack
      * @type {number}
@@ -50,5 +50,5 @@ export class Stack {
      * @private
      * @returns {Iterator<*>}
      */
-    "__@iterator"(): Iterator<any, any, undefined>;
+    private [Symbol.iterator];
 }

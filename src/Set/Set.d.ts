@@ -9,7 +9,7 @@ export class Set {
      * @private
      * @type {*[]}
      */
-    values: any[];
+    private values;
     /**
      * The number of items in the set
      * @type {number}
@@ -45,5 +45,5 @@ export class Set {
      * @private
      * @returns {Iterator<*>} an iterator for the data
      */
-    "__@iterator"(): Iterator<any, any, undefined>;
+    private [Symbol.iterator];
 }

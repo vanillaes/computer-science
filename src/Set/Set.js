@@ -18,7 +18,7 @@ export class Set {
    */
   constructor (items) {
     if (items) {
-      this.addAll(items);
+      this.addAll(items)
     }
   }
 
@@ -28,10 +28,10 @@ export class Set {
    * @param {*} item an item to add to the set
    */
   add (item = null) {
-    if (item === null) { throw Error('\'item\' parameter not defined'); }
+    if (item === null) { throw Error('\'item\' parameter not defined') }
     if (!this.values.includes(item)) {
-      this.values.push(item);
-      this.size++;
+      this.values.push(item)
+      this.size++
     }
   }
 
@@ -41,9 +41,9 @@ export class Set {
    * @param {*[]} items an array of items to be added to the set
    */
   addAll (items = null) {
-    if (items === null) { throw Error('\'items\' parameter not defined'); }
+    if (items === null) { throw Error('\'items\' parameter not defined') }
 
-    items.forEach(item => this.add(item));
+    items.forEach(item => this.add(item))
   }
 
   /**
@@ -53,14 +53,14 @@ export class Set {
    * @returns {boolean} true if the item was successfully removed, false if not
    */
   remove (item = null) {
-    if (item === null) { throw Error('\'item\' parameter not defined'); }
-    const index = this.values.indexOf(item);
+    if (item === null) { throw Error('\'item\' parameter not defined') }
+    const index = this.values.indexOf(item)
     if (index !== -1) {
-      this.values = [...this.values.slice(0, index), ...this.values.slice(index + 1)];
-      this.size--;
-      return true;
+      this.values = [...this.values.slice(0, index), ...this.values.slice(index + 1)]
+      this.size--
+      return true
     }
-    return false;
+    return false
   }
 
   /**
@@ -68,8 +68,8 @@ export class Set {
    * @method
    */
   clear () {
-    this.values = [];
-    this.size = 0;
+    this.values = []
+    this.size = 0
   }
 
   /**
@@ -79,6 +79,6 @@ export class Set {
    * @returns {Iterator<*>} an iterator for the data
    */
   [Symbol.iterator] () {
-    return this.values[Symbol.iterator]();
+    return this.values[Symbol.iterator]()
   }
 }

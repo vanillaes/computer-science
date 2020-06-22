@@ -25,7 +25,7 @@ export class LinkedList {
    */
   constructor (items) {
     if (items) {
-      this.addAll(items);
+      this.addAll(items)
     }
   }
 
@@ -35,16 +35,16 @@ export class LinkedList {
    * @param {*} item an item to add to the list
    */
   add (item = null) {
-    if (item === null) { throw Error('\'item\' parameter not defined'); }
+    if (item === null) { throw Error('\'item\' parameter not defined') }
     if (this.size === 0) {
-      this.tail = new ListNode(item, null);
-      this.head = this.tail;
+      this.tail = new ListNode(item, null)
+      this.head = this.tail
     } else {
-      const prev = this.tail;
-      this.tail = new ListNode(item, null);
-      prev.next = this.tail;
+      const prev = this.tail
+      this.tail = new ListNode(item, null)
+      prev.next = this.tail
     }
-    this.size++;
+    this.size++
   }
 
   /**
@@ -53,9 +53,9 @@ export class LinkedList {
    * @param {*[]} items an array of items to be added to the list
    */
   addAll (items = null) {
-    if (items === null) { throw Error('\'items\' parameter not defined'); }
+    if (items === null) { throw Error('\'items\' parameter not defined') }
 
-    items.forEach(item => this.add(item));
+    items.forEach(item => this.add(item))
   }
 
   /**
@@ -65,33 +65,33 @@ export class LinkedList {
    * @returns {boolean} true if the item was successfully removed, false if not
    */
   remove (item = null) {
-    if (item === null) { throw Error('\'item\' parameter not defined'); }
-    if (this.size === 0) { throw Error('can\'t remove an item from an empty list'); }
+    if (item === null) { throw Error('\'item\' parameter not defined') }
+    if (this.size === 0) { throw Error('can\'t remove an item from an empty list') }
 
-    let prev = this.head;
-    let curr = this.head;
+    let prev = this.head
+    let curr = this.head
     while (curr != null) {
       if (curr.data === item) {
         if (this.size === 1) { // remove the last remaining element
-          this.head = null;
-          this.tail = null;
+          this.head = null
+          this.tail = null
         } else if (curr === this.head) { // remove first element
-          this.head = this.head.next;
+          this.head = this.head.next
         } else if (curr === this.tail) { // remove last element
-          this.tail = prev;
-          this.tail.next = null;
+          this.tail = prev
+          this.tail.next = null
         } else { // remove element
-          prev.next = curr.next;
+          prev.next = curr.next
         }
-        this.size--;
+        this.size--
 
-        return true;
+        return true
       }
-      prev = curr;
-      curr = prev.next;
+      prev = curr
+      curr = prev.next
     }
 
-    return false;
+    return false
   }
 
   /**
@@ -99,9 +99,9 @@ export class LinkedList {
    * @method
    */
   clear () {
-    this.head = null;
-    this.tail = null;
-    this.size = 0;
+    this.head = null
+    this.tail = null
+    this.size = 0
   }
 
   /**
@@ -111,18 +111,18 @@ export class LinkedList {
    * @returns {Iterator<*>} an iterator for the data
    */
   [Symbol.iterator] () {
-    let item = this.head;
+    let item = this.head
     return {
       next: () => {
         if (item) {
-          const value = item.data;
-          item = item.next;
-          return { value, done: false };
+          const value = item.data
+          item = item.next
+          return { value, done: false }
         }
 
-        return { value: null, done: true };
+        return { value: null, done: true }
       }
-    };
+    }
   }
 }
 
@@ -134,7 +134,7 @@ class ListNode {
   next;
 
   constructor (data, next = null) {
-    this.data = data;
-    this.next = next;
+    this.data = data
+    this.next = next
   }
 }

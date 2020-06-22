@@ -10,7 +10,7 @@ export class QuickFind {
      * @private
      * @type {Map<any, any>}
      */
-    verticies: Map<any, any>;
+    private verticies;
     /**
      * The number of sets
      * @type {Number}

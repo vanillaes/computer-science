@@ -6,19 +6,19 @@ export class LRUCache {
      * @private
      * @type {number}
      */
-    capacity: number;
+    private capacity;
     /**
      * the items map
      * @private
      * @type {Map}
      */
-    items: Map;
+    private items;
     /**
      * the cache order
      * @private
      * @type {Array}
      */
-    dequeue: Array;
+    private dequeue;
     /**
      * @param {number} key The key of the item to look up
      * @return {number} The value of the item

@@ -9,13 +9,13 @@ export class Queue {
      * @private
      * @type {Object}
      */
-    first: Object;
+    private first;
     /**
      * The last item in the queue
      * @private
      * @type {Object}
      */
-    last: Object;
+    private last;
     /**
      * The number of items in the queue
      * @type {number}
@@ -56,5 +56,5 @@ export class Queue {
      * @private
      * @returns {Iterator<*>}
      */
-    "__@iterator"(): Iterator<any, any, undefined>;
+    private [Symbol.iterator];
 }

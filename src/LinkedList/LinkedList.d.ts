@@ -9,13 +9,13 @@ export class LinkedList {
      * @private
      * @type {Object}
      */
-    head: Object;
+    private head;
     /**
      * The tail node in the list
      * @private
      * @type {Object}
      */
-    tail: Object;
+    private tail;
     /**
      * The number of items in the list
      * @type {number}
@@ -51,5 +51,5 @@ export class LinkedList {
      * @private
      * @returns {Iterator<*>} an iterator for the data
      */
-    "__@iterator"(): Iterator<any, any, undefined>;
+    private [Symbol.iterator];
 }

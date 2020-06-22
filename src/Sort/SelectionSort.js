@@ -14,21 +14,21 @@
  * @returns {*[]} the sorted array
  */
 function SelectionSort (array, comparator = (a, b) => a < b, step) {
-  const N = array.length;
+  const N = array.length
   for (let i = 0; i < N; i++) {
-    let min = i;
+    let min = i
     for (let j = i + 1; j < N; j++) {
       if (comparator(array[j], array[min])) {
-        min = j;
+        min = j
       }
     }
     if (i !== min) {
-      [array[i], array[min]] = [array[min], array[i]];
+      [array[i], array[min]] = [array[min], array[i]]
     }
-    if (step) { step(array); }
+    if (step) { step(array) }
   }
 
-  return array;
+  return array
 }
 
-export { SelectionSort };
+export { SelectionSort }

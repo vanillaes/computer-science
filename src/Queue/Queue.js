@@ -25,7 +25,7 @@ export class Queue {
    */
   constructor (items) {
     if (items) {
-      this.enqueueAll(items);
+      this.enqueueAll(items)
     }
   }
 
@@ -35,16 +35,16 @@ export class Queue {
    * @param {*} item an item to add to the queue
    */
   enqueue (item = null) {
-    if (item === null) { throw Error('\'item\' parameter not defined'); }
+    if (item === null) { throw Error('\'item\' parameter not defined') }
     if (this.size !== 0) {
-      const prevLast = this.last;
-      this.last = new QueueNode(item, null);
-      prevLast.link = this.last;
+      const prevLast = this.last
+      this.last = new QueueNode(item, null)
+      prevLast.link = this.last
     } else {
-      this.first = new QueueNode(item, null);
-      this.last = this.first;
+      this.first = new QueueNode(item, null)
+      this.last = this.first
     }
-    this.size++;
+    this.size++
   }
 
   /**
@@ -53,9 +53,9 @@ export class Queue {
    * @param {*[]} items an array of items to be added to the queue
    */
   enqueueAll (items = null) {
-    if (items === null) { throw Error('\'items\' parameter not defined'); }
+    if (items === null) { throw Error('\'items\' parameter not defined') }
 
-    items.forEach(item => this.enqueue(item));
+    items.forEach(item => this.enqueue(item))
   }
 
   /**
@@ -64,17 +64,17 @@ export class Queue {
    * @returns {*} removes and returns the last item in the queue
    */
   dequeue () {
-    if (this.size === 0) { throw Error('can\'t dequeue an item from an empty queue'); }
-    const dequeued = this.first;
+    if (this.size === 0) { throw Error('can\'t dequeue an item from an empty queue') }
+    const dequeued = this.first
     if (this.size === 1) {
-      this.first = null;
-      this.last = null;
+      this.first = null
+      this.last = null
     } else {
-      this.first = dequeued.link;
+      this.first = dequeued.link
     }
-    this.size--;
+    this.size--
 
-    return dequeued.data;
+    return dequeued.data
   }
 
   /**
@@ -83,9 +83,9 @@ export class Queue {
    * @returns {*} the last item in the queue
    */
   peek () {
-    if (this.size === 0) { throw Error('can\'t peek an item from an empty stack'); }
+    if (this.size === 0) { throw Error('can\'t peek an item from an empty stack') }
 
-    return this.first.data;
+    return this.first.data
   }
 
   /**
@@ -93,9 +93,9 @@ export class Queue {
    * @method
    */
   clear () {
-    this.first = null;
-    this.last = null;
-    this.size = 0;
+    this.first = null
+    this.last = null
+    this.size = 0
   }
 
   /**
@@ -105,18 +105,18 @@ export class Queue {
    * @returns {Iterator<*>}
    */
   [Symbol.iterator] () {
-    let item = this.first;
+    let item = this.first
     return {
       next: () => {
         if (item) {
-          const value = item.data;
-          item = item.link;
-          return { value, done: false };
+          const value = item.data
+          item = item.link
+          return { value, done: false }
         }
 
-        return { value: null, done: true };
+        return { value: null, done: true }
       }
-    };
+    }
   }
 }
 
@@ -128,7 +128,7 @@ class QueueNode {
   link;
 
   constructor (data, link = null) {
-    this.data = data;
-    this.link = link;
+    this.data = data
+    this.link = link
   }
 }

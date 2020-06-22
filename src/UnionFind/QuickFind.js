@@ -18,12 +18,12 @@ export class QuickFind {
    * @param {*[]} [values] an array of verticies to add to the set
    */
   constructor (values = []) {
-    this.verticies = new Map();
+    this.verticies = new Map()
     values.forEach((value, i) => {
-      this.verticies.set(value, i);
-    });
+      this.verticies.set(value, i)
+    })
 
-    this.count = this.verticies.size;
+    this.count = this.verticies.size
   }
 
   /**
@@ -33,10 +33,10 @@ export class QuickFind {
    * @returns {Number} the identity of the set containing the item
    */
   find (value) {
-    const id = this.verticies.get(value);
-    if (id === undefined) { throw Error(`Item: ${value} not found in the set`); }
+    const id = this.verticies.get(value)
+    if (id === undefined) { throw Error(`Item: ${value} not found in the set`) }
 
-    return id;
+    return id
   }
 
   /**
@@ -47,7 +47,7 @@ export class QuickFind {
    * @returns {boolean} true if the verticies are connected, false if not
    */
   connected (valueA, valueB) {
-    return this.find(valueA) === this.find(valueB);
+    return this.find(valueA) === this.find(valueB)
   }
 
   /**
@@ -57,17 +57,17 @@ export class QuickFind {
    * @param {*} valueB the second vertex to connect
    */
   union (valueA, valueB) {
-    if (this.connected(valueA, valueB)) { return; }
+    if (this.connected(valueA, valueB)) { return }
 
-    const idA = this.find(valueA);
-    const idB = this.find(valueB);
+    const idA = this.find(valueA)
+    const idB = this.find(valueB)
 
     this.verticies.forEach((id, key) => {
       if (id === idA) {
-        this.verticies.set(key, idB);
+        this.verticies.set(key, idB)
       }
-    });
-    this.count--;
+    })
+    this.count--
   }
 
   /**
@@ -76,14 +76,14 @@ export class QuickFind {
    * @returns [][] a 2D array containing the disjoint sets
    */
   sets () {
-    const verticies = [...this.verticies.entries()];
+    const verticies = [...this.verticies.entries()]
     const sets = verticies.reduce((acc, curr) => {
       // create the set array if it doesn't exist
-      if (acc[curr[1]] === undefined) { acc[curr[1]] = []; }
-      acc[curr[1]].push(curr[0]);
-      return acc;
-    }, {});
+      if (acc[curr[1]] === undefined) { acc[curr[1]] = [] }
+      acc[curr[1]].push(curr[0])
+      return acc
+    }, {})
 
-    return Object.values(sets);
+    return Object.values(sets)
   }
 }

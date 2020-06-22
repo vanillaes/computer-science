@@ -13,48 +13,48 @@
  * @returns {*[]} the sorted array
  */
 function QuickSort (array, comparator, step) {
-  if (array.length < 2) { return; }
-  if (typeof comparator !== 'function') { comparator = (a, b) => a < b; }
+  if (array.length < 2) { return }
+  if (typeof comparator !== 'function') { comparator = (a, b) => a < b }
 
-  sortRecursive(array, 0, array.length - 1, comparator, step);
-  return array;
+  sortRecursive(array, 0, array.length - 1, comparator, step)
+  return array
 }
 
 const swap = (array, i, j) => {
-  const tmp = array[i];
-  array[i] = array[j];
-  array[j] = tmp;
-};
+  const tmp = array[i]
+  array[i] = array[j]
+  array[j] = tmp
+}
 
 const hoarePivot = (array, left, right, comparator, step) => {
-  const pivot = Math.floor((left + right) / 2);
+  const pivot = Math.floor((left + right) / 2)
   while (left <= right) {
     while (comparator(array[left], array[pivot])) {
-      left++;
+      left++
     }
     while (comparator(array[pivot], array[right])) {
-      right--;
+      right--
     }
     if (left <= right) {
-      swap(array, left, right);
-      left++;
-      right--;
+      swap(array, left, right)
+      left++
+      right--
     }
-    if (step) { step(array); }
+    if (step) { step(array) }
   }
-  return left;
-};
+  return left
+}
 
 const sortRecursive = (array, left, right, comparator, step) => {
-  if (right - left < 1) { return; }
-  const pivot = hoarePivot(array, left, right, comparator, step);
+  if (right - left < 1) { return }
+  const pivot = hoarePivot(array, left, right, comparator, step)
 
   if (left < pivot - 1) {
-    sortRecursive(array, left, pivot - 1, comparator, step);
+    sortRecursive(array, left, pivot - 1, comparator, step)
   }
   if (pivot < right) {
-    sortRecursive(array, pivot, right, comparator, step);
+    sortRecursive(array, pivot, right, comparator, step)
   }
-};
+}
 
-export { QuickSort };
+export { QuickSort }
