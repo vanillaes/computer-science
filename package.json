@@ -19,7 +19,7 @@
   "scripts": {
     "test": "tape-es",
     "test:watch": "tape-watch-es",
-    "lint": "semistandard",
+    "lint": "esmtk lint",
     "types": "npx tsc -p .config/jsconfig.json",
     "build": "npm run build:docs && npm run build:typings",
     "build:docs": "node .config/docs.config.js",
@@ -31,19 +31,20 @@
     "preversion": "npm test && npm run lint && npm run types",
     "postversion": "git push --follow-tags"
   },
-  "dependencies": {},
+  "dependencies": {
+    "esmtk": "^0.1.1"
+  },
   "devDependencies": {
     "@types/tape": "^4.2.33",
-    "babel-eslint": "^10.0.3",
+    "babel-eslint": "^10.1.0",
     "docdown": "github:evanplaice/docdown",
     "glob": "^7.1.4",
-    "semistandard": "^14.2.0",
     "tape-es": "^1.2.5"
   },
   "engines": {
     "node": "~14"
   },
-  "semistandard": {
+  "standard": {
     "parser": "babel-eslint",
     "ignore": [
       "docs.config.js",
