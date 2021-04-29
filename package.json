@@ -31,18 +31,16 @@
     "preversion": "npm test && npm run lint && npm run types",
     "postversion": "git push --follow-tags"
   },
-  "dependencies": {
-    "esmtk": "^0.1.1"
-  },
   "devDependencies": {
     "@types/tape": "^4.2.33",
     "babel-eslint": "^10.1.0",
     "docdown": "github:evanplaice/docdown",
+    "esmtk": "^0.5.1",
     "glob": "^7.1.4",
     "tape-es": "^1.2.5"
   },
   "engines": {
-    "node": "~14"
+    "node": ">=14"
   },
   "standard": {
     "parser": "babel-eslint",
