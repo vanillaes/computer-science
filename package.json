@@ -23,7 +23,8 @@
     "test:watch": "tape-watch-es",
     "lint": "esmtk lint",
     "types": "npx tsc -p .config/jsconfig.json",
-    "build": "npm run build:docs && npm run build:typings",
+    "build": "npm run build:cjs && build:docs && npm run build:typings",
+    "build:cjs": "esmtk commonjs index.js index.cjs",
     "build:docs": "node .config/docs.config.js",
     "build:typings": "npx tsc -p .config/tsconfig.json",
     "clean": "npm run clean:docs && npm run clean:typings",
@@ -47,7 +48,8 @@
     "parser": "babel-eslint",
     "ignore": [
       "docs.config.js",
-      "index.js"
+      "index.js",
+      "index.cjs"
     ]
   }
 }

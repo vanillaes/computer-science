@@ -2,12 +2,12 @@
 
 A collection of Computer Science algorithms and data structures implemented using bleeding-edge JavaScript features and capabilities 
 
-[![GitHub Releases](https://badgen.net/github/tag/vanillaes/computer-science)](https://github.com/vanillaes/computer-science/releases)
-[![NPM Release](https://badgen.net/npm/v/@vanillaes/computer-science)](https://www.npmjs.com/package/@vanillaes/computer-science)
-[![MIT License](https://badgen.net/github/license/vanillaes/computer-science)](https://raw.githubusercontent.com/vanillaes/computer-science/master/LICENSE)
-[![Latest Status](https://github.com/vanillaes/computer-science/workflows/Latest/badge.svg)](https://github.com/vanillaes/computer-science/actions)
-[![Release Status](https://github.com/vanillaes/computer-science/workflows/Release/badge.svg)](https://github.com/vanillaes/computer-science/actions)
-<!-- [![Bundlephobia](https://badgen.net/bundlephobia/minzip/@vanillaes/computer-science)](https://bundlephobia.com/result?p=@vanillaes/computer-science) -->
+<div align="center">
+  <a href="https://github.com/vanillaes/computer-science/releases"><img src="https://badgen.net/github/tag/vanillaes/computer-science" alt="GitHub Release"></a>
+  <a href="https://www.npmjs.com/package/@vanillaes/computer-science"><img src="https://badgen.net/npm/v/@vanillaes/computer-science" alt="NPM Release"></a>
+  <a href="https://github.com/vanillaes/computer-science/actions"><img src="https://github.com/vanillaes/computer-science/workflows/Latest/badge.svg" alt="Latest Status"></a>
+  <a href="https://github.com/vanillaes/computer-science/actions"><img src="https://github.com/vanillaes/computer-science/workflows/Release/badge.svg" alt="Release Status"></a>
+</div>
 
 <p align="center"><strong>⚠️ Notice: This lib uses experimental features that are not supported by all bundlers or browsers ⚠️</strong></p>
 
