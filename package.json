@@ -1,6 +1,6 @@
 {
   "name": "@vanillaes/computer-science",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "license": "MIT",
   "author": "Evan Plaice <evanplaice@gmail.com> (http://evanplaice.com/)",
   "description": "Algorithms and Data Structures implemented in modern JS",
