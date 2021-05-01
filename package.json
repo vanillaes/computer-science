@@ -3,7 +3,7 @@
   "version": "1.0.8",
   "license": "MIT",
   "author": "Evan Plaice <evanplaice@gmail.com> (http://evanplaice.com/)",
-  "description": "A repository containing typical reference algorithms & data structures",
+  "description": "Algorithms and Data Structures implemented in modern JS",
   "keywords": [
     "esm",
     "esmodule",
