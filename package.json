@@ -34,12 +34,11 @@
     "postversion": "git push --follow-tags"
   },
   "devDependencies": {
-    "@types/tape": "^4.2.33",
     "babel-eslint": "^10.1.0",
     "docdown": "github:evanplaice/docdown",
-    "esmtk": "^0.5.1",
-    "glob": "^7.1.4",
-    "tape-es": "^1.2.5"
+    "esmtk": "^0.5.3",
+    "glob": "^7.1.6",
+    "tape-es": "^1.2.13"
   },
   "engines": {
     "node": ">=14"
