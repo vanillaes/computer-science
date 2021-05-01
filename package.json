@@ -5,9 +5,11 @@
   "author": "Evan Plaice <evanplaice@gmail.com> (http://evanplaice.com/)",
   "description": "A repository containing typical reference algorithms & data structures",
   "keywords": [
+    "esm",
+    "esmodule",
     "algorithms",
     "data-structures",
-    "vanilla"
+    "computer-science"
   ],
   "repository": "git@github.com:vanillaes/computer-science.git",
   "type": "module",
