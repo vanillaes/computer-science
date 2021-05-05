@@ -13,7 +13,6 @@
   ],
   "repository": "git@github.com:vanillaes/computer-science",
   "type": "module",
-  "main": "index.cjs",
   "exports": {
     "import": "./index.js",
     "require": "./index.cjs"
