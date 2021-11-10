@@ -1,12 +1,12 @@
 var __defProp = Object.defineProperty;
-var __markAsModule = (target) => __defProp(target, "__esModule", {value: true});
+var __markAsModule = (target) => __defProp(target, "__esModule", { value: true });
 var __export = (target, all) => {
+  __markAsModule(target);
   for (var name in all)
-    __defProp(target, name, {get: all[name], enumerable: true});
+    __defProp(target, name, { get: all[name], enumerable: true });
 };
 
 // index.js
-__markAsModule(exports);
 __export(exports, {
   BubbleSort: () => BubbleSort,
   InsertionSort: () => InsertionSort,
@@ -23,8 +23,8 @@ __export(exports, {
 
 // src/LinkedList/LinkedList.js
 var LinkedList = class {
-  head = null;
-  tail = null;
+  #head = null;
+  #tail = null;
   size = 0;
   constructor(items) {
     if (items) {
@@ -36,12 +36,12 @@ var LinkedList = class {
       throw Error("'item' parameter not defined");
     }
     if (this.size === 0) {
-      this.tail = new ListNode(item, null);
-      this.head = this.tail;
+      this.#tail = new ListNode(item, null);
+      this.#head = this.#tail;
     } else {
-      const prev = this.tail;
-      this.tail = new ListNode(item, null);
-      prev.next = this.tail;
+      const prev = this.#tail;
+      this.#tail = new ListNode(item, null);
+      prev.next = this.#tail;
     }
     this.size++;
   }
@@ -58,18 +58,18 @@ var LinkedList = class {
     if (this.size === 0) {
       throw Error("can't remove an item from an empty list");
     }
-    let prev = this.head;
-    let curr = this.head;
+    let prev = this.#head;
+    let curr = this.#head;
     while (curr != null) {
       if (curr.data === item) {
         if (this.size === 1) {
-          this.head = null;
+          this.#head = null;
           this.tail = null;
-        } else if (curr === this.head) {
-          this.head = this.head.next;
-        } else if (curr === this.tail) {
-          this.tail = prev;
-          this.tail.next = null;
+        } else if (curr === this.#head) {
+          this.#head = this.#head.next;
+        } else if (curr === this.#tail) {
+          this.#tail = prev;
+          this.#tail.next = null;
         } else {
           prev.next = curr.next;
         }
@@ -82,20 +82,20 @@ var LinkedList = class {
     return false;
   }
   clear() {
-    this.head = null;
-    this.tail = null;
+    this.#head = null;
+    this.#tail = null;
     this.size = 0;
   }
   [Symbol.iterator]() {
-    let item = this.head;
+    let item = this.#head;
     return {
       next: () => {
         if (item) {
           const value = item.data;
           item = item.next;
-          return {value, done: false};
+          return { value, done: false };
         }
-        return {value: null, done: true};
+        return { value: null, done: true };
       }
     };
   }
@@ -224,9 +224,9 @@ var Queue = class {
         if (item) {
           const value = item.data;
           item = item.link;
-          return {value, done: false};
+          return { value, done: false };
         }
-        return {value: null, done: true};
+        return { value: null, done: true };
       }
     };
   }
@@ -441,9 +441,9 @@ var Stack = class {
         if (item) {
           const value = item.data;
           item = item.link;
-          return {value, done: false};
+          return { value, done: false };
         }
-        return {value: null, done: true};
+        return { value: null, done: true };
       }
     };
   }
