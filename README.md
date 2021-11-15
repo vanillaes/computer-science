@@ -31,19 +31,58 @@ That means...
 
 Not only does this package provide a useful reference for Computer Science principles but it also works as a reference for Modern JS best-practices.  
 
-## Usage
+## Imports
 
-All modules are written in VanillsJS as ES modules. All algorithms and data structures can be imported from the entry point.
+This package works isomorphically in browsers and server-side JavaScript runtimes
 
-*Ex.*
+### Browsers
 
-```javascript
-import { LinkedList, Stack } from '@vanillaes/computer-science';
+Import directly from the local path or a CDN
+
+Top-level operator namespaces (ie `[arrays, objects, strings]`) can be imported from the index
+
+```html
+<script type="module">
+import { arrays, objects, strings } from 'path/to/absurdum/index.js'
+</script>
 ```
 
-## Data Structures
+The minified version can be imported from
 
-### Disjoint-Set
+```html
+<script type="module">
+import { arrays, objects, strings } from 'path/to/absurdum/index.min.js'
+</script>
+```
+
+### Node
+
+Install the package
+
+```sh
+npm install @vanillaes/absurdum
+```
+
+Top-level operator namespaces are provided
+
+```javascript
+import { arrays, objects, strings } from '@vanillaes/absurdum';
+```
+
+Individual operators can also be imported from their parent namespaces
+
+```javascript
+import { chunk, find } from '@vanillaes/absurdum/arrays';
+import { assign, invert } from '@vanillaes/absurdum/objects';
+import { camelCase, repeat } from '@vanillaes/absurdum/strings';
+```
+
+*Note: Webpack's tree-shaking algorithm doesn't work with multi-layered exports. To optimize bundle size, prefer individual operator imports.*
+
+## API Documentation
+### Data Structures
+
+#### Disjoint-Set
 
 Disjoint sets are used to determine the connectivity within a graph by grouping vertices into unique sets.
 
@@ -55,7 +94,7 @@ Disjoint sets are used to determine the connectivity within a graph by grouping 
 [QuickFind]: ./docs/UnionFind/QuickFind.md
 [QuickUnion]: ./docs/UnionFind/QuickUnion.md 
 
-### Linear
+#### Linear
 
 Linear data structures get their name because they are typically used to map 1-to-1 relationships between data elements in a one-dimensional fashion.
 
@@ -73,7 +112,7 @@ Linear data structures get their name because they are typically used to map 1-t
 [Queue (Abstract)]: ./docs/queue.md
 [Queue]: ./docs/Queue/Queue.md
 
-### Set
+#### Set
 
 A set represents a collection of unique values.
 
@@ -83,13 +122,13 @@ A set represents a collection of unique values.
 [Set (Abstract)]: ./docs/set.md
 [Set]: ./docs/Set/Set.md
 
-###  Misc
+####  Misc
 
 - [LRUCache][]
 
 [LRUCache]: ./docs/Misc/LRUCache.md
 
-## Algorithms
+### Algorithms
 
 - [Sort (Abstract)][]
   - [BubbleSort][]
