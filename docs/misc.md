@@ -34,7 +34,7 @@ abstract class LRUCache {
 
 - [LRUCache][]
 
-[LRUCache]: ./MiscDS/LRUCache.md
+[LRUCache]: ./Misc/LRUCache.md
 
 ### Resources
 

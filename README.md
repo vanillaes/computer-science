@@ -47,34 +47,61 @@ import { LinkedList, Stack } from '@vanillaes/computer-science';
 
 Disjoint sets are used to determine the connectivity within a graph by grouping vertices into unique sets.
 
-- [UnionFind][]
+- [UnionFind (Abstract)][]
+  - [QuickFind][]
+  - [QuickUnion][]
+
+[UnionFind (Abstract)]: ./docs/union-find.md
+[QuickFind]: ./docs/UnionFind/QuickFind.md
+[QuickUnion]: ./docs/UnionFind/QuickUnion.md 
 
 ### Linear
 
 Linear data structures get their name because they are typically used to map 1-to-1 relationships between data elements in a one-dimensional fashion.
 
-- [LinkedList][]
-- [Stack][]
-- [Queue][]
+- [LinkedList (Abstract)][]
+  - [LinkedList][]
+- [Stack (Abstract)][]
+  - [Stack][]
+- [Queue (Abstract)][]
+  - [Queue][]
 
-[Set]: ./docs/set.md
-[UnionFind]: ./docs/union-find.md
-[LinkedList]: ./docs/linked-list.md
-[Stack]: ./docs/stack.md
-[Queue]: ./docs/queue.md
+[LinkedList (Abstract)]: ./docs/linked-list.md
+[LinkedList]: ./docs/LinkedList/LinkedList.md
+[Stack (Abstract)]: ./docs/stack.md
+[Stack]: ./docs/Stack/Stack.md
+[Queue (Abstract)]: ./docs/queue.md
+[Queue]: ./docs/Queue/Queue.md
+
+### Set
+
+A set represents a collection of unique values.
+
+- [Set (Abstract)][]
+  - [Set][]
+
+[Set (Abstract)]: ./docs/set.md
+[Set]: ./docs/Set/Set.md
+
+###  Misc
+
+- [LRUCache][]
+
+[LRUCache]: ./docs/Misc/LRUCache.md
 
 ## Algorithms
 
-- [Sort][]
+- [Sort (Abstract)][]
+  - [BubbleSort][]
+  - [InsertionSort][]
+  - [QuickSort][]
+  - [SelectionSort][]
 
-
-[Sort]: ./docs/sort.md
-
-## Misc
-
-- [Miscellaneous][]
-
-[Miscellaneous]: ./docs/misc.md
+[Sort (Abstract)]: ./docs/sort.md
+[BubbleSort]: ./docs/Sort/BubbleSort.md
+[InsertionSort]: ./docs/Sort/InsertionSort.md
+[QuickSort]: ./docs/Sort/QuickSort.md
+[SelectionSort]: ./docs/Sort/SelectionSort.md
 
 ## Related Materials
 
