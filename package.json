@@ -15,7 +15,6 @@
   "type": "module",
   "exports": {
     "import": "./index.js",
-    "require": "./index.cjs",
     "browser": "./index.min.js"
   },
   "scripts": {
@@ -23,8 +22,7 @@
     "test:watch": "tape-watch-es",
     "lint": "esmtk lint",
     "types": "npx -p typescript tsc index.js  -t esnext --allowJS --checkJS --skipLibCheck --noEmit",
-    "build": "npm run build:cjs && npm run build:min && npm run build:docs && npm run build:typings",
-    "build:cjs": "esmtk commonjs index.js index.cjs",
+    "build": "npm run build:min && npm run build:docs && npm run build:typings",
     "build:min": "esmtk minify index.js index.min.js",
     "build:docs": "node .config/docs.config.js",
     "build:typings": "npx -p typescript tsc index.js  -t esnext --allowJS --checkJS --skipLibCheck --declaration --emitDeclarationOnly --noEmitOnError",
@@ -49,8 +47,7 @@
     "parser": "babel-eslint",
     "ignore": [
       "docs.config.js",
-      "index.js",
-      "index.cjs"
+      "index.js"
     ]
   }
 }

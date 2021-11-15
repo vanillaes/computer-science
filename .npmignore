@@ -4,6 +4,5 @@
 docs/
 CHANGELOG.md
 CONTRIBUTING.md
-*.spec.cjs
 *.spec.js
 *.tgz
