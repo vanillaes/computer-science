@@ -39,11 +39,9 @@ This package works isomorphically in browsers and server-side JavaScript runtime
 
 Import directly from the local path or a CDN
 
-Top-level operator namespaces (ie `[arrays, objects, strings]`) can be imported from the index
-
 ```html
 <script type="module">
-import { arrays, objects, strings } from 'path/to/absurdum/index.js'
+import { LinkedList } from 'path/to/computer-science/index.js'
 </script>
 ```
 
@@ -51,7 +49,7 @@ The minified version can be imported from
 
 ```html
 <script type="module">
-import { arrays, objects, strings } from 'path/to/absurdum/index.min.js'
+import { LinkedList } from 'path/to/computer-science/index.min.js'
 </script>
 ```
 
@@ -63,21 +61,11 @@ Install the package
 npm install @vanillaes/absurdum
 ```
 
-Top-level operator namespaces are provided
+Import from the installed module
 
 ```javascript
-import { arrays, objects, strings } from '@vanillaes/absurdum';
+import { LinkedList } from '@vanillaes/computer-science';
 ```
-
-Individual operators can also be imported from their parent namespaces
-
-```javascript
-import { chunk, find } from '@vanillaes/absurdum/arrays';
-import { assign, invert } from '@vanillaes/absurdum/objects';
-import { camelCase, repeat } from '@vanillaes/absurdum/strings';
-```
-
-*Note: Webpack's tree-shaking algorithm doesn't work with multi-layered exports. To optimize bundle size, prefer individual operator imports.*
 
 ## API Documentation
 ### Data Structures
