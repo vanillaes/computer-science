@@ -3,12 +3,12 @@
 A collection of Computer Science algorithms and data structures implemented using bleeding-edge JavaScript features and capabilities 
 
 <div align="center">
-  <a href="https://github.com/vanillaes/computer-science/releases"><img src="https://badgen.net/github/tag/vanillaes/computer-science" alt="GitHub Release"></a>
-  <a href="https://www.npmjs.com/package/@vanillaes/computer-science"><img src="https://badgen.net/npm/v/@vanillaes/computer-science" alt="NPM Release"></a>
+  <a href="https://github.com/vanillaes/computer-science/releases"><img src="https://badgen.net/github/tag/vanillaes/computer-science?cache-control=no-cache" alt="GitHub Release"></a>
+  <a href="https://www.npmjs.com/package/@vanillaes/computer-science"><img src="https://badgen.net/npm/v/@vanillaes/computer-science?icon=npm" alt="NPM Version"></a>
+  <a href="https://www.npmjs.com/package/@vanillaes/computer-science"><img src="https://badgen.net/npm/dm/@vanillaes/computer-science?icon=npm" alt="NPM Downloads"></a>
+  <a href="https://bundlephobia.com/result?p=@vanillaes/computer-science"><img src="https://badgen.net/bundlephobia/minzip/@vanillaes/computer-science" alt="Bundlephobia"></a>
   <a href="https://github.com/vanillaes/computer-science/actions"><img src="https://github.com/vanillaes/computer-science/workflows/Latest/badge.svg" alt="Latest Status"></a>
   <a href="https://github.com/vanillaes/computer-science/actions"><img src="https://github.com/vanillaes/computer-science/workflows/Release/badge.svg" alt="Release Status"></a>
-
-  <a href="https://discord.gg/aSWYgtybzV"><img alt="Discord" src="https://img.shields.io/discord/723296249121603604?color=%23738ADB"></a>
 </div>
 
 Algorithms and data structures are essential foundations if you ever want to advance in the professional development world. The goal of this library is to provide a modern Javascript specific reference to study and experiment with a wide range of general purpose algorithms and data structures. This is by-no-means the first JS lib of its kind but it is the first that is 100% dedicated to using modern JS practices and patterns.
