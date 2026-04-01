@@ -2,7 +2,7 @@
 export class QuickFind {
     /**
      * @constructs QuickFind
-     * @param {*[]} [values] an array of verticies to add to the set
+     * @param {Array} [values] an array of verticies to add to the set
      */
     constructor(values?: any[]);
     /**

@@ -30,7 +30,7 @@ export class Queue {
     /**
      * Add multiple items to the end of the queue
      *
-     * @param {*[]} items an array of items to be added to the queue
+     * @param {Array} items an array of items to be added to the queue
      */
     enqueueAll(items?: any[]): void;
     /**

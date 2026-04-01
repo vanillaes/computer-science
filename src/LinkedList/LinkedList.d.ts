@@ -30,7 +30,7 @@ export class LinkedList {
     /**
      * Add multiple items to the list
      *
-     * @param {*[]} items an array of items to be added to the list
+     * @param {Array} items an array of items to be added to the list
      */
     addAll(items?: any[]): void;
     /**

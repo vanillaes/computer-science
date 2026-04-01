@@ -1,20 +1,22 @@
+/* eslint-disable jsdoc/reject-any-type */
+
 /** A Queue implementation using nodes liked by reference */
 export class Stack {
   /**
    * The top item of the stack
    * @private
-   * @type {Object}
+   * @type {object}
    */
-  top = null;
+  top = null
 
   /**
    * The number of items in the stack
    * @type {number}
    */
-  size = 0;
+  size = 0
 
   /**
-   * @param {array} [items] an array of items to push onto the stack
+   * @param {Array} [items] an array of items to push onto the stack
    */
   constructor (items) {
     if (items) {
@@ -24,7 +26,6 @@ export class Stack {
 
   /**
    * Add an item to the top of the stack
-   *
    * @param {*} item an item to push onto the stack
    */
   push (item = null) {
@@ -40,8 +41,7 @@ export class Stack {
 
   /**
    * Add multiple items to the stack
-   *
-   * @param {*[]} items an array of items to push onto the stack
+   * @param {Array} items an array of items to push onto the stack
    */
   pushAll (items = null) {
     if (items === null) { throw Error('\'items\' parameter not defined') }
@@ -51,7 +51,6 @@ export class Stack {
 
   /**
    * Remove and return the top item of the stack
-   *
    * @returns {*} removes and returns the item on the top of the stack
    */
   pop () {
@@ -65,7 +64,6 @@ export class Stack {
 
   /**
    * Return the top item of the stack
-   *
    * @returns {*} the top item on the stack
    */
   peek () {
@@ -76,7 +74,6 @@ export class Stack {
 
   /**
    * Remove all items from the stack
-   * @method
    */
   clear () {
     this.top = null
@@ -85,9 +82,8 @@ export class Stack {
 
   /**
    * Iterate all items (top-to-bottom) in the stack
-   *
    * @private
-   * @returns {Iterator<*>}
+   * @returns {Iterator<*>} the next item in the stack
    */
   [Symbol.iterator] () {
     let item = this.top
@@ -109,8 +105,8 @@ export class Stack {
  * @private
  */
 class StackNode {
-  data;
-  link;
+  data
+  link
 
   constructor (data, link = null) {
     this.data = data

@@ -1,16 +1,18 @@
+/* eslint-disable jsdoc/reject-any-type */
+
 /** A LinkedList implementation using nodes liked by reference */
 export class LinkedList {
   /**
    * The head node in the list
    * @private
-   * @type {Object}
+   * @type {object}
    */
   #head = null
 
   /**
    * The tail node in the list
    * @private
-   * @type {Object}
+   * @type {object}
    */
   #tail = null
 
@@ -21,7 +23,7 @@ export class LinkedList {
   size = 0
 
   /**
-   * @param {array} [items] an array of items to add to the list
+   * @param {Array} [items] an array of items to add to the list
    */
   constructor (items) {
     if (items) {
@@ -31,7 +33,6 @@ export class LinkedList {
 
   /**
    * Add an item to the list
-   *
    * @param {*} item an item to add to the list
    */
   add (item = null) {
@@ -49,8 +50,7 @@ export class LinkedList {
 
   /**
    * Add multiple items to the list
-   *
-   * @param {*[]} items an array of items to be added to the list
+   * @param {Array} items an array of items to be added to the list
    */
   addAll (items = null) {
     if (items === null) { throw Error('\'items\' parameter not defined') }
@@ -60,7 +60,6 @@ export class LinkedList {
 
   /**
    * Remove an item from the list
-   *
    * @param {*} item the item to remove from the list
    * @returns {boolean} true if the item was successfully removed, false if not
    */
@@ -96,7 +95,6 @@ export class LinkedList {
 
   /**
    * Remove all items from the list
-   * @method
    */
   clear () {
     this.#head = null
@@ -106,7 +104,6 @@ export class LinkedList {
 
   /**
    * Iterate all items (in-order) in the list
-   *
    * @private
    * @returns {Iterator<*>} an iterator for the data
    */

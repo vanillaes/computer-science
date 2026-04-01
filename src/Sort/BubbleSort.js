@@ -1,16 +1,15 @@
+/* eslint-disable jsdoc/reject-function-type */
+
 /**
  * A BubbleSort algorithm
- *
  * This sort works by iterating through the list of values from the start
  * comparing each pair of values and swapping them if they are in the wrong order
- *
- * @export
- * @param {*[]} array the input array
+ * @param {Array} array the input array
  * @param {Function} [comparator] a function to compare 2 values (defaults asc->desc)
  * @param {Function} [step] an optional function that gets applied at each step
- * @returns {*[]} the sorted array
+ * @returns {Array} the sorted array
  */
-function BubbleSort (array, comparator = (a, b) => a < b, step) {
+export function BubbleSort (array, comparator = (a, b) => a < b, step) {
   const N = array.length
   for (let i = 0; i < N; i++) {
     for (let j = 0; j < N; j++) {
@@ -24,5 +23,3 @@ function BubbleSort (array, comparator = (a, b) => a < b, step) {
   }
   return array
 }
-
-export { BubbleSort }

@@ -1,20 +1,22 @@
+/* eslint-disable jsdoc/reject-any-type */
+
 /** A Set implementation using an array */
 export class Set {
   /**
    * The set's values
    * @private
-   * @type {*[]}
+   * @type {Array}
    */
-  values = [];
+  values = []
 
   /**
    * The number of items in the set
    * @type {number}
    */
-  size = 0;
+  size = 0
 
   /**
-   * @param {*[]} [items] an array of items to add to the set
+   * @param {Array} [items] an array of items to add to the set
    */
   constructor (items) {
     if (items) {
@@ -24,7 +26,6 @@ export class Set {
 
   /**
    * Add an item to the set
-   *
    * @param {*} item an item to add to the set
    */
   add (item = null) {
@@ -37,8 +38,7 @@ export class Set {
 
   /**
    * Add multiple items to the set
-   *
-   * @param {*[]} items an array of items to be added to the set
+   * @param {Array} items an array of items to be added to the set
    */
   addAll (items = null) {
     if (items === null) { throw Error('\'items\' parameter not defined') }
@@ -48,7 +48,6 @@ export class Set {
 
   /**
    * Remove an item from the set
-   *
    * @param {*} item the item to remove from the set
    * @returns {boolean} true if the item was successfully removed, false if not
    */
@@ -65,7 +64,6 @@ export class Set {
 
   /**
    * Remove all items from the set
-   * @method
    */
   clear () {
     this.values = []
@@ -74,7 +72,6 @@ export class Set {
 
   /**
    * Iterate all items in the set
-   *
    * @private
    * @returns {Iterator<*>} an iterator for the data
    */

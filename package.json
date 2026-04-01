@@ -20,6 +20,7 @@
   "scripts": {
     "test": "esmtk test",
     "test:watch": "esmtk test --watch",
+    "lint": "esmtk lint",
     "type": "esmtk type index.js",
     "build": "npm run build:min && npm run build:docs && npm run build:typings",
     "build:min": "esmtk minify index.js index.min.js",
@@ -29,7 +30,7 @@
     "clean:docs": "npx rimraf docs/*/*.md",
     "clean:typings": "esmtk clean --typings",
     "preview": "esmtk preview",
-    "preversion": "npm test && npm run type",
+    "preversion": "npm test && npm run lint && npm run type",
     "postversion": "git push --follow-tags"
   },
   "dependencies": {

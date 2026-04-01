@@ -1,3 +1,5 @@
+/* eslint-disable jsdoc/reject-any-type */
+
 /** A LRU (Least Recently Used) cache implementation */
 export class LRUCache {
   /**
@@ -5,21 +7,21 @@ export class LRUCache {
    * @private
    * @type {number}
    */
-  capacity = 0;
+  capacity = 0
 
   /**
    * the items map
    * @private
    * @type {Map}
    */
-  items = new Map();
+  items = new Map()
 
   /**
    * the cache order
    * @private
    * @type {Array}
    */
-  dequeue = [];
+  dequeue = []
 
   constructor (capacity = null) {
     if (capacity === null) { throw Error('\'capacity\' parameter not defined') }
@@ -29,7 +31,7 @@ export class LRUCache {
 
   /**
    * @param {number} key The key of the item to look up
-   * @return {number} The value of the item
+   * @returns {number} The value of the item
    */
   get (key) {
     const index = this.dequeue.indexOf(key)
@@ -44,7 +46,6 @@ export class LRUCache {
   /**
    * @param {number} key The key of the item to add/update
    * @param {number} value The value of the item add/update
-   * @return {void}
    */
   put (key, value) {
     if (this.get(key) !== -1) {
@@ -61,7 +62,6 @@ export class LRUCache {
 
   /**
    * Remove all items from the cache
-   * @method
    */
   clear () {
     this.items = new Map()
@@ -70,8 +70,7 @@ export class LRUCache {
 
   /**
    * An iterator that returns the keys in recent -> least-recent order
-   *
-   * @returns {*} an iterator for the item keys
+   * @yields {*} the next key
    */
   * keys () {
     for (const key of this.dequeue) {
@@ -81,8 +80,7 @@ export class LRUCache {
 
   /**
    * An iterator that returns the values in recent -> least-recent order
-   *
-   * @returns {*} an iterator for the item values
+   * @yields {*} the next item
    */
   * values () {
     for (const key of this.dequeue) {
@@ -92,8 +90,7 @@ export class LRUCache {
 
   /**
    * An iterator that returns the entries in recent -> least-recent order
-   *
-   * @returns {*} an iterator for the items
+   * @yields {*} the next entry
    */
   * entries () {
     for (const key of this.dequeue) {

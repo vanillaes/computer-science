@@ -1,13 +1,13 @@
 /** A Set implementation using an array */
 export class Set {
     /**
-     * @param {*[]} [items] an array of items to add to the set
+     * @param {Array} [items] an array of items to add to the set
      */
     constructor(items?: any[]);
     /**
      * The set's values
      * @private
-     * @type {*[]}
+     * @type {Array}
      */
     private values;
     /**
@@ -24,7 +24,7 @@ export class Set {
     /**
      * Add multiple items to the set
      *
-     * @param {*[]} items an array of items to be added to the set
+     * @param {Array} items an array of items to be added to the set
      */
     addAll(items?: any[]): void;
     /**

@@ -1,22 +1,23 @@
-/** QuickUnion is a slightly more optimal (ie tree-based) implementation of a UnionFind data structure. */
+/* eslint-disable jsdoc/reject-any-type */
 
+/** QuickUnion is a slightly more optimal (ie tree-based) implementation of a UnionFind data structure. */
 export class QuickUnion {
   /**
    * The identity array
    * @private
    * @type {Map<any, any>}
    */
-  verticies = null;
+  verticies = null
 
   /**
    * The number of sets
-   * @type {Number}
+   * @type {number}
    */
-  count = 0;
+  count = 0
 
   /**
    * @constructs QuickUnion
-   * @param {*[]} [values] an array of verticies to add to the set
+   * @param {Array} [values] an array of verticies to add to the set
    */
   constructor (values = []) {
     this.verticies = new Map()
@@ -29,7 +30,6 @@ export class QuickUnion {
 
   /**
    * Find the id for a value
-   *
    * @param {*} value the value to lookup
    * @returns {*} the identity of the set containing the item
    */
@@ -45,7 +45,6 @@ export class QuickUnion {
 
   /**
    * Are the 2 verticies connected?
-   *
    * @param {*} valueA the first vertex to compare
    * @param {*} valueB the second vertex to compare
    * @returns {boolean} true if the verticies are connected, false if not
@@ -56,7 +55,6 @@ export class QuickUnion {
 
   /**
    * Join the verticies if not alredy in the same set
-   *
    * @param {*} valueA the first vertex to connect
    * @param {*} valueB the second vertex to connect
    */
@@ -72,8 +70,7 @@ export class QuickUnion {
 
   /**
    * Returns a 2D array of the unique sets and the values in those sets
-   *
-   * @returns [][] a 2D array containing the disjoint sets
+   * @returns {Array} a 2D array containing the disjoint sets
    */
   sets () {
     const verticies = [...this.verticies.entries()]

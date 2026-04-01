@@ -24,7 +24,7 @@ export class Stack {
     /**
      * Add multiple items to the stack
      *
-     * @param {*[]} items an array of items to push onto the stack
+     * @param {Array} items an array of items to push onto the stack
      */
     pushAll(items?: any[]): void;
     /**

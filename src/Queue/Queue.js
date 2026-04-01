@@ -1,27 +1,29 @@
+/* eslint-disable jsdoc/reject-any-type */
+
 /** A Queue implementation using nodes liked by reference */
 export class Queue {
   /**
    * The first item in the queue
    * @private
-   * @type {Object}
+   * @type {object}
    */
-  first = null;
+  first = null
 
   /**
    * The last item in the queue
    * @private
-   * @type {Object}
+   * @type {object}
    */
-  last = null;
+  last = null
 
   /**
    * The number of items in the queue
    * @type {number}
    */
-  size = 0;
+  size = 0
 
   /**
-   * @param {array} [items] an array of items to add to the queue
+   * @param {Array} [items] an array of items to add to the queue
    */
   constructor (items) {
     if (items) {
@@ -31,7 +33,6 @@ export class Queue {
 
   /**
    * Add an item to the end of the queue
-   *
    * @param {*} item an item to add to the queue
    */
   enqueue (item = null) {
@@ -49,8 +50,7 @@ export class Queue {
 
   /**
    * Add multiple items to the end of the queue
-   *
-   * @param {*[]} items an array of items to be added to the queue
+   * @param {Array} items an array of items to be added to the queue
    */
   enqueueAll (items = null) {
     if (items === null) { throw Error('\'items\' parameter not defined') }
@@ -60,7 +60,6 @@ export class Queue {
 
   /**
    * Remove and return the first item in the queue
-   *
    * @returns {*} removes and returns the last item in the queue
    */
   dequeue () {
@@ -79,7 +78,6 @@ export class Queue {
 
   /**
    * Return the first item in the queue
-   *
    * @returns {*} the last item in the queue
    */
   peek () {
@@ -90,7 +88,6 @@ export class Queue {
 
   /**
    * Remove all items from the queue
-   * @method
    */
   clear () {
     this.first = null
@@ -100,9 +97,8 @@ export class Queue {
 
   /**
    * Iterate all items (first-to-last) in the queue
-   *
    * @private
-   * @returns {Iterator<*>}
+   * @returns {Iterator<*>} the next item in the queue
    */
   [Symbol.iterator] () {
     let item = this.first
@@ -124,8 +120,8 @@ export class Queue {
  * @private
  */
 class QueueNode {
-  data;
-  link;
+  data
+  link
 
   constructor (data, link = null) {
     this.data = data
