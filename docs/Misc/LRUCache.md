@@ -7,27 +7,15 @@
 
 <!-- div -->
 
-<h3 id="clear"><code>clear()</code></h3>
-
-Remove all items from the cache
-
----
-
-<!-- /div -->
-
-<!-- /div -->
-
-<!-- div -->
-
-
-<!-- div -->
-
 <h3 id="getkey"><code>get(key)</code></h3>
 
 
 
 #### Arguments
 1. `key` *(number)*: The key of the item to look up
+
+#### Returns
+*(number)*: The value of the item
 
 ---
 

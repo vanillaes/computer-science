@@ -30,22 +30,7 @@ Add an item to the set
 Add multiple items to the set
 
 #### Arguments
-1. `items` *(&#42;&#91;&#93;)*: an array of items to be added to the set
-
----
-
-<!-- /div -->
-
-<!-- /div -->
-
-<!-- div -->
-
-
-<!-- div -->
-
-<h3 id="clear"><code>clear()</code></h3>
-
-Remove all items from the set
+1. `items` *(Array)*: an array of items to be added to the set
 
 ---
 
@@ -63,7 +48,7 @@ Remove all items from the set
 
 
 #### Arguments
-1. `[items]` *(&#42;&#91;&#93;)*: an array of items to add to the set
+1. `[items]` *(Array)*: an array of items to add to the set
 
 ---
 

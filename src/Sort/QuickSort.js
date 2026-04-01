@@ -1,7 +1,6 @@
 /* eslint-disable jsdoc/reject-function-type */
 
 /**
- * A QuickSort algorithm
  * Quicksort chooses an element of the array to serve as the pivot element and
  * then moves two pointers in from the ends of the array until values are found
  * that should be swapped to have a more sorted array this is then done recursively

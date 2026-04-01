@@ -27,7 +27,7 @@
     "build:docs": "node .config/docs.config.js",
     "build:typings": "esmtk typings",
     "clean": "npm run clean:docs && npm run clean:typings",
-    "clean:docs": "npx rimraf docs/*/*.md",
+    "clean:docs": "esmtk clean --custom 'docs/*/*.md'",
     "clean:typings": "esmtk clean --typings",
     "preview": "esmtk preview",
     "preversion": "npm test && npm run lint && npm run type",

@@ -7,27 +7,12 @@
 
 <!-- div -->
 
-<h3 id="clear"><code>clear()</code></h3>
-
-Remove all items from the stack
-
----
-
-<!-- /div -->
-
-<!-- /div -->
-
-<!-- div -->
-
-
-<!-- div -->
-
 <h3 id="constructoritems"><code>constructor([items])</code></h3>
 
 
 
 #### Arguments
-1. `[items]` *(array)*: an array of items to push onto the stack
+1. `[items]` *(Array)*: an array of items to push onto the stack
 
 ---
 
@@ -99,7 +84,7 @@ Add an item to the top of the stack
 Add multiple items to the stack
 
 #### Arguments
-1. `items` *(&#42;&#91;&#93;)*: an array of items to push onto the stack
+1. `items` *(Array)*: an array of items to push onto the stack
 
 ---
 

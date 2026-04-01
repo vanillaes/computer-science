@@ -1,7 +1,6 @@
 /* eslint-disable jsdoc/reject-function-type */
 
 /**
- * A InsertionSort algorithm
  * The sort maintains a sorted (left) and unsorted (right) sections. As each
  * value is checked, if it's greater than the previous value it gets swapped
  * to the left until it is no longer greater.

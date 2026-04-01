@@ -1,7 +1,6 @@
 /* eslint-disable jsdoc/reject-function-type */
 
 /**
- * A SelectionSort algorithm
  * The sort works by iterating through the array starting from the beginning.
  * Each item is compared to every subsequent item in the array to determine
  * which is smaller. Either the current item is kept or a smaller item is

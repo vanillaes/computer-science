@@ -34,7 +34,7 @@ Are the `2` verticies connected?
 
 
 #### Arguments
-1. `[values]` *(&#42;&#91;&#93;)*: an array of verticies to add to the set
+1. `[values]` *(Array)*: an array of verticies to add to the set
 
 ---
 
@@ -49,7 +49,7 @@ Are the `2` verticies connected?
 
 <h3 id="count"><code>count</code></h3>
 
-(Number): The number of sets
+(number): The number of sets
 
 ---
 
@@ -70,7 +70,7 @@ Find the id for a value
 1. `value` *(&#42;)*: the value to lookup
 
 #### Returns
-*(Number)*: the identity of the set containing the item
+*(number)*: the identity of the set containing the item
 
 ---
 
@@ -88,7 +88,7 @@ Find the id for a value
 Returns a `2`D array of the unique sets and the values in those sets
 
 #### Returns
-*(&#42;)*: &#91;&#93;&#91;&#93; a `2`D array containing the disjoint sets
+*(Array)*: a `2`D array containing the disjoint sets
 
 ---
 

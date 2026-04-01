@@ -1,7 +1,6 @@
 /* eslint-disable jsdoc/reject-function-type */
 
 /**
- * A BubbleSort algorithm
  * This sort works by iterating through the list of values from the start
  * comparing each pair of values and swapping them if they are in the wrong order
  * @param {Array} array the input array

@@ -30,22 +30,7 @@ Add an item to the list
 Add multiple items to the list
 
 #### Arguments
-1. `items` *(&#42;&#91;&#93;)*: an array of items to be added to the list
-
----
-
-<!-- /div -->
-
-<!-- /div -->
-
-<!-- div -->
-
-
-<!-- div -->
-
-<h3 id="clear"><code>clear()</code></h3>
-
-Remove all items from the list
+1. `items` *(Array)*: an array of items to be added to the list
 
 ---
 
@@ -63,7 +48,7 @@ Remove all items from the list
 
 
 #### Arguments
-1. `[items]` *(array)*: an array of items to add to the list
+1. `[items]` *(Array)*: an array of items to add to the list
 
 ---
 
