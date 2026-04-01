@@ -20,7 +20,6 @@
   "scripts": {
     "test": "esmtk test",
     "test:watch": "esmtk test --watch",
-    "lint": "esmtk lint",
     "type": "esmtk type index.js",
     "build": "npm run build:min && npm run build:docs && npm run build:typings",
     "build:min": "esmtk minify index.js index.min.js",
