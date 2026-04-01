@@ -14,18 +14,19 @@
   "repository": "git@github.com:vanillaes/computer-science",
   "type": "module",
   "exports": {
-    "import": "./index.js",
-    "browser": "./index.min.js"
+    "import": "./src/index.js",
+    "types": "./src/index.d.ts",
+    "browser": "./src/index.min.js"
   },
   "scripts": {
     "test": "esmtk test",
     "test:watch": "esmtk test --watch",
     "lint": "esmtk lint",
-    "type": "esmtk type index.js",
+    "type": "esmtk type src/index.js",
     "build": "npm run build:min && npm run build:docs && npm run build:typings",
-    "build:min": "esmtk minify index.js index.min.js",
+    "build:min": "esmtk minify src/index.js src/index.min.js",
     "build:docs": "node .config/docs.config.js",
-    "build:typings": "esmtk typings",
+    "build:typings": "esmtk typings src/index.js",
     "clean": "npm run clean:docs && npm run clean:typings",
     "clean:docs": "esmtk clean --custom 'docs/*/*.md'",
     "clean:typings": "esmtk clean --typings",

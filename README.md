@@ -6,7 +6,6 @@ A collection of Computer Science algorithms and data structures implemented usin
   <a href="https://github.com/vanillaes/computer-science/releases"><img src="https://badgen.net/github/tag/vanillaes/computer-science?cache-control=no-cache" alt="GitHub Release"></a>
   <a href="https://www.npmjs.com/package/@vanillaes/computer-science"><img src="https://badgen.net/npm/v/@vanillaes/computer-science?icon=npm" alt="NPM Version"></a>
   <a href="https://www.npmjs.com/package/@vanillaes/computer-science"><img src="https://badgen.net/npm/dm/@vanillaes/computer-science?icon=npm" alt="NPM Downloads"></a>
-  <a href="https://bundlephobia.com/result?p=@vanillaes/computer-science"><img src="https://badgen.net/bundlephobia/minzip/@vanillaes/computer-science" alt="Bundlephobia"></a>
   <a href="https://github.com/vanillaes/computer-science/actions"><img src="https://github.com/vanillaes/computer-science/workflows/Latest/badge.svg" alt="Latest Status"></a>
   <a href="https://github.com/vanillaes/computer-science/actions"><img src="https://github.com/vanillaes/computer-science/workflows/Release/badge.svg" alt="Release Status"></a>
 </div>
@@ -58,7 +57,7 @@ import { LinkedList } from 'path/to/computer-science/index.min.js'
 Install the package
 
 ```sh
-npm install @vanillaes/absurdum
+npm install @vanillaes/computer-science
 ```
 
 Import from the installed module
