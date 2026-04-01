@@ -18,33 +18,26 @@
     "browser": "./index.min.js"
   },
   "scripts": {
-    "test": "tape-es",
-    "test:watch": "tape-watch-es",
+    "test": "esmtk test",
+    "test:watch": "esmtk test --watch",
     "lint": "esmtk lint",
-    "types": "npx -p typescript tsc index.js  -t esnext --allowJS --checkJS --skipLibCheck --noEmit",
+    "type": "esmtk type index.js",
     "build": "npm run build:min && npm run build:docs && npm run build:typings",
     "build:min": "esmtk minify index.js index.min.js",
     "build:docs": "node .config/docs.config.js",
-    "build:typings": "npx -p typescript tsc index.js  -t esnext --allowJS --checkJS --skipLibCheck --declaration --emitDeclarationOnly --noEmitOnError",
+    "build:typings": "esmtk typings",
     "clean": "npm run clean:docs && npm run clean:typings",
     "clean:docs": "npx rimraf docs/*/*.md",
-    "clean:typings": "npx rimraf src/**/*.d.ts",
-    "package": "npx rimraf package && npm pack | tail -n 1 | xargs tar -xf",
-    "preversion": "npm test && npm run lint && npm run types",
+    "clean:typings": "esmtk clean --typings",
+    "preview": "esmtk preview",
+    "preversion": "npm test && npm run type",
     "postversion": "git push --follow-tags"
   },
-  "devDependencies": {
-    "babel-eslint": "^10.1.0",
-    "docdown": "github:evanplaice/docdown",
-    "esmtk": "^0.5.13",
-    "glob": "^7.2.0",
-    "tape-es": "^1.2.16"
+  "dependencies": {
+    "@vanillaes/esmtk": "^1.2.3"
   },
-  "standard": {
-    "parser": "babel-eslint",
-    "ignore": [
-      "docs.config.js",
-      "index.js"
-    ]
+  "devDependencies": {
+    "docdown": "github:evanplaice/docdown",
+    "glob": "^7.2.0"
   }
 }
