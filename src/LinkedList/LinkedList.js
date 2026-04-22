@@ -3,7 +3,7 @@
 /**
  * A LinkedList implementation using nodes liked by reference
  * @template T
-*/
+ */
 export class LinkedList {
   /**
    * The head node in the list
@@ -133,15 +133,15 @@ class ListNode {
    * @type {T}
    */
   data
-  
+
   /**
    * @type {ListNode<T>|null}
    */
   next
 
   /**
-   * @param {T} data 
-   * @param {ListNode<T>|null} next 
+   * @param {T} data Data stored in the node
+   * @param {ListNode<T>|null} next Reference to the next node
    */
   constructor (data, next = null) {
     this.data = data
