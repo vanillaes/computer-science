@@ -14,7 +14,7 @@ export class LinkedList {
    * @private
    * @type {object}
    */
-  #tail = null
+  tail = null
 
   /**
    * The number of items in the list
@@ -38,12 +38,12 @@ export class LinkedList {
   add (item = null) {
     if (item === null) { throw Error('\'item\' parameter not defined') }
     if (this.size === 0) {
-      this.#tail = new ListNode(item, null)
-      this.#head = this.#tail
+      this.tail = new ListNode(item, null)
+      this.head = this.tail
     } else {
-      const prev = this.#tail
-      this.#tail = new ListNode(item, null)
-      prev.next = this.#tail
+      const prev = this.tail
+      this.tail = new ListNode(item, null)
+      prev.next = this.tail
     }
     this.size++
   }
@@ -67,18 +67,18 @@ export class LinkedList {
     if (item === null) { throw Error('\'item\' parameter not defined') }
     if (this.size === 0) { throw Error('can\'t remove an item from an empty list') }
 
-    let prev = this.#head
-    let curr = this.#head
+    let prev = this.head
+    let curr = this.head
     while (curr != null) {
       if (curr.data === item) {
         if (this.size === 1) { // remove the last remaining element
-          this.#head = null
+          this.head = null
           this.tail = null
-        } else if (curr === this.#head) { // remove first element
-          this.#head = this.#head.next
-        } else if (curr === this.#tail) { // remove last element
-          this.#tail = prev
-          this.#tail.next = null
+        } else if (curr === this.head) { // remove first element
+          this.head = this.head.next
+        } else if (curr === this.tail) { // remove last element
+          this.tail = prev
+          this.tail.next = null
         } else { // remove element
           prev.next = curr.next
         }
@@ -97,8 +97,8 @@ export class LinkedList {
    * Remove all items from the list
    */
   clear () {
-    this.#head = null
-    this.#tail = null
+    this.head = null
+    this.tail = null
     this.size = 0
   }
 
@@ -108,7 +108,7 @@ export class LinkedList {
    * @returns {Iterator<*>} an iterator for the data
    */
   [Symbol.iterator] () {
-    let item = this.#head
+    let item = this.head
     return {
       next: () => {
         if (item) {
