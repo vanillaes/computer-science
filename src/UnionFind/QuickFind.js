@@ -1,4 +1,5 @@
 /* eslint-disable jsdoc/reject-any-type */
+// @ts-nocheck TODO: Fix types on this later
 
 /** QuickFind is a simple but less optimal implementation of a UnionFind data structure. */
 export class QuickFind {

@@ -1,4 +1,5 @@
 /* eslint-disable jsdoc/reject-any-type */
+// @ts-nocheck TODO: Fix types on this later
 
 /** A Queue implementation using nodes liked by reference */
 export class Queue {

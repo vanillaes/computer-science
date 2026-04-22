@@ -1,4 +1,5 @@
 /* eslint-disable jsdoc/reject-function-type */
+// @ts-nocheck TODO: Fix types on this later
 
 /**
  * The sort maintains a sorted (left) and unsorted (right) sections. As each

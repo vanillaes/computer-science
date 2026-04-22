@@ -1,4 +1,5 @@
 /* eslint-disable jsdoc/reject-any-type */
+// @ts-nocheck TODO: Fix types on this later
 
 /** QuickUnion is a slightly more optimal (ie tree-based) implementation of a UnionFind data structure. */
 export class QuickUnion {

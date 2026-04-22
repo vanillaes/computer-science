@@ -1,18 +1,19 @@
 /* eslint-disable jsdoc/reject-any-type */
 
-/** A LinkedList implementation using nodes liked by reference */
+/**
+ * A LinkedList implementation using nodes liked by reference
+ * @template T
+*/
 export class LinkedList {
   /**
    * The head node in the list
-   * @private
-   * @type {object}
+   * @type {ListNode<T>|null}
    */
-  #head = null
+  head = null
 
   /**
    * The tail node in the list
-   * @private
-   * @type {object}
+   * @type {ListNode<T>|null}
    */
   tail = null
 
@@ -23,7 +24,7 @@ export class LinkedList {
   size = 0
 
   /**
-   * @param {Array} [items] an array of items to add to the list
+   * @param {T[]} [items] an array of items to add to the list
    */
   constructor (items) {
     if (items) {
@@ -43,17 +44,17 @@ export class LinkedList {
     } else {
       const prev = this.tail
       this.tail = new ListNode(item, null)
-      prev.next = this.tail
+      if (prev) prev.next = this.tail
     }
     this.size++
   }
 
   /**
    * Add multiple items to the list
-   * @param {Array} items an array of items to be added to the list
+   * @param {T[]} [items] an array of items to be added to the list
    */
-  addAll (items = null) {
-    if (items === null) { throw Error('\'items\' parameter not defined') }
+  addAll (items = []) {
+    if (!items) { throw Error('\'items\' parameter not defined') }
 
     items.forEach(item => this.add(item))
   }
@@ -78,9 +79,9 @@ export class LinkedList {
           this.head = this.head.next
         } else if (curr === this.tail) { // remove last element
           this.tail = prev
-          this.tail.next = null
+          if (this.tail) this.tail.next = null
         } else { // remove element
-          prev.next = curr.next
+          if (prev) prev.next = curr.next
         }
         this.size--
 
@@ -124,12 +125,24 @@ export class LinkedList {
 }
 
 /**
+ * @template T
  * @private
  */
 class ListNode {
+  /**
+   * @type {T}
+   */
   data
+  
+  /**
+   * @type {ListNode<T>|null}
+   */
   next
 
+  /**
+   * @param {T} data 
+   * @param {ListNode<T>|null} next 
+   */
   constructor (data, next = null) {
     this.data = data
     this.next = next

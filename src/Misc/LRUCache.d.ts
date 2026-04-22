@@ -1,6 +1,6 @@
 /** A LRU (Least Recently Used) cache implementation */
 export class LRUCache {
-    constructor(capacity?: any);
+    constructor(capacity?: null);
     /**
      * the capacity of the cache
      * @private
@@ -21,36 +21,31 @@ export class LRUCache {
     private dequeue;
     /**
      * @param {number} key The key of the item to look up
-     * @return {number} The value of the item
+     * @returns {number} The value of the item
      */
     get(key: number): number;
     /**
      * @param {number} key The key of the item to add/update
      * @param {number} value The value of the item add/update
-     * @return {void}
      */
     put(key: number, value: number): void;
     /**
      * Remove all items from the cache
-     * @method
      */
     clear(): void;
     /**
      * An iterator that returns the keys in recent -> least-recent order
-     *
-     * @returns {*} an iterator for the item keys
+     * @yields {*} the next key
      */
-    keys(): any;
+    keys(): Generator<any, void, unknown>;
     /**
      * An iterator that returns the values in recent -> least-recent order
-     *
-     * @returns {*} an iterator for the item values
+     * @yields {*} the next item
      */
-    values(): any;
+    values(): Generator<any, void, unknown>;
     /**
      * An iterator that returns the entries in recent -> least-recent order
-     *
-     * @returns {*} an iterator for the items
+     * @yields {*} the next entry
      */
-    entries(): any;
+    entries(): Generator<any[], void, unknown>;
 }

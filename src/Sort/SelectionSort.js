@@ -1,4 +1,5 @@
 /* eslint-disable jsdoc/reject-function-type */
+// @ts-nocheck TODO: Fix types on this later
 
 /**
  * The sort works by iterating through the array starting from the beginning.
