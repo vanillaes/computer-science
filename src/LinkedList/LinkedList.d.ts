@@ -1,7 +1,7 @@
 /**
  * A LinkedList implementation using nodes liked by reference
  * @template T
-*/
+ */
 export class LinkedList<T> {
     /**
      * @param {T[]} [items] an array of items to add to the list
@@ -55,8 +55,8 @@ export class LinkedList<T> {
  */
 declare class ListNode<T> {
     /**
-     * @param {T} data
-     * @param {ListNode<T>|null} next
+     * @param {T} data Data stored in the node
+     * @param {ListNode<T>|null} next Reference to the next node
      */
     constructor(data: T, next?: ListNode<T> | null);
     /**

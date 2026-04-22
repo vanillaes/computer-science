@@ -7,7 +7,7 @@ export class Stack {
     /**
      * The top item of the stack
      * @private
-     * @type {object}
+     * @type {StackNode|null}
      */
     private top;
     /**

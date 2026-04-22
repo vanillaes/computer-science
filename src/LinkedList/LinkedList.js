@@ -3,7 +3,7 @@
 /**
  * A LinkedList implementation using nodes liked by reference
  * @template T
-*/
+ */
 export class LinkedList {
   /**
    * The head node in the list
@@ -44,7 +44,7 @@ export class LinkedList {
     } else {
       const prev = this.tail
       this.tail = new ListNode(item, null)
-      if (prev) prev.next = this.tail
+      if (prev) { prev.next = this.tail }
     }
     this.size++
   }
@@ -81,7 +81,7 @@ export class LinkedList {
           this.tail = prev
           if (this.tail) this.tail.next = null
         } else { // remove element
-          if (prev) prev.next = curr.next
+          if (prev) { prev.next = curr.next }
         }
         this.size--
 
@@ -133,15 +133,15 @@ class ListNode {
    * @type {T}
    */
   data
-  
+
   /**
    * @type {ListNode<T>|null}
    */
   next
 
   /**
-   * @param {T} data 
-   * @param {ListNode<T>|null} next 
+   * @param {T} data Data stored in the node
+   * @param {ListNode<T>|null} next Reference to the next node
    */
   constructor (data, next = null) {
     this.data = data

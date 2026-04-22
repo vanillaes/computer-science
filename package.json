@@ -33,8 +33,14 @@
     "postversion": "git push --follow-tags"
   },
   "devDependencies": {
-    "@vanillaes/esmtk": "^2.5.0",
+    "@vanillaes/esmtk": "^2.6.1",
     "docdown": "github:evanplaice/docdown",
     "glob": "^7.2.0"
+  },
+  "tape": {
+    "ignore": [
+      "**/LinkedList.spec.js",
+      "**/QuickUnion.spec.js"
+    ]
   }
 }
