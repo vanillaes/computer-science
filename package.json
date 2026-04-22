@@ -22,24 +22,18 @@
   },
   "scripts": {
     "test": "esmtk test",
-    "test:watch": "esmtk test --watch",
     "lint": "esmtk lint",
-    "type": "esmtk type src/index.js",
-    "build": "npm run build:min && npm run build:docs && npm run build:typings",
-    "build:min": "esmtk minify src/index.js src/index.min.js",
+    "type": "esmtk type",
+    "build": "esmtk minify && esmtk typings",
     "build:docs": "node .config/docs.config.js",
-    "build:typings": "esmtk typings src/index.js",
-    "clean": "npm run clean:docs && npm run clean:typings",
+    "clean": "esmtk clean --minify --typings",
     "clean:docs": "esmtk clean --custom 'docs/*/*.md'",
-    "clean:typings": "esmtk clean --typings",
     "preview": "esmtk preview",
     "preversion": "npm test && npm run lint && npm run type",
     "postversion": "git push --follow-tags"
   },
-  "dependencies": {
-    "@vanillaes/esmtk": "^1.2.3"
-  },
   "devDependencies": {
+    "@vanillaes/esmtk": "^2.5.0",
     "docdown": "github:evanplaice/docdown",
     "glob": "^7.2.0"
   }
