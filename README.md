@@ -4,8 +4,9 @@ A collection of Computer Science algorithms and data structures implemented usin
 
 <div align="center">
   <a href="https://github.com/vanillaes/computer-science/releases"><img src="https://badgen.net/github/tag/vanillaes/computer-science?cache-control=no-cache" alt="GitHub Release"></a>
-  <a href="https://www.npmjs.com/package/@vanillaes/computer-science"><img src="https://badgen.net/npm/v/@vanillaes/computer-science?icon=npm" alt="NPM Version"></a>
-  <a href="https://www.npmjs.com/package/@vanillaes/computer-science"><img src="https://badgen.net/npm/dm/@vanillaes/computer-science?icon=npm" alt="NPM Downloads"></a>
+  <a href="https://npmjs.com/package/@vanillaes/computer-science"><img src="https://badgen.net/npm/dw/@vanillaes/computer-science?icon=npm" alt="NPM Weekly Downloads"></a>
+  <a href="https://jsr.io/@vanillaes/computer-science"><img src="https://jsr.io/badges/@vanillaes/computer-science/weekly-downloads" alt="JSR Weekly Downloads"></a>
+  <a href="https://jsr.io/@vanillaes/computer-science"><img src="https://jsr.io/badges/@vanillaes/computer-science/score" alt="JSR Score"></a>
   <a href="https://github.com/vanillaes/computer-science/actions"><img src="https://github.com/vanillaes/computer-science/workflows/Latest/badge.svg" alt="Latest Status"></a>
   <a href="https://github.com/vanillaes/computer-science/actions"><img src="https://github.com/vanillaes/computer-science/workflows/Release/badge.svg" alt="Release Status"></a>
 </div>

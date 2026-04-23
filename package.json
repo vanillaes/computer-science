@@ -30,6 +30,7 @@
     "clean:docs": "esmtk clean --custom 'docs/*/*.md'",
     "preview": "esmtk preview",
     "preversion": "npm test && npm run lint && npm run type",
+    "version": "npm run clean && npm run build && git add -f **/*.d.ts **/*.min.js",
     "postversion": "git push --follow-tags"
   },
   "devDependencies": {

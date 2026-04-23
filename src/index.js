@@ -1,3 +1,4 @@
+/* @ts-self-types="./index.d.ts" */
 export { LinkedList } from './LinkedList/LinkedList.js'
 export { LRUCache } from './Misc/LRUCache.js'
 export { Queue } from './Queue/Queue.js'
